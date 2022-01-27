@@ -22,7 +22,7 @@
     "HDMC_throttle": 0,
     "HDT": false,
     "HDT_throttle": 0,
-    "HDTC": false,
+    "HDTC": true,
     "HDTC_throttle": 0,
     "MMB": true,
     "MMB_throttle": 0,
