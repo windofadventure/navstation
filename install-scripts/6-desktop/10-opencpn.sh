@@ -96,6 +96,11 @@ rm -rf tmp-o-bundle-$LMARCH
 
 mv /usr/lib/opencpn/libPolar_pi.so /usr/lib/opencpn/libpolar_pi.so
 
+if [ -f /usr/lib/opencpn/liblogbookkonni_pi.so ]
+then
+  rm -f /usr/lib/opencpn/libLogbookKonni_pi.so
+fi
+
 # Polar Diagrams
 
 BK_DIR="$(pwd)"
