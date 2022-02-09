@@ -1,7 +1,9 @@
 #!/bin/bash -e
 
 if [ $LMARCH == 'armhf' ]; then
-  apt-get -y -q install raspotify=0.31.8~librespot.v0.3.1-54-gf4be9bb
+  #apt-get -y -q install raspotify=0.31.8~librespot.v0.3.1-54-gf4be9bb
+  wget https://github.com/dtcooper/raspotify/blob/2d6ceca0921a632b73e45cb8dbed6b8a57b3b608/pool/main/r/raspotify/raspotify_0.31.8~librespot.v0.3.1-54-gf4be9bb_armhf.deb?raw=true -O rasp.deb
+  dpkg -i rasp.deb && rm -f rasp.deb
   if ! grep -q raspotify /etc/group; then
   	groupadd raspotify
   fi
