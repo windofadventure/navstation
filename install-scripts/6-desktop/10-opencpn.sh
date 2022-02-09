@@ -9,6 +9,7 @@ apt-get install -y -q opencpn=5.2.4-1 opencpn-plugin-celestial opencpn-plugin-la
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/opencpn.conf-bbn"
+install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf-highres-bbn "/home/user/.opencpn/opencpn.conf-highres-bbn"
 
 apt-get install -y -q -o Dpkg::Options::="--force-overwrite" oernc-pi
 
