@@ -168,6 +168,9 @@
             <Filename>jpskmail.desktop</Filename>
         </Include>
         <Include>
+            <Filename>maiana-util.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>fldigi.desktop</Filename>
         </Include>
         <Include>
