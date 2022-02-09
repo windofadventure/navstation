@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 if [ $LMARCH == 'armhf' ]; then
-  apt-get -y -q install raspotify
+  apt-get -y -q install raspotify=0.31.8~librespot.v0.3.1-54-gf4be9bb
   if ! grep -q raspotify /etc/group; then
   	groupadd raspotify
   fi
