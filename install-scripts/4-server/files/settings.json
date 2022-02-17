@@ -86,6 +86,27 @@
             "logging": false,
             "type": "NMEA0183",
             "subOptions": {
+              "validateChecksum": false,
+              "type": "tcp",
+              "port": "10112",
+              "suppress0183event": true,
+              "host": "127.0.0.1",
+              "noDataReceivedTimeout": "1200"
+            }
+          }
+        }
+      ],
+      "id": "rtl_ais_tcp",
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
               "type": "serial",
               "validateChecksum": true,
               "device": "/dev/ttyLYS_ais_0",
