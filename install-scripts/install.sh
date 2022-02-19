@@ -1,6 +1,6 @@
 #! /bin/bash -xe
 
-echo "Install script for Lysmarine :)"
+echo "Install script for BBN OS :)"
 
 ## Check variable declaration
 if [[ -z $LMARCH ]]; then
@@ -55,4 +55,4 @@ for argument in $argumentList; do # access each element of array
   done
 done
 
-echo "Done installing script for Lysmarine $ARCH :)"
+echo "Done installing script for BBN OS $ARCH :)"
