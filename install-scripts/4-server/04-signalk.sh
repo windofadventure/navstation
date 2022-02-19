@@ -107,15 +107,6 @@ sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-mon
 sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
 sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
-## Install signalk lysmarine-dashboard plugin
-#pushd /home/signalk/.signalk/node_modules/@signalk/
-#  su signalk -c "git clone https://github.com/lysmarine/lysmarine-dashboard"
-#  pushd ./lysmarine-dashboard
-#    rm -rf .git
-#    npm install
-#  popd
-#popd
-
 ## Give set-system-time the possibility to change the date.
 echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
 
