@@ -49,7 +49,7 @@ if [ -f /etc/issue ]; then
 	rm /etc/issue /etc/issue.net
 fi
 
-# Raspbian enable this to intercept keystroke during the boot process, (for ondemand cup freq management.) Lysmarine don't want to set it that way.
+# Raspbian enable this to intercept keystroke during the boot process, (for ondemand cup freq management.) We don't want to set it that way.
 if [[ $LMOS == 'Raspbian' ]]; then
 	systemctl disable triggerhappy.service
 fi
