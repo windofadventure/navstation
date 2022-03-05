@@ -24,4 +24,4 @@ sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" "/etc/NetworkManager/system-connections
 
 sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" "/home/pypilot/.pypilot/signalk.conf"
 
-echo "done."
+echo "Done. Reboot the system for the changes to take effect."
