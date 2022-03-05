@@ -7,8 +7,7 @@ if [ "$EUID" -ne 0 ] ; then
   exit
 fi
 
-if [ $# -eq 0 ]
-  then
+if [ $# -eq 0 ] ; then
     echo "Provide a new host name as the first argument"
 fi
 
