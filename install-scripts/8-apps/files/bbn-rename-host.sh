@@ -4,11 +4,12 @@
 
 if [ "$EUID" -ne 0 ] ; then
   echo "Run as root"
-  exit
+  exit 1
 fi
 
 if [ $# -eq 0 ] ; then
-    echo "Provide a new host name as the first argument"
+  echo "Provide a new host name as the first argument"
+  exit 2
 fi
 
 NEW_HOSTNAME=$(echo $1 | tr '[:upper:]' '[:lower:]' | sed 's/[^0-9a-z-]*//g')
