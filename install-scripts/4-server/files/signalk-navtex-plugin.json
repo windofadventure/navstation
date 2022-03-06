@@ -1,0 +1,8 @@
+{
+  "configuration": {
+    "tty": "/dev/null",
+    "baudrate": 4800,
+    "expire": 48
+  },
+  "enabled": false
+}
