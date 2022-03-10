@@ -15,3 +15,6 @@ if [ $LMARCH == 'armhf' ]; then
 fi
 
 apt-get clean
+
+pip3 install --upgrade spotify-cli
+
