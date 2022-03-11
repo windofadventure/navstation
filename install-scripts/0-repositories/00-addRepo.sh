@@ -16,7 +16,7 @@ install -m 0644 -v $FILE_FOLDER/bbn-navtex.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/bbn-gpsd.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/mopidy.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/avnav.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v $FILE_FOLDER/avnav.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/mosquitto.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/influxdb.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/grafana.list "/etc/apt/sources.list.d/"
@@ -52,7 +52,7 @@ curl -1sLf https://dl.cloudsmith.io/public/bbn-projects/bbn-autoadb/gpg.A63E85DF
 curl -1sLf https://dl.cloudsmith.io/public/bbn-projects/bbn-gpsd/gpg.B3336FAFD344E1C5.key | apt-key add -
 curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/master/public-keys/cloudsmith-bbn-noaa-apt/gpg.DB5121F72251E833.key | apt-key add -
 wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add -
-curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -     # AvNav
+#curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -     # AvNav
 curl -1sLf https://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | apt-key add - # Mosquitto
 wget -q -O - https://repos.influxdata.com/influxdb.key | apt-key add -
 wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
