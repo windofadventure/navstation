@@ -33,14 +33,17 @@ USER_AGENT="Mozilla/5.0 (Linux; Android 10; SM-G960U) AppleWebKit/537.36 (KHTML,
 ########################################################################################################################
 
 nativefier -a $arch --inject $FILE_FOLDER/pypilot_darktheme.js --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "Pypilot_webapp" --icon /usr/share/icons/gnome/256x256/actions/go-jump.png \
   "http://localhost:8080" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "AvNav" --icon /usr/share/icons/gnome/256x256/actions/go-jump.png \
   "http://localhost:8099/viewer/avnav_viewer.html?noCloseDialog=true" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "bbn-launcher" --icon /usr/share/icons/gnome/256x256/apps/utilities-system-monitor.png \
   "http://localhost:4997" /opt/
 
@@ -66,22 +69,27 @@ npm cache clean --force
 ########################################################################################################################
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "SignalK" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/admin/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "Freeboard-sk" --icon /home/user/.local/share/icons/freeboard-sk.png \
   "http://localhost:3000/@signalk/freeboard-sk/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "kip-dash" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/@mxtommy/kip/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "instrumentpanel" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/@signalk/instrumentpanel/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "sailgauge" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/@signalk/sailgauge/" /opt/
 
@@ -114,21 +122,25 @@ npm cache clean --force
 ########################################################################################################################
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "MusicBox" --icon /usr/share/icons/gnome/48x48/apps/multimedia-volume-control.png \
   --internal-urls ".*" \
   "http://localhost:6680/musicbox_webclient" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "Iris" --icon /usr/share/icons/gnome/48x48/apps/multimedia-volume-control.png \
   --internal-urls ".*" \
   "http://localhost:6680/iris" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "Moorings" --icon /home/user/.local/share/icons/dockwa.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=moorings" -u "$USER_AGENT" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "Nauticed" --icon /usr/share/icons/gnome/256x256/actions/go-jump.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=nauticed" -u "$USER_AGENT" /opt/
@@ -158,16 +170,19 @@ npm cache clean --force
 ########################################################################################################################
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "youtube" --icon /usr/share/icons/gnome/48x48/apps/multimedia-volume-control.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=youtube" -u "$USER_AGENT" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "facebook" --icon /usr/share/icons/Adwaita/256x256/emotes/face-cool.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=facebook" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "WA-Web-Msg" --icon /usr/share/icons/gnome/48x48/emotes/face-monkey.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=WA-Web-Msg" /opt/
@@ -194,18 +209,22 @@ npm cache clean --force
 ########################################################################################################################
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "skwiz" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/skwiz/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "motioneye" --icon /usr/share/icons/gnome/32x32/devices/camera-web.png \
   "http://localhost:8765/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "tuktuk" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/tuktuk-chart-plotter/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
+  --disable-old-build-warning-yesiknowitisinsecure \
   --name "sk-autopilot" --icon /home/user/.local/share/icons/signalk.png \
   "http://localhost:3000/@signalk/signalk-autopilot/" /opt/
 
