@@ -63,7 +63,7 @@ if [ $LMOS == Debian ]; then
 fi
 
 # Minimize space by linking identical files
-hardlink -v -t /opt/*
+hardlink -v -t /opt/* /usr/lib/node_modules/electron/*
 npm cache clean --force
 
 ########################################################################################################################
@@ -116,7 +116,7 @@ if [ $LMOS == Debian ]; then
 fi
 
 # Minimize space by linking identical files
-hardlink -v -t /opt/*
+hardlink -v -t /opt/* /usr/lib/node_modules/electron/*
 npm cache clean --force
 
 ########################################################################################################################
@@ -164,7 +164,7 @@ if [ $LMOS == Debian ]; then
 fi
 
 # Minimize space by linking identical files
-hardlink -v -t /opt/*
+hardlink -v -t /opt/* /usr/lib/node_modules/electron/*
 npm cache clean --force
 
 ########################################################################################################################
@@ -203,7 +203,7 @@ if [ $LMOS == Debian ]; then
 fi
 
 # Minimize space by linking identical files
-hardlink -v -t /opt/*
+hardlink -v -t /opt/* /usr/lib/node_modules/electron/*
 npm cache clean --force
 
 ########################################################################################################################
@@ -247,7 +247,7 @@ if [ $LMOS == Debian ]; then
 fi
 
 # Minimize space by linking identical files
-hardlink -v -t /opt/*
+hardlink -v -t /opt/* /usr/lib/node_modules/electron/*
 npm cache clean --force
 
 apt-get clean
