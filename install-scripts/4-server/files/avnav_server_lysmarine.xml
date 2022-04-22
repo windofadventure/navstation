@@ -30,6 +30,7 @@
              if you still enable it here, a couple of features will not work
              as gpsd lacks some decoders we need
              so leave this entry untouched
+             <AVNFeeder/>
              -->
         <AVNGpsdFeeder useGpsd="false" listenerPort="4020" port="2948" gpsdcommand="/usr/sbin/gpsd -b -n -N -G"/>
 
@@ -168,7 +169,7 @@
              interval is the minimum interval between writing trackpoints
              mindistance is the minimum distance in m before a new trackpoint is written (interval wins)
               -->
-        <AVNTrackWriter interval="10" mindistance="50" trackdir="/home/user/avnav/data/tracks"/>
+        <AVNTrackWriter interval="10" distance="100" trackdir="/home/user/avnav/data/tracks"/>
 
         <!-- an TCP writer that will provide data from the feeder input to other systems
              port - the listener port
@@ -197,7 +198,7 @@
         -->
 
         <!-- a tcp socket that will output all NMEA data that AvNav has received. You can customize it using the filter -->
-        <AVNSocketWriter port="34567" maxDevices="5" filter="" read="true" minTime="50" name="allnmea0183"/>
+        <AVNSocketWriter port="34567" maxDevices="5" filter="" read="true" minTime="100" name="allnmea0183" avahiName="avnav-server"/>
         <!--
         <AVNSocketWriter port="34568" maxDevices="5" filter="" read="true" minTime="50" name="nmea0183tosignalk" blackList="canboatnmea0183,canboatgen"/>
         -->
