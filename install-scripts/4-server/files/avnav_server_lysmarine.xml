@@ -231,9 +231,9 @@
              interval: minimal interval in seconds between sentences of the same type (default: 5)
         -->
         <!--<AVNNmeaLogger filter="$" interval="0"/>-->
-        <AVNNmeaLogger/>
+        <AVNNmeaLogger interval="10"/>
 
-        <AVNImporter importDir="/home/user/avnav/data/import"></AVNImporter>
+        <AVNImporter importDir="/home/user/avnav/data/import"/>
 
         <!-- add the following property to AVNWpaHandler to be able to allow external access for wlan client
              firewallCommand="sudo -n $BASEDIR/../raspberry/iptables-ext.sh wlan-av1"
@@ -256,4 +256,5 @@
             <Alarm name="gps" command="sound" parameter="/usr/lib/avnav/sounds/anchorAlarm.mp3" repeat="20000"/>
         </AVNAlarmHandler>
     </Workers>
+    <!--<AVNSignalKHandler uuid="5f9cb472-f473-4a13-99d6-dcd33fe2d483" migrated="True"/>-->
 </AVNServer>
