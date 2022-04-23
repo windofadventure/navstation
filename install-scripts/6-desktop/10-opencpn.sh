@@ -1,7 +1,9 @@
 #!/bin/bash -e
 
+apt-get install -y -q -o Dpkg::Options::="--force-overwrite" libsglock
+
 apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
-   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap # libsglock
+   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
@@ -31,11 +33,10 @@ if [ $LMARCH == 'armhf' ]; then
     opencpn-plugin-watchdog                                     \
     opencpn-plugin-weatherfax                                   \
     opencpn-plugin-weatherrouting                               \
-    opencpn-plugin-draw                                         \
-    opencpn-sglock-arm32
+    opencpn-plugin-draw
 fi
 
-apt-get install -y -q -o Dpkg::Options::="--force-overwrite" libsglock
+apt-get install -y -q -o Dpkg::Options::="--force-overwrite" opencpn-sglock-arm32
 
 # Install plugin bundle
 mkdir tmp-o-bundle-$LMARCH || exit 2
