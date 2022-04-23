@@ -7,10 +7,10 @@
 
   thisArch="raspios"
   cpuArch="armhf"
-  zipName="raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2022-04-07/2022-04-04-raspios-buster-armhf-lite.zip"
+  zipName="raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2022-04-07/2022-04-04-raspios-buster-armhf-lite.img.xz"
   if [ "arm64" == "$MY_CPU_ARCH" ]; then
     cpuArch="arm64"
-    zipName="raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.zip"
+    zipName="raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.img.xz"
   fi
   imageSource="https://downloads.raspberrypi.org/${zipName}"
 
