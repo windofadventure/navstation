@@ -35,6 +35,8 @@ if [ $LMARCH == 'armhf' ]; then
     opencpn-sglock-arm32
 fi
 
+apt-get install -y -q -o Dpkg::Options::="--force-overwrite" libsglock
+
 # Install plugin bundle
 mkdir tmp-o-bundle-$LMARCH || exit 2
 cd tmp-o-bundle-$LMARCH
