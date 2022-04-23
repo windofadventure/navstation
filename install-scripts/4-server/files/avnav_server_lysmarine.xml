@@ -207,7 +207,7 @@
 
         <AVNPluginHandler>
             <builtin-signalk enabled="true" port="3000" />
-            <system-history enabled="true"/>
+            <system-history enabled="true" storeKeys="gps.time,gps.speed" period="30.0" sensorNames=""/>
             <builtin-canboat enabled="false" port="6000" host="localhost" allowKeyOverwrite="true" autoSendRMC="30" sourceName="canboatgen"/>
         </AVNPluginHandler>
 
