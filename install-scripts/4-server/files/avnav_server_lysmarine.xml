@@ -199,7 +199,7 @@
         <AVNSocketWriter port="34568" enabled="false" maxDevices="5" filter="" read="true" minTime="50" name="nmea0183tosignalk" blackList="canboatnmea0183,canboatgen"/>
 
         <!-- a tcp socket that will output all NMEA data that AvNav has received. You can customize it using the filter -->
-        <AVNSocketWriter port="34567" maxDevices="5" filter="" read="true" minTime="100" name="allnmea0183" avahiName="avnav-server"/>
+        <AVNSocketWriter port="34567" maxDevices="5" filter="" read="true" minTime="100" name="allnmea0183" avahiEnabled="true" avahiName="avnav-server"/>
 
         <AVNSocketReader port="2599" enabled="false" host="localhost" filter="" name="canboatnmea0183" timeout="31104000"/>
         <AVNSocketReader port="10110" host="localhost" filter="" name="nmea0183" timeout="31104000"/>
@@ -207,6 +207,7 @@
 
         <AVNPluginHandler>
             <builtin-signalk enabled="true" port="3000" />
+            <system-history enabled="true"/>
             <builtin-canboat enabled="false" port="6000" host="localhost" allowKeyOverwrite="true" autoSendRMC="30" sourceName="canboatgen"/>
         </AVNPluginHandler>
 
@@ -253,6 +254,6 @@
             <Alarm name="gps" command="sound" parameter="/usr/lib/avnav/sounds/anchorAlarm.mp3" repeat="20000"/>
         </AVNAlarmHandler>
     </Workers>
-    <!--<AVNSignalKHandler uuid="5f9cb472-f473-4a13-99d6-dcd33fe2d483" migrated="True"/>-->
+    <!--<AVNSignalKHandler uuid="5f9cb472-f473-4a13-99d6-dcd33fe2d483" migrated="true" fetchAis="true"/>-->
     <AVNAvahi enabled="false"/>
 </AVNServer>
