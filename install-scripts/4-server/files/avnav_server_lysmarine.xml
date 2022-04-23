@@ -254,6 +254,6 @@
             <Alarm name="gps" command="sound" parameter="/usr/lib/avnav/sounds/anchorAlarm.mp3" repeat="20000"/>
         </AVNAlarmHandler>
     </Workers>
+    <AVNAvahi enabled="true"/>
     <!--<AVNSignalKHandler uuid="5f9cb472-f473-4a13-99d6-dcd33fe2d483" migrated="true" fetchAis="true"/>-->
-    <AVNAvahi enabled="false"/>
 </AVNServer>
