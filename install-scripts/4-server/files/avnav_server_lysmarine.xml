@@ -169,7 +169,7 @@
              interval is the minimum interval between writing trackpoints
              mindistance is the minimum distance in m before a new trackpoint is written (interval wins)
               -->
-        <AVNTrackWriter interval="10" distance="100" trackdir="/home/user/avnav/data/tracks"/>
+        <AVNTrackWriter interval="10" distance="100" mindistance="100" trackdir="/home/user/avnav/data/tracks"/>
 
         <!-- an TCP writer that will provide data from the feeder input to other systems
              port - the listener port
@@ -196,18 +196,14 @@
                * canboat: will receive pgns that are not translated to NMEA0183 - currently only 126992 to get the time
              for canboat to work you potentially need to modify /etc/default/n2kd and /boot/config.txt
         -->
+        <AVNSocketWriter port="34568" enabled="false" maxDevices="5" filter="" read="true" minTime="50" name="nmea0183tosignalk" blackList="canboatnmea0183,canboatgen"/>
 
         <!-- a tcp socket that will output all NMEA data that AvNav has received. You can customize it using the filter -->
         <AVNSocketWriter port="34567" maxDevices="5" filter="" read="true" minTime="100" name="allnmea0183" avahiName="avnav-server"/>
-        <!--
-        <AVNSocketWriter port="34568" maxDevices="5" filter="" read="true" minTime="50" name="nmea0183tosignalk" blackList="canboatnmea0183,canboatgen"/>
-        -->
 
-        <AVNSocketReader host="localhost" port="10110" filter="" name="nmea0183" timeout="31104000"/>
-        <AVNSocketReader host="localhost" port="20220" filter="" name="nmea0183_pypilot" timeout="31104000"/>
-        <!--
-        <AVNSocketReader port="2599" host="localhost" filter="" name="canboatnmea0183" timeout="31104000"/>
-        -->
+        <AVNSocketReader port="2599" enabled="false" host="localhost" filter="" name="canboatnmea0183" timeout="31104000"/>
+        <AVNSocketReader port="10110" host="localhost" filter="" name="nmea0183" timeout="31104000"/>
+        <AVNSocketReader port="20220" host="localhost" filter="" name="nmea0183_pypilot" timeout="31104000"/>
 
         <AVNPluginHandler>
             <builtin-signalk enabled="true" port="3000" />
@@ -258,4 +254,5 @@
         </AVNAlarmHandler>
     </Workers>
     <!--<AVNSignalKHandler uuid="5f9cb472-f473-4a13-99d6-dcd33fe2d483" migrated="True"/>-->
+    <AVNAvahi enabled="false"/>
 </AVNServer>
