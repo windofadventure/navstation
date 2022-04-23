@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
-   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap libsglock
+   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap # libsglock
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
