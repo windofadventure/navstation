@@ -11,7 +11,7 @@ make altinstall
 apt -y autoremove
 cd ../..
 rm -rf python-tmp
-ln -sf python3.9 /usr/bin/python3
+#ln -sf python3.9 /usr/bin/python3
 
 mkdir libffi-tmp && cd libffi-tmp
 wget "https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz"
