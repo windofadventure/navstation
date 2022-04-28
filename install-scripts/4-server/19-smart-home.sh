@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 mkdir python-tmp && cd python-tmp
+version=3.9.12
 wget https://www.python.org/ftp/python/$version/Python-$version.tgz
 tar zxf Python-$version.tgz
 cd Python-$version
@@ -8,7 +9,7 @@ cd Python-$version
 make -j4
 make altinstall
 apt -y autoremove
-cd ..
+cd ../..
 rm -rf python-tmp
 
 mkdir libffi-tmp && cd libffi-tmp
@@ -18,7 +19,7 @@ cd libffi-3.3
 ./configure
 make install
 ldconfig
-cd ..
+cd ../..
 rm -rf libffi-tmp
 
 
