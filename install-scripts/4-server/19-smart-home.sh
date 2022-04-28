@@ -32,6 +32,9 @@ useradd -rm homeassistant -G dialout,gpio,i2c
 mkdir -p /srv/homeassistant
 chown homeassistant:homeassistant /srv/homeassistant
 
+mkdir -p /home/homeassistant
+chown homeassistant:homeassistant /home/homeassistant
+
 {
 cat << EOF
   cd /srv/homeassistant
