@@ -37,7 +37,7 @@ cat << EOF
   python3.9 -m venv .
   source bin/activate
   python3.9 -m pip install wheel
-  pip3 install homeassistant
+  pip3.9 install homeassistant
   mkdir -p /home/homeassistant/.homeassistant
   rm -rf /home/homeassistant/.cache
 EOF
@@ -73,7 +73,7 @@ cat << EOF
   python3.9 -m venv .
   source bin/activate
   python3.9 -m pip install wheel
-  pip3 install esphome tornado esptool
+  pip3.9 install esphome tornado esptool
   rm -rf /home/homeassistant/.cache
 EOF
 } | sudo -u homeassistant -H -s
