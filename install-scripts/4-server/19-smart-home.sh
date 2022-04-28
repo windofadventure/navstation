@@ -1,5 +1,27 @@
 #!/bin/bash -e
 
+mkdir python-tmp && cd python-tmp
+wget https://www.python.org/ftp/python/$version/Python-$version.tgz
+tar zxf Python-$version.tgz
+cd Python-$version
+./configure --enable-optimizations
+make -j4
+make altinstall
+apt -y autoremove
+cd ..
+rm -rf python-tmp
+
+mkdir libffi-tmp && cd libffi-tmp
+wget "https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz"
+tar zxf libffi-3.3.tar.gz
+cd libffi-3.3
+./configure
+make install
+ldconfig
+cd ..
+rm -rf libffi-tmp
+
+
 apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev libjpeg-dev \
    zlib1g-dev autoconf build-essential libopenjp2-7 libtiff5 libturbojpeg0 tzdata
 
@@ -11,9 +33,9 @@ chown homeassistant:homeassistant /srv/homeassistant
 {
 cat << EOF
   cd /srv/homeassistant
-  python3 -m venv .
+  python3.9 -m venv .
   source bin/activate
-  python3 -m pip install wheel
+  python3.9 -m pip install wheel
   pip3 install homeassistant
   mkdir -p /home/homeassistant/.homeassistant
   rm -rf /home/homeassistant/.cache
@@ -47,9 +69,9 @@ chown homeassistant:homeassistant esphome
 {
 cat << EOF
   cd /srv/esphome
-  python3 -m venv .
+  python3.9 -m venv .
   source bin/activate
-  python3 -m pip install wheel
+  python3.9 -m pip install wheel
   pip3 install esphome tornado esptool
   rm -rf /home/homeassistant/.cache
 EOF
