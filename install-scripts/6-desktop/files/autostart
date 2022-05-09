@@ -11,6 +11,7 @@ amixer -c 1 cset numid=1 98%
 
 (rm -rf ~/.config/*nativefier*/Cache/ || true) &
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
+(rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
 xset s off &
 xset -dpms &
