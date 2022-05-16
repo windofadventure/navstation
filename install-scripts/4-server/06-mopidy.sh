@@ -5,9 +5,9 @@
 
 apt-get -y --no-install-recommends install mopidy mopidy-mpd mopidy-tunein xdotool gstreamer1.0-plugins-bad
 
-if [ $LMARCH == 'armhf' ]; then
-  apt-get -y install mopidy-spotify libspotify-dev
-fi
+#if [ $LMARCH == 'armhf' ]; then
+#  apt-get -y install mopidy-spotify libspotify-dev
+#fi
 
 adduser mopidy video
 adduser mopidy audio
