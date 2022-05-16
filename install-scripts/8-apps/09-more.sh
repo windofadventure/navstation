@@ -80,12 +80,14 @@ install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/stdc-install.sh "/home/u
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/sailorhat-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/maiana-ais-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/tripwire-install.sh "/home/user/add-ons/"
+install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/noaa-enc-online-install.sh "/home/user/add-ons/"
 
 /home/user/add-ons/windy-install.sh
 /home/user/add-ons/lightningmaps-install.sh
 /home/user/add-ons/marinetraffic-install.sh
 /home/user/add-ons/boatsetter-install.sh
 /home/user/add-ons/findacrew-install.sh
+/home/user/add-ons/noaa-enc-online-install.sh
 
 install -v $FILE_FOLDER/bbn-checklist.desktop "/usr/local/share/applications/"
 

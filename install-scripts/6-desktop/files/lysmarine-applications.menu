@@ -143,6 +143,9 @@
             <Filename>findacrew.desktop</Filename>
         </Include>
         <Include>
+            <Filename>noaa-enc-online.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>windy.desktop</Filename>
         </Include>
         <Include>
