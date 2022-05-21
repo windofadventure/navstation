@@ -27,6 +27,7 @@
               "host": "localhost",
               "port": "2947",
               "noDataReceivedTimeout": "10",
+              "removeNulls": true,
               "providerId": "gpsd"
             },
             "providerId": "gpsd"
@@ -49,6 +50,7 @@
               "port": "10115",
               "suppress0183event": true,
               "host": "127.0.0.1",
+              "removeNulls": true,
               "noDataReceivedTimeout": "10"
             }
           }
@@ -70,6 +72,7 @@
               "port": "20220",
               "suppress0183event": true,
               "host": "127.0.0.1",
+              "removeNulls": true,
               "noDataReceivedTimeout": "10"
             }
           }
@@ -91,6 +94,7 @@
               "port": "10112",
               "suppress0183event": true,
               "host": "127.0.0.1",
+              "removeNulls": true,
               "noDataReceivedTimeout": "1200"
             }
           }
@@ -110,6 +114,7 @@
               "type": "serial",
               "validateChecksum": true,
               "device": "/dev/ttyLYS_ais_0",
+              "removeNulls": true,
               "baudrate": 38400
             }
           }
@@ -129,6 +134,7 @@
               "validateChecksum": true,
               "type": "serial",
               "device": "/dev/ttyLYS_gps_1",
+              "removeNulls": true,
               "baudrate": 4800
             }
           }
@@ -148,6 +154,7 @@
               "validateChecksum": true,
               "type": "serial",
               "device": "/dev/ttyLYS_gps_2",
+              "removeNulls": true,
               "baudrate": 4800
             }
           }
@@ -167,6 +174,7 @@
               "validateChecksum": true,
               "type": "serial",
               "device": "/dev/ttyLYS_ch340",
+              "removeNulls": true,
               "baudrate": 4800
             }
           }
@@ -189,6 +197,7 @@
               "host": "myPhone_Gps2IP_address",
               "suppress0183event": false,
               "noDataReceivedTimeout": "10",
+              "removeNulls": true,
               "appendChecksum": true
             }
           }
@@ -207,6 +216,7 @@
             "subOptions": {
               "validateChecksum": false,
               "type": "tcpserver",
+              "removeNulls": true,
               "suppress0183event": false
             }
           }
