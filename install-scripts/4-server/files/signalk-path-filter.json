@@ -4,7 +4,7 @@
       {
         "path": "navigation.magneticVariation",
         "wildcard": true,
-        "source": "gpsd.GN"
+        "source": "gps"
       }
     ]
   },
