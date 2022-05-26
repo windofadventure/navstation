@@ -67,6 +67,7 @@ pushd /home/signalk/.signalk
                  node-red-contrib-moment \
                  node-red-contrib-string \
                  node-red-node-email \
+                 node-red-node-openweathermap \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
