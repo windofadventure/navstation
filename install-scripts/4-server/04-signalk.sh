@@ -59,6 +59,9 @@ pushd /home/signalk/.signalk
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  node-red-dashboard \
+                 node-red-contrib-modbus \
+                 node-red-contrib-influxdb \
+                 node-red-contrib-moment \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
