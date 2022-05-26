@@ -59,10 +59,14 @@ pushd /home/signalk/.signalk
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  node-red-dashboard \
+                 node-red-contrib-nmea \
                  node-red-contrib-modbus \
+                 node-red-contrib-solaredge-modbus \
+                 @victronenergy/node-red-contrib-victron \
                  node-red-contrib-influxdb \
                  node-red-contrib-moment \
-                 node-red-contrib-nmea \
+                 node-red-contrib-string \
+                 node-red-node-email \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
