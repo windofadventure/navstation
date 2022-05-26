@@ -62,6 +62,7 @@ pushd /home/signalk/.signalk
                  node-red-contrib-modbus \
                  node-red-contrib-influxdb \
                  node-red-contrib-moment \
+                 node-red-contrib-nmea \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
