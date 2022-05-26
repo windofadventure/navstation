@@ -58,6 +58,7 @@ pushd /home/signalk/.signalk
                  @signalk/sailgauge  \
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
+                 node-red-dashboard \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
