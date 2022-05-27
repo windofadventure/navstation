@@ -95,7 +95,7 @@
               "suppress0183event": true,
               "host": "127.0.0.1",
               "removeNulls": true,
-              "noDataReceivedTimeout": "1200"
+              "noDataReceivedTimeout": "600"
             }
           }
         }
@@ -234,5 +234,7 @@
   "enablePluginLogging": false,
   "pruneContextsMinutes": 60,
   "port": 3000,
-  "sslport": 3443
+  "sslport": 3443,
+  "keepMostRecentLogsOnly": true,
+  "logCountToKeep": 48
 }
