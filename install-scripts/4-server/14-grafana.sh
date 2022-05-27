@@ -2,7 +2,7 @@
 
 apt-get clean
 
-apt-get -y -q install grafana=8.5.2
+apt-get -y -q install grafana=8.5.3
 
 systemctl disable grafana-server
 
