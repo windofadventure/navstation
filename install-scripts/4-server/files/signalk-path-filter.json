@@ -15,6 +15,11 @@
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "gps2.GN"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "ais0.GN"
       }
     ]
   },
