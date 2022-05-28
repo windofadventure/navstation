@@ -20,6 +20,26 @@
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "ais0.GN"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gpsd.GP"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps1.GP"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps2.GP"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "ais0.GP"
       }
     ]
   },
