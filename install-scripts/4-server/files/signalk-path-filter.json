@@ -40,6 +40,66 @@
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "ais0.GP"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gpsd.GL"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps1.GL"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps2.GL"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "ais0.GL"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gpsd.GA"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps1.GA"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps2.GA"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "ais0.GA"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gpsd.GB"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps1.GB"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps2.GB"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "ais0.GB"
       }
     ]
   },
