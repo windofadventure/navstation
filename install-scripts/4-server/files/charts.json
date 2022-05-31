@@ -5,6 +5,16 @@
     ],
     "onlineChartProviders": [
       {
+        "name": "NOAA-ENC-online",
+        "description": "NOAA-ENC-online",
+        "minzoom": 1,
+        "maxzoom": 15,
+        "serverType": "WMS",
+        "format": "png",
+        "url": "https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/ENCOnline/MapServer/exts/MaritimeChartService/WMSServer",
+        "layers": []
+      },
+      {
         "name": "OpenTopoMap-Online",
         "minzoom": 1,
         "maxzoom": 15,
