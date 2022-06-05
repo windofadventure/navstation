@@ -6,11 +6,11 @@
   LYSMARINE_VER=$2
 
   thisArch="raspios"
-  cpuArch="armhf"
-  zipName="raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2022-04-07/2022-04-04-raspios-buster-armhf-lite.img.xz"
-  if [ "arm64" == "$MY_CPU_ARCH" ]; then
-    cpuArch="arm64"
-    zipName="raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.zip"
+  cpuArch="arm64"
+  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64-lite.img.xz"
+  if [ "armhf" == "$MY_CPU_ARCH" ]; then
+    cpuArch="armhf"
+    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2022-04-07/2022-04-04-raspios-bullseye-armhf-lite.img.xz"
   fi
   imageSource="https://downloads.raspberrypi.org/${zipName}"
 
@@ -23,8 +23,8 @@
   log "Downloading official image from internet."
   myCache=./cache/$thisArch
   wget -P $myCache/ $imageSource
-  7z e -aoa -o$myCache/ $myCache/$(basename $zipName)
-  rm $myCache/$(basename $zipName)
+  7z e -aoa -o$myCache/ $myCache/"$(basename $zipName)"
+  rm $myCache/"$(basename $zipName)"
 
   # Copy image file to work folder add temporary space to it.
   imageName=$(
@@ -58,7 +58,7 @@
   mount --rbind $myCache/stageCache $mkRoot/install-scripts/stageCache
   mount --rbind /run/shm $mkRoot/run/shm
   chroot $mkRoot /bin/bash -xe <<EOF
-    set -x; set -e; cd /install-scripts; export LMBUILD="raspios"; ls; chmod +x *.sh; ./install.sh 0 2 4 6 8 a; exit
+    set -x; set -e; cd /install-scripts; export LMBUILD="raspios"; ls; chmod +x *.sh; ./install.sh 0 2 6 a; exit
 EOF
 
   # Unmount
