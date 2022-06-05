@@ -1,7 +1,19 @@
 #!/bin/bash -e
 
-## this stage depends on stage 18-users for the pypilot user creation
-## adduser --home /home/pypilot --gecos --system --disabled-password --disabled-login pypilot
+
+## Create pypilot user to run the services.
+if [ ! -d /home/pypilot ]; then
+	echo "Creating pypilot user"
+	adduser --home /home/pypilot --gecos --system --disabled-password --disabled-login pypilot
+fi
+
+usermod -a -G tty pypilot
+usermod -a -G i2c pypilot
+usermod -a -G spi pypilot
+usermod -a -G gpio pypilot
+usermod -a -G dialout pypilot
+usermod -a -G plugdev pypilot
+
 
 # Op way
 apt-get install -y -q --no-install-recommends git python3 python3-pip python3-dev python3-setuptools libpython3-dev \

@@ -1,5 +1,36 @@
 #!/bin/bash -e
 
+## Create signalk user to run the server.
+if [ ! -d /home/signalk ]; then
+	echo "Creating signalk user"
+	adduser --home /home/signalk --gecos --system --disabled-password --disabled-login signalk
+fi
+
+usermod -a -G tty signalk
+usermod -a -G i2c signalk
+usermod -a -G spi signalk
+usermod -a -G gpio signalk
+usermod -a -G dialout signalk
+usermod -a -G plugdev signalk
+
+
+## Create the charts group and add users that have to write to that folder.
+if ! grep -q charts /etc/group; then
+	groupadd charts
+	usermod -a -G charts signalk
+	usermod -a -G charts user
+	usermod -a -G charts root
+fi
+
+## Create the special charts folder.
+install -v -d -m 6775 -o signalk -g charts /srv/charts
+
+## Link the chart folder to home for convenience.
+if [ ! -f /home/user/charts ] ; then
+	su user -c "ln -s /srv/charts /home/user/charts"
+fi
+
+
 ## Dependencies of signalk.
 apt-get install -y -q python-dev git nodejs \
  libnss-mdns avahi-utils \
