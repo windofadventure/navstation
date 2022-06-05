@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Network manager
-apt-get install -y -q network-manager make avahi-daemon createap bridge-utils wakeonlan
+apt-get install -y -q network-manager make avahi-daemon bridge-utils wakeonlan #createap
 
 
 # Resolve lysmarine.local
