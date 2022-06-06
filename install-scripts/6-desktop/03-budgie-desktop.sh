@@ -12,7 +12,6 @@ install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
 {
   echo 'export XDG_CURRENT_DESKTOP=Budgie:GNOME'
   echo 'budgie-desktop --debug --whale &'
-  echo 'sleep 5 && openbox --replace'
 }  >>/home/user/.config/openbox/autostart
 
 if [ $LMARCH == 'arm64' ]; then
