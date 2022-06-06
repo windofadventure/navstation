@@ -1,5 +1,5 @@
 # Allow mopidy user to access X server
-#xhost +SI:localuser:mopidy
+xhost +SI:localuser:mopidy || true
 
 export MOZ_USE_XINPUT2=1
 
