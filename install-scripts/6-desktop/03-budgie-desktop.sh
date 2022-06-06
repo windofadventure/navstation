@@ -7,14 +7,19 @@ apt-get install -y -q libatk-adaptor libgtk-3-0 libatk1.0-0 libcairo2 libfontcon
 
 install -o 1000 -g 1000 -d /home/user/.config/openbox
 
+## Start budgie-desktop on openbox boot.
+install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
+{
+  echo 'export XDG_CURRENT_DESKTOP=Budgie:GNOME'
+  echo 'budgie-desktop --debug --whale &'
+  echo 'sleep 5 && openbox --replace'
+}  >>/home/user/.config/openbox/autostart
+
 if [ $LMARCH == 'arm64' ]; then
   echo 'chromium --headless &' >>/home/user/.config/openbox/autostart
 else
   echo 'chromium-browser --headless &' >>/home/user/.config/openbox/autostart
 fi
-
-## Start budgie-desktop on openbox boot.
-echo 'export XDG_CURRENT_DESKTOP=Budgie:GNOME; budgie-desktop &' >>/home/user/.config/openbox/autostart
 
 apt-get clean
 
