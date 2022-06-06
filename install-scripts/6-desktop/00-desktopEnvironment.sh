@@ -18,10 +18,10 @@ apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-c
  budgie-desktop budgie-weathershow-applet budgie-rotation-lock-applet \
  gstreamer1.0-x gstreamer1.0-omx gstreamer1.0-plugins-base \
  gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa \
- gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git openbox \
+ gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git \
  xbacklight lxappearance gmrun xsettingsd xserver-xorg \
  xinit cpanminus perl-base \
- dialog lxterminal network-manager-gnome system-config-printer
+ dialog lxterminal network-manager-gnome system-config-printer # openbox
 
 install -o 1000 -g 1000 -d /home/user/.local
 install -o 1000 -g 1000 -d /home/user/.local/share
