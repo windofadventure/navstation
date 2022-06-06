@@ -14,11 +14,7 @@ install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
   echo 'budgie-desktop --debug --whale &'
 }  >>/home/user/.config/openbox/autostart
 
-if [ $LMARCH == 'arm64' ]; then
-  echo 'chromium --headless &' >>/home/user/.config/openbox/autostart
-else
-  echo 'chromium-browser --headless &' >>/home/user/.config/openbox/autostart
-fi
+echo '(chromium-browser --headless || true) &' >>/home/user/.config/openbox/autostart
 
 apt-get clean
 
