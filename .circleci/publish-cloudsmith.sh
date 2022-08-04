@@ -21,7 +21,7 @@ for pkg_file in cross-build-release/release/*/*.$EXT; do
   cd $zipDir || exit 255
   xz -z -c -v -5 --threads=4 ${zipName} > ../../../tmp/${zipName}.xz
   cd ../../..
-  cloudsmith push raw $REPO ./tmp/${zipName}.xz --summary "LysMarine built by CircleCi on $(date)" --description "LysMarine BBN build"
+  cloudsmith push raw $REPO ./tmp/${zipName}.xz --summary "BBN OS built by CircleCi on $(date)" --description "BBN OS build"
   RESULT=$?
   if [ $RESULT -eq 144 ]; then
     echo "skipping already deployed $pkg_file"
