@@ -8,7 +8,7 @@ apt-get install -y -q libatk-adaptor libgtk-3-0 libatk1.0-0 libcairo2 libfontcon
 install -o 1000 -g 1000 -d /home/user/.config/openbox
 
 ## Start budgie-desktop on openbox boot.
-install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
+#install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
 {
   echo 'export XDG_CURRENT_DESKTOP=Budgie:GNOME'
   echo 'budgie-desktop &'
