@@ -11,13 +11,15 @@ DISTRO=$3
 pwd
 ls
 
+exit 0
+
 for pkg_file in cross-build-release/release/*/*.$EXT; do
   zipName=$(basename $pkg_file)
   zipDir=$(dirname $pkg_file)
   mkdir ./tmp
   chmod 755 ./tmp
   cd $zipDir || exit 255
-  xz -z -c -v -5 --threads=4 ${zipName} > ../../../tmp/${zipName}.xz
+  xz -z -c -v -5 --threads=8 ${zipName} > ../../../tmp/${zipName}.xz
   cd ../../..
   cloudsmith push raw $REPO ./tmp/${zipName}.xz --summary "BBN OS built by CircleCi on $(date)" --description "BBN OS build"
   RESULT=$?
