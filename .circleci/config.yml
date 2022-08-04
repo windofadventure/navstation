@@ -37,7 +37,7 @@ commands:
       - git-checkout
       - build-n-publish-debian
 jobs:
-  build-raspbian-buster-arm32:
+  build-raspbian-bullseye-arm32:
     executor: boot-linux-arm
     environment:
       - DOCKER_IMAGE=arm32v7/debian:bullseye
@@ -48,7 +48,7 @@ jobs:
       - EMU=off
     steps:
       - do-all
-  build-raspbian-buster-arm64:
+  build-raspbian-bullseye-arm64:
     executor: boot-linux-arm
     environment:
       - DOCKER_IMAGE=arm64v8/debian:bullseye
