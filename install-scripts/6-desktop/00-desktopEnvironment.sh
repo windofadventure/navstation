@@ -21,7 +21,7 @@ apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-c
  gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git \
  xbacklight lxappearance gmrun xsettingsd xserver-xorg \
  xinit cpanminus perl-base \
- dialog lxterminal network-manager-gnome system-config-printer # openbox
+ dialog lxterminal network-manager-gnome system-config-printer openbox lightdm
 
 install -o 1000 -g 1000 -d /home/user/.local
 install -o 1000 -g 1000 -d /home/user/.local/share
