@@ -11,8 +11,6 @@ DISTRO=$3
 pwd
 ls
 
-exit 0
-
 for pkg_file in cross-build-release/release/*/*.$EXT; do
   zipName=$(basename $pkg_file)
   zipDir=$(dirname $pkg_file)
