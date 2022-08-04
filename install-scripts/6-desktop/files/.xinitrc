@@ -3,5 +3,5 @@ if [ -z $XDG_CURRENT_DESKTOP ]; then
   export XDG_CURRENT_DESKTOP
 fi
 
-exec budgie-session --session=gnome-desktop
+exec budgie-session --session=gnome-desktop $*
 
