@@ -7,6 +7,9 @@ sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
 ## Set root password.
 echo 'root:changeme' | chpasswd
 
+DPASS=$(echo 'changeme' | openssl passwd -6 -stdin)
+echo "user:$DPASS" > /boot/userconf.txt
+
 ## Remove default user (if any).
 oldUser=$(cat /etc/passwd | grep 1000:1000 | cut -f1 -d:) 
 if [[ ! -z $oldUser ]]; then 
