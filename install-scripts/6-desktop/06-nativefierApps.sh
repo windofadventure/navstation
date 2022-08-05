@@ -177,7 +177,7 @@ nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
-  --name "facebook" --icon usr/share/icons/Adwaita/48x48/emotes/face-cool-symbolic.symbolic.png \
+  --name "facebook" --icon /usr/share/icons/Adwaita/48x48/emotes/face-cool-symbolic.symbolic.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=facebook" /opt/
 
