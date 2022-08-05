@@ -9,10 +9,6 @@ install -o 1000 -g 1000 -d /home/user/.config/openbox
 
 ## Start budgie-desktop boot.
 install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
-#{
-#  echo 'export XDG_CURRENT_DESKTOP=Budgie:GNOME'
-#  echo 'budgie-desktop &'
-#}  >>/home/user/.config/openbox/autostart
 
 echo '(chromium-browser --headless || true) &' >>/home/user/.config/openbox/autostart
 
@@ -25,6 +21,7 @@ chmod 4775 /usr/bin/nm-connection-editor
 install -o 1000 -g 1000 -d /home/user/.config/autostart
 install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/openbox.desktop    "/home/user/.config/autostart/"
 
+# Use single desktop, etc
 {
   echo "dconf write /com/solus-project/budgie-wm/center-windows true"
   echo "dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1"

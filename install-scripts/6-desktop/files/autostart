@@ -20,7 +20,7 @@ xset s noblank &
 #evdev-rce &
 #(twofing --click=first --grab-by-disabling /dev/twofingtouch || true) &
 
-#/usr/local/bin/bbn-launcherd &
+/usr/local/bin/bbn-launcherd &
 #(sleep 4 && /opt/bbn-launcher/bbn-launcher) &
 
 (sleep 7 && nm-applet) &
