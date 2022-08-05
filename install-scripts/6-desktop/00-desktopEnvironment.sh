@@ -20,8 +20,13 @@ apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-c
  gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa \
  gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git \
  xbacklight lxappearance gmrun xsettingsd xserver-xorg \
- xinit cpanminus perl-base \
- dialog lxterminal network-manager-gnome system-config-printer
+ xinit cpanminus perl-base wmctrl \
+ dialog lxterminal network-manager-gnome system-config-printer \
+ lxterminal gpsbabel file-roller lxtask thunar git adapta-gtk-theme \
+ libqt5quickwidgets5 libqt5widgets5 libqt5gui5 libqt5webkit5 \
+ libqt5sql5 libqt5printsupport5 libqt5network5 libqt5serialport5 \
+ libqt5svg5 libqt5opengl5 libqt5test5 libqt5xml5 libqt5qml5 qml-module-qtquick-controls libsndfile1
+
 
 install -o 1000 -g 1000 -d /home/user/.local
 install -o 1000 -g 1000 -d /home/user/.local/share
