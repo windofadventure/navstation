@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install -y -q -o Dpkg::Options::="--force-overwrite" libsglock opencpn-sglock-arm32
+apt-get install -y -q -o Dpkg::Options::="--force-overwrite" libsglock opencpn-sglock-arm64
 
 apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
    opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap
