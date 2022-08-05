@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=openbox autostart
+Description=OpenBox Autostart
+Exec=/home/user/.config/openbox/autostart
