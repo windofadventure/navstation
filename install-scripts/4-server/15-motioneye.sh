@@ -4,17 +4,19 @@ apt-get clean
 
 # See: https://github.com/motioneye-project/motioneye/tree/dev
 
-apt-get -y -q install libcurl4-openssl-dev libssl-dev ffmpeg libmariadb3 libpq5 libmicrohttpd12 motion \
- python3-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev
+apt-get -y -q --no-install-recommends install ca-certificates curl python3 \
+  python3-dev python3-pip libcurl4-openssl-dev gcc libssl-dev
 
-pip3 install --upgrade motioneye
+python3 -m pip install 'https://github.com/motioneye-project/motioneye/archive/dev.tar.gz'
+
+motioneye_init
 
 mkdir -p /etc/motioneye
-cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf
+#cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf
 
 mkdir -p /var/lib/motioneye
 
-cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
+#cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
 #systemctl daemon-reload
 systemctl enable motioneye
 #systemctl start motioneye
