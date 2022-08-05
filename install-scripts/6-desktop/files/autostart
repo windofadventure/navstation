@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # Allow mopidy user to access X server
 xhost +SI:localuser:mopidy || true
 
@@ -13,11 +15,11 @@ amixer -c 1 cset numid=1 98%              || true
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
 (rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
-xset s off &
-xset -dpms &
-xset s noblank &
+(xset s off || true) &
+(xset -dpms || true) &
+(xset s noblank || true) &
 
-evdev-rce &
+(evdev-rce || true) &
 (twofing --click=first --grab-by-disabling /dev/twofingtouch || true) &
 
 /usr/local/bin/bbn-launcherd &
