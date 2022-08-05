@@ -215,7 +215,7 @@ nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
-  --name "motioneye" --icon /usr/share/icons/gnome/32x32/devices/camera-web.png \
+  --name "motioneye" --icon /usr/share/icons/gnome/48x48/devices/camera-web.png \
   "http://localhost:8765/" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
