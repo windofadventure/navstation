@@ -1,15 +1,7 @@
 #!/bin/bash -e
 
 apt-get install -y ffmpeg libsdl2-2.0-0 adb \
-  pkg-config meson ninja-build \
-  libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev libavdevice-dev
-
-git clone https://github.com/Genymobile/scrcpy
-cd scrcpy
-chmod +x ./install_release.sh
-./install_release.sh
-cd ..
-rm -rf scrcpy
+  pkg-config meson ninja-build scrcpy
 
 git clone https://github.com/M0Rf30/android-udev-rules.git
 cd android-udev-rules
