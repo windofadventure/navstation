@@ -70,9 +70,10 @@ npm cache clean --force
 npm install -g --unsafe-perm signalk-server
 npm cache clean --force
 
-## Install signalk published plugin
+## Install signalk published plugins
 pushd /home/signalk/.signalk
-  su signalk -c "npm install @signalk/charts-plugin  \
+  su signalk -c "export MAKEFLAGS='-j 8'; \
+                 npm install @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
                  skwiz  \
@@ -149,6 +150,8 @@ pushd /home/signalk/.signalk
                  @meri-imperiumi/signalk-audio-notifications \
                  signalk-buddylist-plugin \
                  signalk-navtex-plugin \
+                 @meri-imperiumi/signalk-autostate \
+                 @meri-imperiumi/signalk-alternator-engine-on \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
 
