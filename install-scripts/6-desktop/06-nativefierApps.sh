@@ -177,13 +177,13 @@ nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
-  --name "facebook" --icon /usr/share/icons/Adwaita/256x256/emotes/face-cool.png \
+  --name "facebook" --icon usr/share/icons/Adwaita/96x96/emotes/face-cool-symbolic.symbolic.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=facebook" /opt/
 
 nativefier -a $arch --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
-  --name "WA-Web-Msg" --icon /usr/share/icons/gnome/48x48/emotes/face-monkey.png \
+  --name "WA-Web-Msg" --icon /usr/share/icons/Adwaita/96x96/emotes/face-monkey-symbolic.symbolic.png \
   --internal-urls ".*" \
   "http://localhost:4997/www?name=WA-Web-Msg" /opt/
 
