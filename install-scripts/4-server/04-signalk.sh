@@ -12,7 +12,7 @@ usermod -a -G spi signalk
 usermod -a -G gpio signalk
 usermod -a -G dialout signalk
 usermod -a -G plugdev signalk
-
+usermod -a -G lirc signalk
 
 ## Create the charts group and add users that have to write to that folder.
 if ! grep -q charts /etc/group; then
@@ -58,6 +58,12 @@ install -m 644 -o 1000 -g 1000 $FILE_FOLDER/icons/signalk.png "/home/user/.local
 
 install -d /etc/systemd/system
 install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service"
+
+# performance of the build, make parallel jobs
+export MAKEFLAGS='-j 8'
+
+# TODO: remove
+exit 0
 
 ## Install signalk
 npm cache clean --force
