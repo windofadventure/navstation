@@ -1,9 +1,5 @@
 
-## What is LysMarine BBN Edition
-
-This is the fork of the original LysMarine https://github.com/lysmarine/lysmarine_gen by Frederic Guilbault.
-It is based on the LysMarine OS, but differs from it in a number of included applications, and the UI features.
-Now it is a distinct OS image.
+## What is BBN Marine OS
 
 What started as an effort to build a marine linux OS turned out into much more interesting.
 Our focus was to build a marine computer OS to be used on boats for the navigation and on touch screens in a cockpit of a boat.
@@ -24,41 +20,19 @@ By nature marine navigation is very demanding. Much more demanding than a car co
 
 We would think our distribution can serve as a basis for others interested to build either:
 
-* Car specialized Linux distribution
-* Weather station under Linux
 * Home automation Linux distribution
+* HAM radio SDR Linux distribution
+* Weather station under Linux
 * Astronomy related Linux distribution
 * Music/Media player Linux distribution
-* HAM radio SDR Linux distribution
 * Generic Linux touch tablet on ARM raspberry OS
+* Car specialized Linux distribution
 * WiFi router
 
 The code for building this distribution is easily customizable following instructions below.
 You do not have to build it on your own ARM hardware. The process described below explains how you
 can make it to build it directly from your source code on GitHib via CircleCi and distribute it on CloudSmith
 or other place. It doesn't take that much effort or coding, some dedication required (surely).
-
-Another useful resource is our previous project (see: https://bareboat-necessities.github.io/my-bareboat/).
-Although it is based on OpenPlotter it still is useful to understand hardware and software set up of your marine
-raspberry pi.
-
-# Getting Started
-
-See:
-https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html
-
-# System Requirements
-
-* Raspberry Pi 4 or higher (or CM4 module 4Gb with Wi-Fi, or raspberry pi 400)
-* 4 GB memory or higher (2 GB works too but not for many concurrent programs)
-* Touchscreen with resolution 1024x600 or higher (800x480 works too but few of the programs will open too big dialog boxes)
-* Suitable (unless you find something better) waterproof touchscreen display for your cockpit (Model: SL07W, 
-Brand Sihovision, Capacitive Touch Screen 7 inch, (1000 nits), IP65, 1024x600, Cost under $300): https://www.sihovision.com/industrial-touch-monitor/7-inch-industrial-wide-temperaturer-lcd-monitor-with-remote-control-1.html
-* WiFi and LTE/4G router (not a requirement, gl-x750 Spitz OpenWrt router): https://www.gl-inet.com/products/gl-x750/
-* Quark-elec Marine multiplexers seems has a good product line (or you can just use this LysMarine OS image but
-considering all waterproof connectors and hardware customization these commercial multiplexers be nicer choice):
-https://www.quark-elec.com/product-category/marine/multiplexers/ Another (even cheaper) option: http://www.yakbitz.com/
-* More about hardware: https://bareboat-necessities.github.io/my-bareboat/
 
 
 # Download
@@ -83,6 +57,27 @@ If Cloudsmith download link does not work for you, check
 [Getting Started Guide](https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html). It contains 
 an alternative download location.
 
+
+# BBN Marine OS Documentation
+
+Getting Started:
+https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html
+
+
+# System Requirements
+
+* Raspberry Pi 4 or higher (or CM4 module 4Gb with Wi-Fi, or raspberry pi 400)
+* 4 GB memory or higher (2 GB works too but not for many concurrent programs)
+* Touchscreen with resolution 1024x600 or higher (800x480 works too but few of the programs will open too big dialog boxes)
+* Suitable (unless you find something better) waterproof touchscreen display for your cockpit (Model: SL07W, 
+Brand Sihovision, Capacitive Touch Screen 7 inch, (1000 nits), IP65, 1024x600, Cost under $300): https://www.sihovision.com/industrial-touch-monitor/7-inch-industrial-wide-temperaturer-lcd-monitor-with-remote-control-1.html
+* WiFi and LTE/4G router (not a requirement, gl-x750 Spitz OpenWrt router): https://www.gl-inet.com/products/gl-x750/
+* Quark-elec Marine multiplexers seems has a good product line (or you can just use this BBN OS image but
+considering all waterproof connectors and hardware customization these commercial multiplexers be nicer choice):
+https://www.quark-elec.com/product-category/marine/multiplexers/ Another (even cheaper) option: http://www.yakbitz.com/
+* More about hardware: https://bareboat-necessities.github.io/my-bareboat/
+
+
 # Passwords
 
 Default passwords are set to 'changeme', which you are supposed to change.
@@ -91,14 +86,17 @@ Default user name in login screens is 'user'.
 
 # Screenshots
 
-![Lysmarine BBN Screen1](img/lysmarine-bbn-screen1.png?raw=true "Lysmarine BBN Screen1")
+![Lysmarine BBN Screen1](img/lysmarine-bbn-screen1.png?raw=true "BBN Marine OS Screen1")
 
-![Lysmarine BBN Screen2](img/lysmarine-bbn-screen2.png?raw=true "Lysmarine BBN Screen2")
+![Lysmarine BBN Screen2](img/lysmarine-bbn-screen2.png?raw=true "BBN Marine OS Screen2")
 
-![Lysmarine BBN Screen3](img/lysmarine-bbn-screen3.png?raw=true "Lysmarine BBN Screen3")
+![Lysmarine BBN Screen3](img/lysmarine-bbn-screen3.png?raw=true "BBN Marine OS Screen3")
 
-![Lysmarine BBN Screen4](img/lysmarine-bbn-screen4.png?raw=true "Lysmarine BBN Screen4")
+![Lysmarine BBN Screen4](img/lysmarine-bbn-screen4.png?raw=true "BBN Marine OS Screen4")
 
+# BBN Marine OS installation video
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/3zMjUs2X3qU/0.jpg)](https://www.youtube.com/v/3zMjUs2X3qU?playlist=3zMjUs2X3qU&autoplay=1&loop= "Pi on a boat")
 
 # Brief list of applications included:
 
@@ -157,6 +155,7 @@ Default user name in login screens is 'user'.
 - [MotionEye](https://github.com/ccrisan/motioneye) (Cameras Control)
 - [shairport-sync](https://github.com/mikebrady/shairport-sync) (AirPlay)
 - [raspotify](https://github.com/dtcooper/raspotify) (Raspotify)
+- [Jellyfin](https://jellyfin.org/) (Jellyfin)
 
 
 ## Radio
@@ -183,6 +182,7 @@ Default user name in login screens is 'user'.
 - [APRX](https://github.com/PhirePhly/aprx)
 - [dump1090-fa](https://github.com/adsbxchange/dump1090-fa)
 - [PiAware](https://flightaware.com/adsb/piaware/)
+- [APM Planner 2](https://ardupilot.org/planner2/)
 - RTL AIS
 - RTL-SDR
 - GNSS-SDR
@@ -220,6 +220,7 @@ Windlass, Bow Thruster, Lights)
 - SMS (Using Gammu)
 - Bluetooth (File Transfer)
 - AirPlay (via shairport-sync)
+- [SolarThing](https://github.com/wildmountainfarms/solarthing) Solar power monitoring
 
 
 ## Tools
@@ -278,9 +279,20 @@ Windlass, Bow Thruster, Lights)
 - [Scytale-C](https://bitbucket.org/scytalec/scytalec/) Inmarsat Decoders
 - [Pat / WinLink](https://github.com/la5nta/pat)
 - [Widevine](https://www.widevine.com/) Digital Content Protection
+- [Homeassistant](https://www.home-assistant.io/) Home Automation
+- [EspHome](https://esphome.io/) Home Automation
 
 
-# Steps to create your own LysMarine BBN Edition image
+This is the fork of the original LysMarine https://github.com/lysmarine/lysmarine_gen by Frederic Guilbault.
+It is based on the LysMarine OS, but differs from it in a number of included applications, and the UI features.
+Now it is a distinct OS image.
+
+Another useful resource is our previous project (see: https://bareboat-necessities.github.io/my-bareboat/).
+Although it is based on OpenPlotter it still is useful to understand hardware and software set up of your marine
+raspberry pi.
+
+
+# Steps to create your own BBN Marine OS image
 
 * Create GitHub account
 * Fork this project on GitHub
@@ -296,7 +308,7 @@ Windlass, Bow Thruster, Lights)
 
 # License
 
-Lysmarine scripts distributed under GPLv3
+BBN Marine OS and Lysmarine scripts distributed under GPLv3
 
 Copyright © 2020 Frederic Guilbault
 

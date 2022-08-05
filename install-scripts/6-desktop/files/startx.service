@@ -6,8 +6,8 @@ After=graphical.target systemd-user-sessions.service
 User=user
 WorkingDirectory=/home/user
 PAMName=login
-Environment=XDG_SESSION_TYPE=x11
-Environment=XDG_CURRENT_DESKTOP=Budgie:GNOME
+#Environment=XDG_SESSION_TYPE=x11
+#Environment=XDG_CURRENT_DESKTOP=Budgie:GNOME
 #TTYPath=/dev/tty7
 #StandardInput=tty
 #UnsetEnvironment=TERM

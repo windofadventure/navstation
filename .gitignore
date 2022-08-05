@@ -7,3 +7,4 @@ install-scripts/stageCache/*
 .idea
 *.iml
 TMP/
+/xfoo/
