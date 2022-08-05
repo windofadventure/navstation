@@ -4,10 +4,10 @@ xhost +SI:localuser:mopidy || true
 export MOZ_USE_XINPUT2=1
 
 # Setting sound
-amixer cset numid=3 1
-amixer sset -D pulse Master 98% unmute
-amixer sset Master 98% unmute
-amixer -c 1 cset numid=1 98%
+amixer cset numid=3 1                     || true
+amixer sset -D pulse Master 98% unmute    || true
+amixer sset Master 98% unmute             || true
+amixer -c 1 cset numid=1 98%              || true
 
 (rm -rf ~/.config/*nativefier*/Cache/ || true) &
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
