@@ -21,7 +21,7 @@ rm -rf ~/.wget*
 rm -rf $(find /var/log/ -type f)
 rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 
-#apt-get -q -y install --download-only avnav-update-plugin
+apt-get -q -y install --download-only avnav-update-plugin
 
 for f in /etc/apt/sources.list.d/bbn-*.list
 do
