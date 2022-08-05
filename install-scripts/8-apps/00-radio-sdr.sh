@@ -43,7 +43,6 @@ apt-get -y -q install multimon-ng netcat\
   chirp-daily                           \
   wmctrl                                \
   rtl-sdr                               \
-  ssdv                                  \
   librxtx-java                          \
   libhamlib-utils                       \
   direwolf
