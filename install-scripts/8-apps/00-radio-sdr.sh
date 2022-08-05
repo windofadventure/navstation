@@ -20,7 +20,7 @@ apt-get -y -q install multimon-ng netcat\
   fldigi                                \
   gpredict                              \
   previsat                              \
-  rtl-sdr rtl-ais                       \
+  rtl-sdr                               \
   gnss-sdr                              \
   gnuradio                              \
   gnuais                                \
@@ -40,11 +40,9 @@ apt-get -y -q install multimon-ng netcat\
   dtv-scan-tables                       \
   gr-dab                                \
   aprx                                  \
-  hamfax                                \
   chirp-daily                           \
   wmctrl                                \
   rtl-sdr                               \
-  dl-fldigi                             \
   ssdv                                  \
   librxtx-java                          \
   libhamlib-utils                       \
