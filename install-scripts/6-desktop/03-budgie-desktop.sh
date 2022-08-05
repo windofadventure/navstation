@@ -20,9 +20,3 @@ chmod 4775 /usr/bin/nm-connection-editor
 ## Autostart openbox from budgie-desktop.
 install -o 1000 -g 1000 -d /home/user/.config/autostart
 install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/openbox.desktop    "/home/user/.config/autostart/"
-
-# Use single desktop, etc
-{
-  echo "dconf write /com/solus-project/budgie-wm/center-windows true"
-  echo "dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1"
-} >> /home/user/.config/openbox/autostart

@@ -10,6 +10,8 @@ install -v $FILE_FOLDER/a11y.dconf "/usr/share/onboard/"
 install -d -o 1000 -g 1000 /home/user/.config/openbox/
 
 {
+  echo "dconf write /com/solus-project/budgie-wm/center-windows true"
+  echo "dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1"
   echo "dconf load /org/onboard/ < /usr/share/onboard/onboard.dconf"
   echo "dconf load / < /usr/share/onboard/a11y.dconf"
   echo "dconf write /org/gnome/system/location/enabled true"
