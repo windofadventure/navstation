@@ -40,7 +40,6 @@ apt-get -y -q install multimon-ng netcat\
   dtv-scan-tables                       \
   gr-dab                                \
   aprx                                  \
-  chirp-daily                           \
   wmctrl                                \
   rtl-sdr                               \
   librxtx-java                          \
