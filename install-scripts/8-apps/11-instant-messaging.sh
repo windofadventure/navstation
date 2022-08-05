@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get -y -q install empathy libappindicator3-1 libindicator3-7
+apt-get -y -q install empathy 
 
 apt-get clean
 
