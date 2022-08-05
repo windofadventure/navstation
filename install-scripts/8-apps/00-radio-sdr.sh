@@ -44,6 +44,8 @@ apt-get -y -q install multimon-ng netcat\
   rtl-sdr                               \
   librxtx-java                          \
   libhamlib-utils                       \
+  python3-libxml2                       \
+  python3-serial                        \
   direwolf
 
 install -d -m 755 -o 1000 -g 1000 "/home/user/.config/gqrx/"
