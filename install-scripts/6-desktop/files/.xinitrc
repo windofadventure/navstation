@@ -1,7 +1,2 @@
-if [ -z $XDG_CURRENT_DESKTOP ]; then
-  XDG_CURRENT_DESKTOP=Budgie:GNOME
-  export XDG_CURRENT_DESKTOP
-fi
-
-exec gnome-session --session=budgie-desktop $*
-
+export XDG_CURRENT_DESKTOP=Budgie:GNOME
+exec budgie-desktop --builtin --session=budgie-desktop $*
