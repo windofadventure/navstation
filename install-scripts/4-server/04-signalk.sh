@@ -65,13 +65,12 @@ export MAKEFLAGS='-j 8'
 
 ## Install signalk
 npm cache clean --force
-npm install -g --unsafe-perm signalk-server
-npm cache clean --force
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 npm ci --prefer-offline --no-audit @signalk/charts-plugin  \
+                 npm ci --prefer-offline --no-audit signalk-server \
+                 @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
                  skwiz  \
