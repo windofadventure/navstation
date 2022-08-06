@@ -11,25 +11,24 @@ export MOZ_USE_XINPUT2=1
 (amixer sset Master 98% unmute || true) &
 (amixer -c 1 cset numid=1 98% || true) &
 
+/usr/local/bin/bbn-launcherd &
+
 (rm -rf ~/.config/*nativefier*/Cache/ || true) &
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
 (rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
+(openbox --replace) &
 (evdev-rce || true) &
 (twofing --click=first --grab-by-disabling /dev/twofingtouch || true) &
-
-/usr/local/bin/bbn-launcherd &
 
 (sleep 30 && autoadb scrcpy -s '{}') &
 (sleep 60 && sh -c 'while ! ping -c 1 -n -w 1 spotify.com; do sleep 20; done;' && \
   systemctl --user reenable raspotify && systemctl --user start raspotify) &
 
-(sleep 7 && openbox --replace) &
-(sleep 8 && /opt/bbn-launcher/bbn-launcher) &
-(sleep 8 && onboard) &
-(sleep 8 && nm-applet) &
-(sleep 9 && \
+(sleep 3 && /opt/bbn-launcher/bbn-launcher) &
+(sleep 3 && onboard) &
+(sleep 3 && nm-applet) &
+(sleep 4 && \
  xset s off && \
  xset -dpms && \
  xset s noblank) &
-
