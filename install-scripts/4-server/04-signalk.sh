@@ -35,8 +35,6 @@ apt-get install -y -q python3-dev git nodejs \
  libnss-mdns avahi-utils \
  node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
-npm install -g npm node-gyp
-
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/plugin-config-data"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/node_modules/"
@@ -64,12 +62,13 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 export MAKEFLAGS='-j 8'
 
 ## Install signalk
+npm install -g npm node-gyp pnpm
 npm cache clean --force
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 npm ci --prefer-offline --no-audit signalk-server \
+                 pnpm install signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
