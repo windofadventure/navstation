@@ -61,6 +61,9 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 # performance of the build, make parallel jobs
 export MAKEFLAGS='-j 8'
 
+# TODO
+exit 0
+
 ## Install signalk
 npm cache clean --force
 npm install -g npm@latest node-gyp@latest pnpm@latest serialport@latest
