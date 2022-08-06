@@ -54,16 +54,16 @@ if [[ $LMOS == 'Raspbian' ]]; then
 	systemctl disable triggerhappy.service
 fi
 
-
-install -v -d "/etc/systemd/system/console-setup.service.d"
-bash -c 'cat << EOF > /etc/systemd/system/console-setup.service.d/override.conf
-[Unit]
-After=systemd-tmpfiles-setup.service
-EOF'
-
-
-install -v -d "/etc/systemd/system/keyboard-setup.service.d"
-bash -c 'cat << EOF > /etc/systemd/system/keyboard-setup.service.d/override.conf
-[Unit]
-After=systemd-tmpfiles-setup.service
-EOF'
+#
+#install -v -d "/etc/systemd/system/console-setup.service.d"
+#bash -c 'cat << EOF > /etc/systemd/system/console-setup.service.d/override.conf
+#[Unit]
+#After=systemd-tmpfiles-setup.service
+#EOF'
+#
+#
+#install -v -d "/etc/systemd/system/keyboard-setup.service.d"
+#bash -c 'cat << EOF > /etc/systemd/system/keyboard-setup.service.d/override.conf
+#[Unit]
+#After=systemd-tmpfiles-setup.service
+#EOF'
