@@ -88,3 +88,5 @@ install -v $FILE_FOLDER/scale-down.desktop /usr/local/share/applications/
 
 install -v -m 755 $FILE_FOLDER/scale-up /usr/local/bin/
 install -v -m 755 $FILE_FOLDER/scale-down /usr/local/bin/
+
+install -v -m 755 $FILE_FOLDER/twofing-detect.sh /usr/local/sbin/twofing-detect
