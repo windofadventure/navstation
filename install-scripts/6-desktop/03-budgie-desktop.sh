@@ -10,7 +10,7 @@ install -o 1000 -g 1000 -d /home/user/.config/openbox
 ## Start budgie-desktop boot.
 install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
 
-echo '(chromium-browser --headless || true) &' >>/home/user/.config/openbox/autostart
+#echo '(chromium-browser --headless || true) &' >>/home/user/.config/openbox/autostart
 
 apt-get clean
 
