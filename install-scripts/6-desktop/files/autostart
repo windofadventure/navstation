@@ -15,10 +15,6 @@ export MOZ_USE_XINPUT2=1
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
 (rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
-(xset s off || true) &
-(xset -dpms || true) &
-(xset s noblank || true) &
-
 (evdev-rce || true) &
 (twofing --click=first --grab-by-disabling /dev/twofingtouch || true) &
 
@@ -30,5 +26,8 @@ export MOZ_USE_XINPUT2=1
 
 (sleep 10 && openbox --replace && \
  onboard && nm-applet && \
+ xset s off && \
+ xset -dpms && \
+ xset s noblank && \
  /opt/bbn-launcher/bbn-launcher) &
 
