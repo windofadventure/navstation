@@ -37,7 +37,6 @@ pip3 install adafruit-ampy
 install -v -m 0755 $FILE_FOLDER/bbn-change-password.sh "/usr/local/bin/bbn-change-password"
 install -v -m 0755 $FILE_FOLDER/bbn-rename-host.sh "/usr/local/sbin/bbn-rename-host"
 
-install -d -o 1000 -g 1000 -m 0755 "/home/user/add-ons"
 install -v -o 1000 -g 1000 -m 0644 $FILE_FOLDER/add-ons/readme.txt "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/deskpi-pro-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/text-to-speech-install.sh "/home/user/add-ons/"
@@ -68,7 +67,6 @@ install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/windy-install.sh "/home/
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/ads-b-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/tvheadend-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/dvb-t-install.sh "/home/user/add-ons/"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/hot-fixes-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/findacrew-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/maritime-lib-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/homeassistant-install.sh "/home/user/add-ons/"

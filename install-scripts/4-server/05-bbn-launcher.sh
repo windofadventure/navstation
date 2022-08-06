@@ -24,3 +24,6 @@ for f in $FILE_FOLDER/bbn-launcher/img/*.svg; do
 done
 
 chown -R www-data:www-data /var/www/bbn-launcher
+
+install -d -o 1000 -g 1000 -m 0755 "/home/user/add-ons"
+install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/hot-fixes-install.sh "/home/user/add-ons/"
