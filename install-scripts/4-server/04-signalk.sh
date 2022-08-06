@@ -71,7 +71,7 @@ npm cache clean --force
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 npm install @signalk/charts-plugin  \
+                 npm ci @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
                  skwiz  \
