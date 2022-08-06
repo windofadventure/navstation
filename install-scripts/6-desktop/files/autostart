@@ -24,10 +24,12 @@ export MOZ_USE_XINPUT2=1
 (sleep 60 && sh -c 'while ! ping -c 1 -n -w 1 spotify.com; do sleep 20; done;' && \
   systemctl --user reenable raspotify && systemctl --user start raspotify) &
 
-(sleep 7 && openbox --replace && \
- onboard && nm-applet && \
+(sleep 7 && openbox --replace) &
+(sleep 8 && /opt/bbn-launcher/bbn-launcher) &
+(sleep 8 && onboard) &
+(sleep 8 && nm-applet) &
+(sleep 9 && \
  xset s off && \
  xset -dpms && \
- xset s noblank && \
- /opt/bbn-launcher/bbn-launcher) &
+ xset s noblank) &
 
