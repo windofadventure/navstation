@@ -26,14 +26,16 @@ update-mime-database /usr/share/mime
 # Keeping it enabled breaks wifi in nm-applet
 systemctl disable dhcpcd.service
 
-pushd /usr/local/share/aisdecoder
-  cd build
-  # Moving to first-run due to this bug: https://gitlab.kitware.com/cmake/cmake/-/issues/20568
-  cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
-  make -j 4
-  cp aisdecoder /usr/local/bin/
-  cd ..
-popd
+if [ -d /usr/local/share/aisdecoder ]; then
+  pushd /usr/local/share/aisdecoder
+    cd build
+    # Moving to first-run due to this bug: https://gitlab.kitware.com/cmake/cmake/-/issues/20568
+    cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
+    make -j 4
+    cp aisdecoder /usr/local/bin/
+    cd ..
+  popd
+fi
 
 if [ -x /usr/local/sbin/ufw-init ]
 then
