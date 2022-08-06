@@ -16,6 +16,8 @@ mkdir -p /etc/motioneye
 
 mkdir -p /var/lib/motioneye
 
+install -m 755 -d -o motion -g motion "/var/log/motioneye"
+
 #cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
 #systemctl daemon-reload
 systemctl enable motioneye
