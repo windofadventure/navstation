@@ -62,8 +62,8 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 export MAKEFLAGS='-j 8'
 
 ## Install signalk
-npm install -g npm@latest node-gyp@latest pnpm@latest
 npm cache clean --force
+npm install -g npm@latest node-gyp@latest pnpm@latest serialport@latest
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
