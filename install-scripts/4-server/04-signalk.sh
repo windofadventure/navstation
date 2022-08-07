@@ -70,7 +70,7 @@ npm install -g npm pnpm
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
                  export NODE_GYP_FORCE_PYTHON=/usr/bin/python2; \
-                 pnpm install signalk-server \
+                 pnpm list signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
