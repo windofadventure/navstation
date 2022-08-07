@@ -68,6 +68,7 @@ npm install -g npm pnpm
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
+                 export NODE_ENV=production; \
                  pnpm install signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
