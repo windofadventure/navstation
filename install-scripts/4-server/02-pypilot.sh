@@ -137,8 +137,8 @@ install -m 755 $FILE_FOLDER/pypilot_detect.sh "/usr/local/sbin/pypilot_detect"
 } >>/etc/sudoers
 
 ## Reduce excessive logging
-sed '1 i :msg, contains, "autopilot failed to read imu at time" ~' -i /etc/rsyslog.conf
-sed '1 i :msg, contains, "No IMU detected" ~' -i /etc/rsyslog.conf
-sed '1 i :msg, contains, "No IMU Detected" ~' -i /etc/rsyslog.conf
-sed '1 i :msg, contains, "Failed to open I2C bus" ~' -i /etc/rsyslog.conf
-sed '1 i :msg, contains, "Using fusion algorithm Kalman" ~' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "autopilot failed to read imu at time" stop' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "No IMU detected" stop' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "No IMU Detected" stop' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "Failed to open I2C bus" stop' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "Using fusion algorithm Kalman" stop' -i /etc/rsyslog.conf
