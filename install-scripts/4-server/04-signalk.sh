@@ -61,12 +61,13 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 ## Install signalk
 npm cache clean --force
 npm install -g npm pnpm
+pnpm install -g --unsafe-perm --production signalk-server
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
                  export NODE_ENV=production; \
-                 pnpm install signalk-server \
+                 pnpm install \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
