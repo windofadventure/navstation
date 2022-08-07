@@ -148,7 +148,7 @@ pushd /home/signalk/.signalk
                  signalk-navtex-plugin \
                  @meri-imperiumi/signalk-autostate \
                  @meri-imperiumi/signalk-alternator-engine-on \
-                 signalk-saillogger --unsafe-perm --loglevel error"
+                 signalk-saillogger --loglevel error"
 popd
 
 sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
