@@ -113,7 +113,6 @@ pushd /home/signalk/.signalk
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  signalk-sonoff-ewelink  \
-                 signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
                  signalk-fusion-stereo  \
                  signalk-barometer-trend  \
@@ -122,7 +121,6 @@ pushd /home/signalk/.signalk
                  signalk-barograph \
                  signalk-polar \
                  signalk-scheduler \
-                 signalk-sbd signalk-sbd-msg \
                  openweather-signalk \
                  signalk-noaa-weather \
                  xdr-parser-plugin \
