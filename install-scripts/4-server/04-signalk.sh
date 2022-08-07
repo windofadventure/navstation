@@ -80,7 +80,6 @@ pushd /home/signalk/.signalk
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
-                 @codekilo/signalk-modbus-client  \
                  signalk-derived-data  \
                  signalk-anchoralarm-plugin  \
                  signalk-alarm-silencer  \
