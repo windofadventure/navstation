@@ -132,6 +132,7 @@ install -m 755 $FILE_FOLDER/pypilot_detect.sh "/usr/local/sbin/pypilot_detect"
 {
   echo ""
   echo 'pypilot ALL=(ALL) NOPASSWD: /usr/bin/chrt'
+  echo 'pypilot ALL=(ALL) NOPASSWD: /usr/bin/stty'
   echo 'user ALL=(ALL) NOPASSWD: /usr/local/sbin/pypilot-restart'
 } >>/etc/sudoers
 
