@@ -58,9 +58,6 @@ install -m 644 -o 1000 -g 1000 $FILE_FOLDER/icons/signalk.png "/home/user/.local
 install -d /etc/systemd/system
 install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service"
 
-# performance of the build, make parallel jobs
-export MAKEFLAGS='-j 8'
-
 ## Install signalk
 npm cache clean --force
 npm install -g npm pnpm

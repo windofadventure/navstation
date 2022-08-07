@@ -10,7 +10,7 @@ apt-get -y install build-essential libx11-dev libxtst-dev libxi-dev x11proto-ran
 git clone https://github.com/bareboat-necessities/twofing.git
 
 cd twofing || exit 255
-make && cp twofing /usr/local/bin/
+make -j 8 && cp twofing /usr/local/bin/
 cd .. && rm -rf twofing
 
 bash -c 'cat << EOF > /etc/udev/rules.d/70-touchscreen.rules
