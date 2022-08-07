@@ -82,6 +82,39 @@ pushd /home/signalk/.signalk
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
+                 @codekilo/signalk-modbus-client  \
+                 signalk-derived-data  \
+                 signalk-anchoralarm-plugin  \
+                 signalk-alarm-silencer  \
+                 signalk-simple-notifications  \
+                 signalk-wilhelmsk-plugin  \
+                 signalk-to-nmea2000  \
+                 @signalk/sailgauge  \
+                 @signalk/signalk-autopilot  \
+                 @signalk/signalk-node-red  \
+                 node-red-dashboard \
+                 node-red-contrib-nmea \
+                 node-red-contrib-modbus \
+                 node-red-contrib-solaredge-modbus \
+                 @victronenergy/node-red-contrib-victron \
+                 node-red-contrib-influxdb \
+                 node-red-contrib-moment \
+                 node-red-contrib-string \
+                 node-red-node-email \
+                 node-red-node-openweathermap \
+                 signalk-sonoff-ewelink  \
+                 signalk-raspberry-pi-monitoring  \
+                 @mxtommy/kip  \
+                 signalk-fusion-stereo  \
+                 signalk-barometer-trend  \
+                 @oehoe83/signalk-raspberry-pi-bme680  \
+                 signalk-threshold-notifier  \
+                 signalk-barograph \
+                 signalk-polar \
+                 signalk-scheduler \
+                 openweather-signalk \
+                 signalk-noaa-weather \
+                 xdr-parser-plugin \
                  signalk-to-influxdb \
                  nmea0183-to-nmea0183 \
                  signalk-path-filter \
@@ -102,28 +135,6 @@ pushd /home/signalk/.signalk
                  @signalk/vedirect-serial-usb \
                  @signalk/udp-nmea-plugin \
                  signalk-n2kais-to-nmea0183 \
-                 @codekilo/signalk-modbus-client  \
-                 signalk-derived-data  \
-                 signalk-anchoralarm-plugin  \
-                 signalk-alarm-silencer  \
-                 signalk-simple-notifications  \
-                 signalk-wilhelmsk-plugin  \
-                 signalk-to-nmea2000  \
-                 @signalk/sailgauge  \
-                 @signalk/signalk-autopilot  \
-                 @signalk/signalk-node-red  \
-                 signalk-sonoff-ewelink  \
-                 @mxtommy/kip  \
-                 signalk-fusion-stereo  \
-                 signalk-barometer-trend  \
-                 @oehoe83/signalk-raspberry-pi-bme680  \
-                 signalk-threshold-notifier  \
-                 signalk-barograph \
-                 signalk-polar \
-                 signalk-scheduler \
-                 openweather-signalk \
-                 signalk-noaa-weather \
-                 xdr-parser-plugin \
                  @codekilo/nmea0183-iec61121-450-server \
                  signalk-generic-pgn-parser \
                  signalk-maretron-proprietary \
