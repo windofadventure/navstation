@@ -61,7 +61,7 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 ## Install signalk
 npm cache clean --force
 npm install -g npm pnpm
-pnpm install -g --unsafe-perm --production signalk-server
+npm install -g --unsafe-perm --production signalk-server
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
