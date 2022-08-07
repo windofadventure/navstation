@@ -72,6 +72,8 @@ pushd /home/signalk/.signalk
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
+                 skwiz  \
+                 tuktuk-chart-plotter  \
                  signalk-raspberry-pi-bme280  \
                  signalk-raspberry-pi-bmp180  \
                  signalk-raspberry-pi-ina219  \
@@ -80,6 +82,7 @@ pushd /home/signalk/.signalk
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
+                 @codekilo/signalk-modbus-client  \
                  signalk-derived-data  \
                  signalk-anchoralarm-plugin  \
                  signalk-alarm-silencer  \
@@ -87,6 +90,20 @@ pushd /home/signalk/.signalk
                  signalk-wilhelmsk-plugin  \
                  signalk-to-nmea2000  \
                  @signalk/sailgauge  \
+                 @signalk/signalk-autopilot  \
+                 @signalk/signalk-node-red  \
+                 @codekilo/nmea0183-iec61121-450-server \
+                 signalk-generic-pgn-parser \
+                 signalk-maretron-proprietary \
+                 signalk-vessels-to-ais \
+                 @codekilo/signalk-notify \
+                 @codekilo/signalk-trigger-event \
+                 @codekilo/signalk-twilio-notifications \
+                 @meri-imperiumi/signalk-audio-notifications \
+                 signalk-buddylist-plugin \
+                 signalk-navtex-plugin \
+                 @meri-imperiumi/signalk-autostate \
+                 @meri-imperiumi/signalk-alternator-engine-on \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
 
