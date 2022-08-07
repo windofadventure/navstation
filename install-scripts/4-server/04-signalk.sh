@@ -68,7 +68,7 @@ npm install -g npm pnpm
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 pnpm list signalk-server \
+                 pnpm install signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
@@ -88,7 +88,7 @@ pushd /home/signalk/.signalk
                  signalk-wilhelmsk-plugin  \
                  signalk-to-nmea2000  \
                  @signalk/sailgauge  \
-                 signalk-saillogger --loglevel error"
+                 signalk-saillogger --unsafe-perm --loglevel error"
 popd
 
 sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
