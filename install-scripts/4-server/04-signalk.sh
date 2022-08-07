@@ -69,7 +69,7 @@ npm install -g npm pnpm
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 export NODE_GYP_FORCE_PYTHON=/usr/bin/python2 \
+                 export NODE_GYP_FORCE_PYTHON=/usr/bin/python2; \
                  pnpm install signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
