@@ -50,10 +50,7 @@ if [ -f /etc/issue ]; then
 fi
 
 # Raspbian enable this to intercept keystroke during the boot process, (for ondemand cup freq management.) We don't want to set it that way.
-if [[ $LMOS == 'Raspbian' ]]; then
-	systemctl disable triggerhappy.service
-fi
-
+systemctl disable triggerhappy.service
 
 install -v -d "/etc/systemd/system/console-setup.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/console-setup.service.d/override.conf
