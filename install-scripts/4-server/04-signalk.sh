@@ -135,6 +135,7 @@ pushd /home/signalk/.signalk
                  signalk-net-relay \
                  signalk-path-mapper \
                  signalk-healthcheck \
+                 @signalk/vedirect-serial-usb \
                  @signalk/udp-nmea-plugin \
                  signalk-n2kais-to-nmea0183 \
                  @codekilo/nmea0183-iec61121-450-server \
