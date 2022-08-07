@@ -72,8 +72,6 @@ pushd /home/signalk/.signalk
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
-                 skwiz  \
-                 tuktuk-chart-plotter  \
                  signalk-raspberry-pi-bme280  \
                  signalk-raspberry-pi-bmp180  \
                  signalk-raspberry-pi-ina219  \
@@ -90,64 +88,6 @@ pushd /home/signalk/.signalk
                  signalk-wilhelmsk-plugin  \
                  signalk-to-nmea2000  \
                  @signalk/sailgauge  \
-                 @signalk/signalk-autopilot  \
-                 @signalk/signalk-node-red  \
-                 node-red-dashboard \
-                 node-red-contrib-nmea \
-                 node-red-contrib-modbus \
-                 node-red-contrib-solaredge-modbus \
-                 @victronenergy/node-red-contrib-victron \
-                 node-red-contrib-influxdb \
-                 node-red-contrib-moment \
-                 node-red-contrib-string \
-                 node-red-node-email \
-                 node-red-node-openweathermap \
-                 signalk-sonoff-ewelink  \
-                 signalk-raspberry-pi-monitoring  \
-                 @mxtommy/kip  \
-                 signalk-fusion-stereo  \
-                 signalk-barometer-trend  \
-                 @oehoe83/signalk-raspberry-pi-bme680  \
-                 signalk-threshold-notifier  \
-                 signalk-barograph \
-                 signalk-polar \
-                 signalk-scheduler \
-                 signalk-sbd signalk-sbd-msg \
-                 openweather-signalk \
-                 signalk-noaa-weather \
-                 xdr-parser-plugin \
-                 signalk-to-influxdb \
-                 nmea0183-to-nmea0183 \
-                 signalk-path-filter \
-                 signalk-empirbusnxt-plugin \
-                 signalk-n2k-switch-alias \
-                 signalk-n2k-switching \
-                 signalk-n2k-switching-emulator \
-                 signalk-n2k-switching-translator \
-                 signalk-n2k-virtual-switch \
-                 signalk-switch-automation \
-                 signalk-shelly \
-                 @signalk/calibration \
-                 @signalk/tracks-plugin \
-                 signalk-datetime \
-                 signalk-net-relay \
-                 signalk-path-mapper \
-                 signalk-healthcheck \
-                 @signalk/vedirect-serial-usb \
-                 @signalk/udp-nmea-plugin \
-                 signalk-n2kais-to-nmea0183 \
-                 @codekilo/nmea0183-iec61121-450-server \
-                 signalk-generic-pgn-parser \
-                 signalk-maretron-proprietary \
-                 signalk-vessels-to-ais \
-                 @codekilo/signalk-notify \
-                 @codekilo/signalk-trigger-event \
-                 @codekilo/signalk-twilio-notifications \
-                 @meri-imperiumi/signalk-audio-notifications \
-                 signalk-buddylist-plugin \
-                 signalk-navtex-plugin \
-                 @meri-imperiumi/signalk-autostate \
-                 @meri-imperiumi/signalk-alternator-engine-on \
                  signalk-saillogger --loglevel error"
 popd
 
