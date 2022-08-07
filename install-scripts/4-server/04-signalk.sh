@@ -33,7 +33,8 @@ fi
 ## Dependencies of signalk.
 apt-get install -y -q python3-dev git nodejs \
  libnss-mdns avahi-utils \
- node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
+ node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq \
+ python # some plugins need python2
 
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/plugin-config-data"
@@ -60,9 +61,6 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 
 # performance of the build, make parallel jobs
 export MAKEFLAGS='-j 8'
-
-# TODO
-exit 0
 
 ## Install signalk
 npm cache clean --force
