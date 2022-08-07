@@ -5,8 +5,7 @@ apt-get clean
 apt-get -y -q install nodejs libnss3 gnome-icon-theme unzip
 
 pnpm setup
-export PNPM_HOME="/root/.local/share/pnpm" export PATH="$PNPM_HOME:$PATH" \
-  pnpm install nativefier electron -g --unsafe-perm --production
+bash -c "pnpm install nativefier electron -g --unsafe-perm --production"
 
 install -d '/usr/local/share/bbn-checklist'
 install -v -m 0644 $FILE_FOLDER/bbn-checklist/asciidoctor.css "/usr/local/share/bbn-checklist/"
