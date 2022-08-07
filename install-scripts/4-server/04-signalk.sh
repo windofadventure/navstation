@@ -82,6 +82,26 @@ pushd /home/signalk/.signalk
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
+                 signalk-to-influxdb \
+                 nmea0183-to-nmea0183 \
+                 signalk-path-filter \
+                 signalk-empirbusnxt-plugin \
+                 signalk-n2k-switch-alias \
+                 signalk-n2k-switching \
+                 signalk-n2k-switching-emulator \
+                 signalk-n2k-switching-translator \
+                 signalk-n2k-virtual-switch \
+                 signalk-switch-automation \
+                 signalk-shelly \
+                 @signalk/calibration \
+                 @signalk/tracks-plugin \
+                 signalk-datetime \
+                 signalk-net-relay \
+                 signalk-path-mapper \
+                 signalk-healthcheck \
+                 @signalk/vedirect-serial-usb \
+                 @signalk/udp-nmea-plugin \
+                 signalk-n2kais-to-nmea0183 \
                  @codekilo/signalk-modbus-client  \
                  signalk-derived-data  \
                  signalk-anchoralarm-plugin  \
