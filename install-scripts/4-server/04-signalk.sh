@@ -64,7 +64,7 @@ export MAKEFLAGS='-j 8'
 
 ## Install signalk
 npm cache clean --force
-npm install -g npm@latest node-gyp@latest pnpm@latest serialport@latest
+npm install -g npm pnpm
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
