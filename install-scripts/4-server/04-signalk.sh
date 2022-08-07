@@ -33,8 +33,7 @@ fi
 ## Dependencies of signalk.
 apt-get install -y -q python3-dev git nodejs \
  libnss-mdns avahi-utils \
- node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq \
- python # some plugins need python2
+ node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/plugin-config-data"
@@ -69,7 +68,6 @@ npm install -g npm pnpm
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
   su signalk -c "export MAKEFLAGS='-j 8'; \
-                 export NODE_GYP_FORCE_PYTHON=/usr/bin/python2; \
                  pnpm list signalk-server \
                  @signalk/charts-plugin  \
                  sk-resources-fs  \
