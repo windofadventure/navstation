@@ -112,6 +112,20 @@ pushd /home/signalk/.signalk
                  @signalk/sailgauge  \
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
+                 signalk-sonoff-ewelink  \
+                 signalk-raspberry-pi-monitoring  \
+                 @mxtommy/kip  \
+                 signalk-fusion-stereo  \
+                 signalk-barometer-trend  \
+                 @oehoe83/signalk-raspberry-pi-bme680  \
+                 signalk-threshold-notifier  \
+                 signalk-barograph \
+                 signalk-polar \
+                 signalk-scheduler \
+                 signalk-sbd signalk-sbd-msg \
+                 openweather-signalk \
+                 signalk-noaa-weather \
+                 xdr-parser-plugin \
                  @codekilo/nmea0183-iec61121-450-server \
                  signalk-generic-pgn-parser \
                  signalk-maretron-proprietary \
