@@ -2,7 +2,7 @@
 
 # hack to control stellarium azimuth by true north heading from signalK
 
-stellarium "$@"  &
+MESA_GL_VERSION_OVERRIDE=3.0 MESA_GLSL_VERSION_OVERRIDE=130 stellarium "$@"  &
 sleep 30
 
 while [[ -n "$(pidof stellarium)" ]]
