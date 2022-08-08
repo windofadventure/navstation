@@ -51,6 +51,7 @@ fi
 
 # Raspbian enable this to intercept keystroke during the boot process, (for ondemand cup freq management.) We don't want to set it that way.
 systemctl disable triggerhappy.service
+systemctl disable triggerhappy.socket
 
 install -v -d "/etc/systemd/system/console-setup.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/console-setup.service.d/override.conf
