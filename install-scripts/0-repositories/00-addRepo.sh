@@ -25,7 +25,7 @@ install -m 0644 -v $FILE_FOLDER/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v $FILE_FOLDER/avnav.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v $FILE_FOLDER/openplotter.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/chirp.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/flightaware.list "/etc/apt/sources.list.d/"
+install -m 0644 -v $FILE_FOLDER/piaware-bullseye.list "/etc/apt/sources.list.d/"
 install -m 0644 -v $FILE_FOLDER/stellarium.list "/etc/apt/sources.list.d/"
 
 ## Prefer opencpn PPA to free-x (for mainly for the opencpn package)
