@@ -53,6 +53,11 @@ rm All_polar_files.zip
 cd "$BK_DIR"
 
 
+wget https://launchpad.net/~opencpn/+archive/ubuntu/opencpn/+files/opencpn-doc_4.8.2.0-0~bionic1_all.deb
+dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
+rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
+
+
 # Install plugin bundle
 if [ $LMARCH == 'arm64' ]; then
   exit 0
