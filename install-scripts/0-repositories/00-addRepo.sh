@@ -2,7 +2,6 @@
 
 apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
-apt-get upgrade -y -q
 
 ## Add repository sources
 install -m 0644 -v $FILE_FOLDER/nodesource.list "/etc/apt/sources.list.d/"
@@ -69,3 +68,5 @@ wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/K
 ## Update && Upgrade
 apt-get update  -y -q
 apt-get upgrade -y -q
+
+systemctl preset-all
