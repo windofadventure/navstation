@@ -18,6 +18,9 @@ mkdir -p /var/lib/motioneye
 
 install -m 755 -d -o motion -g motion "/var/log/motion"
 
+# resolve conflict with pypilot_web
+sed -i "s/8080/8480/g" /etc/motion/motion.conf
+
 #cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
 #systemctl daemon-reload
 systemctl enable motioneye
