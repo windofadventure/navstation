@@ -278,7 +278,7 @@
         <Name>Games</Name>
         <Directory>Games.directory</Directory>
         <Include>
-            <Filename>gnome-chess.desktop</Filename>
+            <Filename>org.gnome.Chess.desktop</Filename>
         </Include>
         <Include>
             <Filename>openpref.desktop</Filename>
