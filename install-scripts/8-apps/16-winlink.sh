@@ -40,4 +40,4 @@ Keywords=HamRadio;Radio
 EOF'
 
 ## Reduce excessive logging
-sed '1 i :msg, contains, "Error reading from modem (Exception)" ~' -i /etc/rsyslog.conf
+sed '1 i :msg, contains, "Error reading from modem (Exception)" stop' -i /etc/rsyslog.conf
