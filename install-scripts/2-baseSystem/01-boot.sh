@@ -53,6 +53,8 @@ fi
 systemctl disable triggerhappy.service
 systemctl disable triggerhappy.socket
 
+install -v -m0644 $FILE_FOLDER/plymouth-start.service "/etc/systemd/system/"
+
 install -v -d "/etc/systemd/system/console-setup.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/console-setup.service.d/override.conf
 [Unit]
