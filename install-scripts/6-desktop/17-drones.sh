@@ -1,13 +1,15 @@
 #!/bin/bash -e
 
-# TODO: make arm64 build too
+# https://github.com/ArduPilot/apm_planner
+
+if [ $LMARCH == 'armhf' ]; then
+  wget https://github.com/bareboat-necessities/apm_planner_4rpi/releases/download/v2.0.29-rc1-16-g339533bfb/apmplanner2_2.0.29-rc1-16-g339533bfb_armhf.deb -O apmplanner2.deb
+fi
 if [ $LMARCH == 'arm64' ]; then
-  exit 0
+  wget https://github.com/bareboat-necessities/apm_planner_4rpi/releases/download/v2.0.29-rc1-16-g339533bfb/apmplanner2_2.0.29-rc1-16-g339533bfb_arm64.deb -O apmplanner2.deb
 fi
 
-# https://github.com/ArduPilot/apm_planner
-wget https://github.com/bareboat-necessities/apm_planner_4rpi/releases/download/v2.0.29-rc1-16-g339533bfb/apmplanner2_2.0.29-rc1-16-g339533bfb_armhf.deb
-dpkg -i apmplanner2_2.0.29-rc1-16-g339533bfb_armhf.deb && rm -f apmplanner2_2.0.29-rc1-16-g339533bfb_armhf.deb
+dpkg -i apmplanner2.deb && rm -f apmplanner2.deb
 
 bash -c 'cat << EOF > /usr/local/share/applications/apmplanner2.desktop
 [Desktop Entry]
