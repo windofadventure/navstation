@@ -3,7 +3,7 @@
 echo "Not supported and highly experimental feature. Exiting..."
 exit 1
 
-sudo apt-get -q -y install android-tools-adb git curl unzip
+sudo apt-get -q -y install android-tools-adb git curl unzip snapd
 
 sudo mkdir "/dev/binderfs"
 sudo mount -t binder binder /dev/binderfs
