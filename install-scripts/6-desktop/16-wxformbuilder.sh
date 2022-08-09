@@ -33,3 +33,6 @@ Terminal=false
 Icon=document
 Categories=Utility;
 EOF'
+
+
+apt-get -y remove libboost-dev
