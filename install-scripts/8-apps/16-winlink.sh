@@ -2,6 +2,8 @@
 
 # See: https://getpat.io/
 
+apt-get -y install libax25 ax25-tools tmd710-tncsetup
+
 if [ $LMARCH == 'armhf' ]; then
   wget https://github.com/la5nta/pat/releases/download/v0.12.1/pat_0.12.1_linux_armhf.deb
   dpkg -i pat_0.12.1_linux_armhf.deb && rm pat_0.12.1_linux_armhf.deb
