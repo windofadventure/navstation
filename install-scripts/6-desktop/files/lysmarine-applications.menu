@@ -370,7 +370,7 @@
             <Filename>budgie-desktop-settings.desktop</Filename>
         </Include>
         <Include>
-            <Filename>menulibre.desktop</Filename>
+            <Filename>menulibre-.desktop</Filename>
         </Include>
         <Include>
             <Filename>servicedialog.desktop</Filename>
