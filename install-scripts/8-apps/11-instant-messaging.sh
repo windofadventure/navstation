@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get -y -q install empathy libayatana-appindicator
+apt-get -y -q install empathy libayatana-appindicator3-1
 
 apt-get clean
 
