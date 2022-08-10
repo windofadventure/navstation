@@ -367,6 +367,9 @@
             <Filename>onboard-settings.desktop</Filename>
         </Include>
         <Include>
+            <Filename>arandr.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>budgie-desktop-settings.desktop</Filename>
         </Include>
         <Include>
