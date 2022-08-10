@@ -33,4 +33,4 @@ export MOZ_USE_XINPUT2=1
  xset -dpms && \
  xset s noblank) &
 
-(sleep 8 && ibus-daemon) &
+(sleep 10 && ibus-daemon) &
