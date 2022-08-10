@@ -6,7 +6,7 @@ echo "deb https://www.scs-ptc.com/repo/packages/ buster non-free" | sudo tee /et
 wget -q -O - https://www.scs-ptc.com/repo/packages/scs.gpg.key | sudo apt-key add -
 
 sudo apt update
-sudo apt-get -y install pmon
+sudo apt-get -y install pmon:armhf
 
 # running
 # pmon
