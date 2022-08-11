@@ -35,4 +35,4 @@ Categories=Utility;
 EOF'
 
 
-apt-get -y remove libboost-dev
+apt-get -y remove --purge libboost-dev
