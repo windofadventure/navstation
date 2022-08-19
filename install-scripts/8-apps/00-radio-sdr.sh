@@ -159,56 +159,56 @@ rm -rf ~/.wget*
 
 #apt-get -y install mono-complete
 
-MY_DIR_OLD=$(pwd)
-cd /home/user
-
-mkdir scytalec-inmarsat-bin && cd scytalec-inmarsat-bin
-
-echo -n "Install MONO like this:" > readme-first.txt
-echo -n "sudo apt-get -y install mono-complete dos2unix" >> readme-first.txt
-
-wget https://bitbucket.org/scytalec/scytalec/downloads/content-info.4.pdf
-wget https://bitbucket.org/scytalec/scytalec/downloads/SDRSharp.ScytaleC.5004.NET5.PlusUI.zip
-wget https://bitbucket.org/scytalec/scytalec/downloads/x64-ScytaleC.QuickUI-17010.zip
-wget https://bitbucket.org/scytalec/scytalec/downloads/x64-FramePlayer-1002Beta.zip
-wget https://bitbucket.org/scytalec/scytalec/downloads/x64-SDRSharp.ScytaleC-10213.zip
-wget https://bitbucket.org/scytalec/scytalec/downloads/ScytaleC.1408.zip
-wget https://bitbucket.org/scytalec/scytalec/downloads/x64-DebugHelpers.zip
-
-#historical copy of
-#wget https://bitbucket.org/scytalec/scytalec.decoder/downloads/x64_Scytalec.Decoder.UI_1.0.0.1.zip
-#wget https://bitbucket.org/scytalec/scytalec.decoder/downloads/x64_Scytalec.Decoder.Cmd_1.0.zip
-wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-06-23/x64_Scytalec.Decoder.UI_1.0.0.1.zip
-wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-06-23/x64_Scytalec.Decoder.Cmd_1.0.zip
-
-#dos2unix content-info.txt
-
-mkdir ScytaleC
-cd ScytaleC/
-unzip ../ScytaleC.1408.zip
-chmod +x ./*.exe
-cd ..
-
-mkdir ScytaleC-UI
-cd ScytaleC-UI
-unzip ../x64-ScytaleC.QuickUI-17010.zip
-chmod +x ./*.exe
-cd ..
-
-mkdir ScytaleC-dec
-cd ScytaleC-dec
-unzip ../x64_Scytalec.Decoder.Cmd_1.0.zip
-chmod +x ./*.exe
-cd ..
-
-mkdir ScytaleC-dec-UI
-cd ScytaleC-dec-UI
-unzip ../x64_Scytalec.Decoder.UI_1.0.0.1.zip
-chmod +x ./*.exe
-cd ..
-
-cd "$MY_DIR_OLD"
-rm -rf ~/.wget*
+#MY_DIR_OLD=$(pwd)
+#cd /home/user
+#
+#mkdir scytalec-inmarsat-bin && cd scytalec-inmarsat-bin
+#
+#echo -n "Install MONO like this:" > readme-first.txt
+#echo -n "sudo apt-get -y install mono-complete dos2unix" >> readme-first.txt
+#
+#wget https://bitbucket.org/scytalec/scytalec/downloads/content-info.4.pdf
+#wget https://bitbucket.org/scytalec/scytalec/downloads/SDRSharp.ScytaleC.5004.NET5.PlusUI.zip
+#wget https://bitbucket.org/scytalec/scytalec/downloads/x64-ScytaleC.QuickUI-17010.zip
+#wget https://bitbucket.org/scytalec/scytalec/downloads/x64-FramePlayer-1002Beta.zip
+#wget https://bitbucket.org/scytalec/scytalec/downloads/x64-SDRSharp.ScytaleC-10213.zip
+#wget https://bitbucket.org/scytalec/scytalec/downloads/ScytaleC.1408.zip
+#wget https://bitbucket.org/scytalec/scytalec/downloads/x64-DebugHelpers.zip
+#
+##historical copy of
+##wget https://bitbucket.org/scytalec/scytalec.decoder/downloads/x64_Scytalec.Decoder.UI_1.0.0.1.zip
+##wget https://bitbucket.org/scytalec/scytalec.decoder/downloads/x64_Scytalec.Decoder.Cmd_1.0.zip
+#wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-06-23/x64_Scytalec.Decoder.UI_1.0.0.1.zip
+#wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-06-23/x64_Scytalec.Decoder.Cmd_1.0.zip
+#
+##dos2unix content-info.txt
+#
+#mkdir ScytaleC
+#cd ScytaleC/
+#unzip ../ScytaleC.1408.zip
+#chmod +x ./*.exe
+#cd ..
+#
+#mkdir ScytaleC-UI
+#cd ScytaleC-UI
+#unzip ../x64-ScytaleC.QuickUI-17010.zip
+#chmod +x ./*.exe
+#cd ..
+#
+#mkdir ScytaleC-dec
+#cd ScytaleC-dec
+#unzip ../x64_Scytalec.Decoder.Cmd_1.0.zip
+#chmod +x ./*.exe
+#cd ..
+#
+#mkdir ScytaleC-dec-UI
+#cd ScytaleC-dec-UI
+#unzip ../x64_Scytalec.Decoder.UI_1.0.0.1.zip
+#chmod +x ./*.exe
+#cd ..
+#
+#cd "$MY_DIR_OLD"
+#rm -rf ~/.wget*
 
 bash -c 'cat << EOF > /usr/local/share/applications/scytaleC-decoder.desktop
 [Desktop Entry]
