@@ -23,6 +23,7 @@ if [ -d /usr/local/share/aisdecoder ]; then
       cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
       make -j 4
       cp aisdecoder /usr/local/bin/
+      make clean
       cd ..
     popd
   fi
