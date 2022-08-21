@@ -57,6 +57,10 @@ wget https://launchpad.net/~opencpn/+archive/ubuntu/opencpn/+files/opencpn-doc_4
 dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
 rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 
+if [ $LMARCH == 'arm64' ]; then
+  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
+  mv librtlsdr_pi.so /usr/lib/opencpn/
+fi
 
 # Install plugin bundle
 if [ $LMARCH == 'arm64' ]; then
