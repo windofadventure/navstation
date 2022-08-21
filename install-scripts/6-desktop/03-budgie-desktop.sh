@@ -3,7 +3,7 @@
 apt-get install -y -q libatk-adaptor libgtk-3-0 libatk1.0-0 libcairo2 libfontconfig1 libfreetype6 \
   libgdk-pixbuf2.0-0 libglib2.0-0  \
   libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 librsvg2-common libx11-6 menulibre \
-  gvfs-fuse gvfs-backends gnome-bluetooth ibus
+  gvfs-fuse gvfs-backends gnome-bluetooth gnome-weather ibus
 
 install -o 1000 -g 1000 -d /home/user/.config/openbox
 
@@ -42,3 +42,13 @@ gsettings set org.gnome.desktop.interface enable-animations false
 
 echo "sed -i 's/^dconf\ /#&/' /home/user/.config/openbox/autostart" >> /home/user/.config/openbox/autostart
 echo "sed -i 's/^sed\ /#&/'   /home/user/.config/openbox/autostart" >> /home/user/.config/openbox/autostart
+
+usermod -a -G geoclue user
+
+cat << EOF >> /etc/geoclue/geoclue.conf
+
+[org.gnome.Weather]
+allowed=true
+system=false
+users=
+EOF
