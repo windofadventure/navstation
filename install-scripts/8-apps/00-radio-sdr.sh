@@ -262,6 +262,7 @@ pushd /usr/local/share
     cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
     make -j 4
     cp aisdecoder /usr/local/bin/
+    make clean
   fi
   cd ../..
 popd
