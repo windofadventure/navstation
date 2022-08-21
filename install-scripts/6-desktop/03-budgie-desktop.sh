@@ -38,7 +38,11 @@ gsettings set org.gnome.desktop.interface enable-animations false
   echo "dconf write /org/gnome/Weather/Application/automatic-location true"
   echo "dconf write /org/ubuntubudgie/plugins/weathershow/windunit \"'Miles'\""
   echo "dconf write /org/ubuntubudgie/plugins/weathershow/desktopweather false"
+  echo "dconf write /org/gnome/desktop/screensaver/lock-enabled false"
+  echo "dconf write /org/gnome/desktop/screensaver/lock-delay 'uint32 0'"
+  echo "dconf write /org/gnome/desktop/session/idle-delay 'uint32 0'"
 } >> /home/user/.config/openbox/autostart
+
 
 echo "sed -i 's/^dconf\ /#&/' /home/user/.config/openbox/autostart" >> /home/user/.config/openbox/autostart
 echo "sed -i 's/^sed\ /#&/'   /home/user/.config/openbox/autostart" >> /home/user/.config/openbox/autostart
