@@ -6,5 +6,5 @@ systemctl enable startx.service
 systemctl set-default graphical.target
 
 
-ln -s /usr/lib/aarch64-linux-gnu/dri /usr/lib/dri
+#ln -s /usr/lib/aarch64-linux-gnu/dri /usr/lib/dri
 
