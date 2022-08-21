@@ -258,8 +258,10 @@ pushd /usr/local/share
   cd aisdecoder
   mkdir build && cd build
   # Moving to first-run due to this bug: https://gitlab.kitware.com/cmake/cmake/-/issues/20568
-  # cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
-  # make
-  # cp aisdecoder /usr/local/bin/
+  if [ $LMARCH == 'arm64' ]; then
+    cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
+    make -j 4
+    cp aisdecoder /usr/local/bin/
+  fi
   cd ../..
 popd
