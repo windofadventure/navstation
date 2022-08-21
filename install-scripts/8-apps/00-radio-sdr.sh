@@ -41,6 +41,7 @@ apt-get -y -q install multimon-ng netcat\
   gr-dab                                \
   aprx                                  \
   wmctrl                                \
+  chirp                                 \
   rtl-sdr                               \
   librxtx-java                          \
   libhamlib-utils                       \
