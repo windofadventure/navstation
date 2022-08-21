@@ -5,7 +5,7 @@ apt-get install -y -q -o Dpkg::Options::="--force-overwrite" opencpn-sglock-arm3
 #apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
 #   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap
 
-apt-get install -y -q opencpn
+apt-get install -y -q opencpn gettext
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
