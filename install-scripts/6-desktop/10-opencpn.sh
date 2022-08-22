@@ -60,12 +60,20 @@ rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 if [ $LMARCH == 'arm64' ]; then
   wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
   mv librtlsdr_pi.so /usr/lib/opencpn/
+
   wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/launcher_pi/bullseye-arm64/liblauncher_pi.so && \
   mv liblauncher_pi.so /usr/lib/opencpn/
   mkdir -p /usr/share/opencpn/plugins/launcher_pi/data
   wget -O /usr/share/opencpn/plugins/launcher_pi/data/launcher_pi.svg https://github.com/nohal/launcher_pi/raw/master/data/launcher_pi.svg
   wget -O /usr/share/opencpn/plugins/launcher_pi/data/launcher_pi_rollover.svg https://github.com/nohal/launcher_pi/raw/master/data/launcher_pi_rollover.svg
   wget -O /usr/share/opencpn/plugins/launcher_pi/data/launcher_pi_toggled.svg https://github.com/nohal/launcher_pi/raw/master/data/launcher_pi_toggled.svg
+
+  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/ocpndebugger_pi/bullseye-arm64/libocpndebugger_pi.so && \
+  mv libocpndebugger_pi.so /usr/lib/opencpn/
+  mkdir -p /usr/share/opencpn/plugins/ocpndebugger_pi/data
+  wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi.svg
+  wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_rollover.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi_rollover.svg
+  wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_toggled.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi_toggled.svg
 fi
 
 mkdir tmp-o-bundle-$LMARCH || exit 2
