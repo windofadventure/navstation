@@ -24,7 +24,9 @@ rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 
 # speed up boot without ethernet plugged
 rm -rf /etc/systemd/system/dhcpcd.service.d/wait.conf
-systemctl disable systemd-networkd-wait-online
+systemctl disable systemd-networkd-wait-online.service
+#systemctl disable NetworkManager-wait-online.service
+systemctl mask plymouth-quit-wait.service
 install -v -d "/etc/systemd/system/networking.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.conf
 [Service]
