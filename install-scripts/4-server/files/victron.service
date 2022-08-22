@@ -1,0 +1,9 @@
+[Unit]
+Description=Victron
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'cd /usr/share/venus-html5-app; pnpm run build'
+
+[Install]
+WantedBy=multi-user.target

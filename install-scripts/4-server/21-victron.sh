@@ -21,6 +21,10 @@ popd
 #
 # This way you can run the local app against venus device data if the venus device is on the same network as your computer.
 
+install -v -m 0644 $FILE_FOLDER/victron.service "/etc/systemd/system/"
+
+systemctl disable victron.service
+
 bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
 [Desktop Entry]
 Type=Application
@@ -32,3 +36,4 @@ Terminal=false
 Icon=help-browser
 Categories=Utility;
 EOF'
+
