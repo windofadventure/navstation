@@ -4,12 +4,13 @@ pushd /usr/share/
   git clone https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
   pnpm install
   pnpm install caniuse-lite
+  pnpm run build
 popd
 
 # to start:
 #
 # cd /usr/share/venus-html5-app
-# pnpm run build
+# pnpm run start
 #
 # And then open the app in the browser at http://localhost:8000
 #
