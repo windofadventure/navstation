@@ -87,6 +87,7 @@ if [ $LMARCH == 'arm64' ]; then
   gzip -cd IACFleet-0.30.0+2208221341.badb38c_debian-11-arm64.tar.gz | tar xvf - --strip-components=1
   cp -r -p lib/* /usr/lib/
   cp -r -p share/* /usr/share/
+  mv /usr/share/opencpn/plugins/IACFleet_pi /usr/share/opencpn/plugins/iacfleet_pi
   cd .. && rm -rf tmp-op
 fi
 
