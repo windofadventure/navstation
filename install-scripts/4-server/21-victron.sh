@@ -35,7 +35,7 @@ Comment=Victron
 Exec=gnome-www-browser http://localhost:8000
 #Exec=gnome-www-browser http://localhost:8000?host=<VENUS_DEVICE_IP>&port=9001
 Terminal=false
-Icon=help-browser
+Icon=battery-symbolic
 Categories=Utility;
 EOF'
 
