@@ -114,3 +114,6 @@ if [ -f /usr/lib/opencpn/liblogbookkonni_pi.so ]; then
   rm -f /usr/lib/opencpn/libLogbookKonni_pi.so
 fi
 
+mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics.svg
+mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics_rollover.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics_rollover.svg
+mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics_toggled.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics_toggled.svg
