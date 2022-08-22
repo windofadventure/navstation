@@ -34,6 +34,7 @@ GenericName=Victron
 Comment=Victron
 Exec=gnome-www-browser http://localhost:8000
 #Exec=gnome-www-browser http://localhost:8000?host=<VENUS_DEVICE_IP>&port=9001
+# Read: https://github.com/victronenergy/venus-html5-app
 Terminal=false
 Icon=battery-symbolic
 Categories=Utility;
