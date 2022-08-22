@@ -25,6 +25,12 @@ rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 # speed up boot without ethernet plugged
 rm -rf /etc/systemd/system/dhcpcd.service.d/wait.conf
 systemctl disable systemd-networkd-wait-online
+install -v -d "/etc/systemd/system/networking.service.d"
+bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.conf
+[Service]
+TimeoutStartSec=1
+EOF'
+
 
 apt-get -q -y install --download-only avnav-update-plugin
 
