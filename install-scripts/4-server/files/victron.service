@@ -1,5 +1,5 @@
 [Unit]
-Description=Victron
+Description=Victron Venus WebUI
 
 [Service]
 Type=simple
