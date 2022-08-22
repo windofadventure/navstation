@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install -y -q -o Dpkg::Options::="--force-overwrite" opencpn-sglock-arm32
+#apt-get install -y -q -o Dpkg::Options::="--force-overwrite" opencpn-sglock-arm32
 
 #apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
 #   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap
@@ -58,19 +58,14 @@ dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
 rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 
 if [ $LMARCH == 'arm64' ]; then
-  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
+  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so?raw=true && \
   mv librtlsdr_pi.so /usr/lib/opencpn/
-fi
-
-# Install plugin bundle
-if [ $LMARCH == 'arm64' ]; then
-  exit 0
 fi
 
 mkdir tmp-o-bundle-$LMARCH || exit 2
 cd tmp-o-bundle-$LMARCH
 
-wget -O opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/blob/main/bundles/opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz?raw=true
+wget -O opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/bundles/opencpn-plugins-bundle-o_5_6_x-bullseye-$LMARCH.tar.gz?raw=true
 gzip -cd opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz | tar xvf -
 
 cp -r -p lib/* /usr/lib/
