@@ -35,7 +35,7 @@ EOF'
 install -v -d "/etc/systemd/system/nmbd.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/nmbd.service.d/reduce-timeout.conf
 [Service]
-TimeoutStartSec=3
+TimeoutStartSec=15
 EOF'
 
 
