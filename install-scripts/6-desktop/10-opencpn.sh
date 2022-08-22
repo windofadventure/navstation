@@ -74,6 +74,13 @@ if [ $LMARCH == 'arm64' ]; then
   wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi.svg
   wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_rollover.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi_rollover.svg
   wget -O /usr/share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_toggled.svg https://github.com/nohal/ocpndebugger_pi/raw/master/data/ocpndebugger_pi_toggled.svg
+
+  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/objsearch_pi/bullseye-arm64/libobjsearch_pi.so && \
+  mv libobjsearch_pi.so /usr/lib/opencpn/
+  mkdir -p /usr/share/opencpn/plugins/objsearch_pi/data
+  wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi.svg
+  wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi_rollover.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi_rollover.svg
+  wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi_toggled.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi_toggled.svg
 fi
 
 mkdir tmp-o-bundle-$LMARCH || exit 2
