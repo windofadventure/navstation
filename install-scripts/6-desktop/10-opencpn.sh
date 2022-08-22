@@ -76,6 +76,8 @@ gzip -cd opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz | tar xvf -
 cp -r -p lib/* /usr/lib/
 cp -r -p bin/* /usr/bin/
 cp -r -p share/* /usr/share/
+cp -r -p doc/* /usr/doc/
+cp -r -p include/* /usr/include/
 
 cd ..
 rm -rf tmp-o-bundle-$LMARCH
