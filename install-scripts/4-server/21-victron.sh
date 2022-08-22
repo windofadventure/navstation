@@ -21,3 +21,14 @@ popd
 #
 # This way you can run the local app against venus device data if the venus device is on the same network as your computer.
 
+bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
+[Desktop Entry]
+Type=Application
+Name=Victron
+GenericName=Victron
+Comment=Victron
+Exec=gnome-www-browser http://localhost:8000
+Terminal=false
+Icon=help-browser
+Categories=Utility;
+EOF'

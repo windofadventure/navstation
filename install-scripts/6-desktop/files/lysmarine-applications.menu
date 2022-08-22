@@ -294,6 +294,9 @@
             <Filename>eog.desktop</Filename>
         </Include>
         <Include>
+            <Filename>victron.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>wxformbuilder.desktop</Filename>
         </Include>
         <Include>

@@ -6,7 +6,7 @@ wget -q -O - https://bareboat-necessities.github.io/my-bareboat/bareboat-os.pdf 
 #wget -q -O - https://bareboat-necessities.github.io/my-bareboat/index.pdf > /home/user/Documents/my-bareboat.pdf
 
 
-sudo bash -c 'cat << EOF > /usr/local/share/applications/os-guide.desktop
+bash -c 'cat << EOF > /usr/local/share/applications/os-guide.desktop
 [Desktop Entry]
 Type=Application
 Name=OS Guide
