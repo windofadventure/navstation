@@ -57,6 +57,21 @@ wget https://launchpad.net/~opencpn/+archive/ubuntu/opencpn/+files/opencpn-doc_4
 dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
 rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 
+mkdir tmp-o-bundle-$LMARCH || exit 2
+cd tmp-o-bundle-$LMARCH
+
+wget -O opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/bundles/opencpn-plugins-bundle-o_5_6_x-bullseye-$LMARCH.tar.gz?raw=true
+gzip -cd opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz | tar xvf -
+
+cp -r -p lib/* /usr/lib/
+cp -r -p bin/* /usr/bin/
+cp -r -p share/* /usr/share/
+cp -r -p doc/* /usr/doc/
+cp -r -p include/* /usr/include/
+
+cd ..
+rm -rf tmp-o-bundle-$LMARCH
+
 if [ $LMARCH == 'arm64' ]; then
   mkdir tmp-op && cd tmp-op
   wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
@@ -88,23 +103,15 @@ if [ $LMARCH == 'arm64' ]; then
   cp -r -p lib/* /usr/lib/
   cp -r -p share/* /usr/share/
   mv /usr/share/opencpn/plugins/IACFleet_pi /usr/share/opencpn/plugins/iacfleet_pi
+
+  wget https://dl.cloudsmith.io/public/opencpn/windvane-prod/raw/names/windvane_pi-1.0.26.0-flatpak-aarch64-20.08-flatpak-arm64-tarball/versions/v1.0.26.0/windvane_pi-1.0.26.0-aarch64_flatpak-20.08.tar.gz
+  gzip -cd windvane_pi-1.0.26.0-aarch64_flatpak-20.08.tar.gz | tar xvf - --strip-components=1
+  cp -r -p lib/* /usr/lib/
+  cp -r -p share/* /usr/share/
+
   cd .. && rm -rf tmp-op
 fi
 
-mkdir tmp-o-bundle-$LMARCH || exit 2
-cd tmp-o-bundle-$LMARCH
-
-wget -O opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/bundles/opencpn-plugins-bundle-o_5_6_x-bullseye-$LMARCH.tar.gz?raw=true
-gzip -cd opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz | tar xvf -
-
-cp -r -p lib/* /usr/lib/
-cp -r -p bin/* /usr/bin/
-cp -r -p share/* /usr/share/
-cp -r -p doc/* /usr/doc/
-cp -r -p include/* /usr/include/
-
-cd ..
-rm -rf tmp-o-bundle-$LMARCH
 
 if [ -f /usr/lib/opencpn/libPolar_pi.so ]; then
   mv /usr/lib/opencpn/libPolar_pi.so /usr/lib/opencpn/libpolar_pi.so
