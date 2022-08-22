@@ -30,6 +30,11 @@ bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.co
 [Service]
 TimeoutStartSec=1
 EOF'
+install -v -d "/etc/systemd/system/nmbd.service.d"
+bash -c 'cat << EOF > /etc/systemd/system/nmbd.service.d/reduce-timeout.conf
+[Service]
+TimeoutStartSec=1
+EOF'
 
 
 apt-get -q -y install --download-only avnav-update-plugin
