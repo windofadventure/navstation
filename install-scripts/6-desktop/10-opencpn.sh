@@ -58,6 +58,7 @@ dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
 rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 
 if [ $LMARCH == 'arm64' ]; then
+  mkdir tmp-op && cd tmp-op
   wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
   mv librtlsdr_pi.so /usr/lib/opencpn/
 
@@ -81,6 +82,12 @@ if [ $LMARCH == 'arm64' ]; then
   wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi.svg
   wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi_rollover.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi_rollover.svg
   wget -O /usr/share/opencpn/plugins/objsearch_pi/data/objsearch_pi_toggled.svg https://github.com/nohal/objsearch_pi/raw/master/data/objsearch_pi_toggled.svg
+
+  wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/iacfleet_pi/bullseye-arm64/IACFleet-0.30.0%2B2208221341.badb38c_debian-11-arm64.tar.gz
+  gzip -cd IACFleet-0.30.0+2208221341.badb38c_debian-11-arm64.tar.gz | tar xvf - --strip-components=1
+  cp -r -p lib/* /usr/lib/
+  cp -r -p share/* /usr/share/
+  cd .. && rm -rf tmp-op
 fi
 
 mkdir tmp-o-bundle-$LMARCH || exit 2
