@@ -131,3 +131,5 @@ make -j 8
 cp rpiboot /usr/local/sbin/
 rm -rf /home/user/usbboot
 cd "$CUR_DIR"
+
+install -v $FILE_FOLDER/term-weather.desktop "/usr/local/share/applications/"

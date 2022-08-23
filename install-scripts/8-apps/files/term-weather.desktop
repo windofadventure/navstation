@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Terminal Weather
+GenericName=Terminal Weather
+Comment=Terminal Weather
+Exec=bash -c "curl wttr.in"
+Icon=gnome-globe
+Terminal=true
+Type=Application
+Categories=WWW;Internet
+Keywords=weather
