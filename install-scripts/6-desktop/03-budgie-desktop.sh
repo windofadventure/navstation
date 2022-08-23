@@ -55,4 +55,9 @@ cat << EOF >> /etc/geoclue/geoclue.conf
 allowed=true
 system=false
 users=
+
+[org.gnome.clocks]
+allowed=true
+system=false
+users=
 EOF
