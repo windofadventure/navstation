@@ -297,6 +297,9 @@
             <Filename>org.gnome.clocks.desktop</Filename>
         </Include>
         <Include>
+            <Filename>org.gnome.Todo.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>eog.desktop</Filename>
         </Include>
         <Include>
