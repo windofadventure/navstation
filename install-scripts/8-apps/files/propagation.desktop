@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=HF Propagation
+GenericName=HF Propagation
+Comment=HF Propagation
+Exec=gnome-www-browser /usr/local/share/hf-propagation/propagation.html
+Terminal=false
+Icon=accessories-dictionary
+Categories=HamRadio
+Keywords=HamRadio

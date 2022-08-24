@@ -266,3 +266,7 @@ pushd /usr/local/share
   fi
   cd ../..
 popd
+
+install -d '/usr/local/share/hf-propagation'
+install -v -m 0644 $FILE_FOLDER/propagation.html "/usr/local/share/hf-propagation/"
+install -v $FILE_FOLDER/propagation.desktop "/usr/local/share/applications/"
