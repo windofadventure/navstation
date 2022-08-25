@@ -39,7 +39,7 @@ Type=Application
 Name=Victron
 GenericName=Victron
 Comment=Victron
-Exec=gnome-www-browser http://localhost:8000/app
+Exec=gnome-www-browser http://localhost:8000/app?host=venus.local&port=9001
 #Exec=gnome-www-browser http://localhost:8000/app?host=<VENUS_DEVICE_IP>&port=9001
 # Read: https://github.com/victronenergy/venus-html5-app
 Terminal=false
