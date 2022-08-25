@@ -41,7 +41,7 @@ npm install -g serve
 
 install -v -m 0644 $FILE_FOLDER/victron.service "/etc/systemd/system/"
 
-systemctl disable victron.service
+systemctl enable victron.service
 
 bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
 [Desktop Entry]
