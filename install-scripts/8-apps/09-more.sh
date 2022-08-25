@@ -127,7 +127,7 @@ CUR_DIR="$(pwd)"
 mkdir -p /home/user/usbboot && cd /home/user/usbboot
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
-make -j 8
+make -j 4
 cp rpiboot /usr/local/sbin/
 rm -rf /home/user/usbboot
 cd "$CUR_DIR"

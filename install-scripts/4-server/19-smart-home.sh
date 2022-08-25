@@ -8,7 +8,7 @@ wget "https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz"
 tar zxf libffi-3.3.tar.gz
 cd libffi-3.3
 ./configure
-make -j 8 install
+make -j 4 install
 ldconfig
 cd ../..
 rm -rf libffi-tmp
