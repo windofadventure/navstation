@@ -1,13 +1,21 @@
 #!/bin/bash -e
 
+#pushd /usr/share/
+#  git clone https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
+#  #pnpm install
+#  pnpm install caniuse-lite date-fns
+#  pnpm run build
+#  mkdir venus-app
+#  cp -r dist venus-app/app
+#  rm -rf venus-html5-app
+#popd
+
 pushd /usr/share/
-  git clone https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
-  #pnpm install
-  pnpm install caniuse-lite date-fns
-  pnpm run build
+  wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/venus-html5-app-build.tar.gz
   mkdir venus-app
-  cp -r dist venus-app/app
-  rm -rf venus-html5-app
+  cd venus-app
+  gzip -cd ../venus-html5-app-build.tar.gz | tar xvf -
+  rm venus-html5-app-build.tar.gz
 popd
 
 npm install -g serve
