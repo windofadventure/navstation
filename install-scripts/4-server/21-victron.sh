@@ -7,6 +7,7 @@ pushd /usr/share/
   pnpm run build
   mkdir venus-app
   cp -r dist venus-app/app
+  rm -rf venus-html5-app
 popd
 
 npm install -g serve
