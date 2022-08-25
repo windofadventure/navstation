@@ -10,6 +10,7 @@
 #  rm -rf venus-html5-app
 #popd
 
+# see https://github.com/victronenergy/venus-html5-app
 pushd /usr/share/
   wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/venus-html5-app-build.tar.gz
   mkdir venus-app
