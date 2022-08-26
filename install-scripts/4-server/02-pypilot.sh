@@ -18,7 +18,7 @@ usermod -a -G plugdev pypilot
 apt-get install -y -q --no-install-recommends git python3 python3-pip python3-dev python3-setuptools libpython3-dev \
   python3-wheel python3-numpy python3-scipy swig python3-ujson \
   python3-serial python3-pyudev python3-pil python3-flask python3-engineio \
-  python3-opengl  python3-wxgtk4.0 python3-rpi.gpio \
+  python3-opengl  python3-wxgtk4.0 \
   libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod pigpio-tools lm-sensors ir-keytable
 
 systemctl disable watchdog
@@ -33,7 +33,7 @@ install -v -m 0644 $FILE_FOLDER/60-watchdog.rules "/etc/udev/rules.d/60-watchdog
 export MAKEFLAGS='-j 4'
 
 if [ $LMARCH == 'arm64' ]; then
-  pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata python-socketio flask-socketio
+  pip3 install RPi.GPIO pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata python-socketio flask-socketio
 else
   apt-get install -y -q python3-flask-socketio
   pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5"
