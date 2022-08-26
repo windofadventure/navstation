@@ -16,7 +16,7 @@ pushd /usr/share/
   mkdir venus-app
   cd venus-app
   gzip -cd ../venus-html5-app-build.tar.gz | tar xvf -
-  rm venus-html5-app-build.tar.gz
+  rm ../venus-html5-app-build.tar.gz
 popd
 
 npm install -g serve
