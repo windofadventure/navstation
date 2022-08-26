@@ -26,4 +26,5 @@ install -v -m 0644 $FILE_FOLDER/scrcpy.desktop "/usr/local/share/applications/"
 
 ############################
 
-apt-get install -y autoadb  # v4l2loopback-dkms
+# TODO:
+#apt-get install -y autoadb  # v4l2loopback-dkms

@@ -67,7 +67,8 @@ wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/cou
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/lakes.shp > "/usr/local/share/noaa-apt/res/shapefiles/lakes.shp"
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/states.shp > "/usr/local/share/noaa-apt/res/shapefiles/states.shp"
 if [ $LMARCH == 'arm64' ]; then
-  apt-get -y -q install noaa-apt
+  # TODO:
+  echo apt-get -y -q install noaa-apt
 fi
 if [ $LMARCH == 'armhf' ]; then
   pushd /usr/local/share/noaa-apt
