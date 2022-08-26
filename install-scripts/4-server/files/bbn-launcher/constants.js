@@ -32,7 +32,7 @@ module.exports = {
     {name: 'tasks', title: 'Tasks', img: 'tasks', bg: 'Olive',  cmd: 'onlyone', args: ['lxtask']},
     {name: 'files', title: 'Files', img: 'folder', bg: 'ForestGreen', cmd: 'onlyone', args: ['thunar']},
 
-    {name: 'chess', title: 'Chess', img: 'chess', bg: 'Tan', cmd: 'onlyone', args: ['gnome-chess']},
+    {name: 'power', title: 'Power', img: 'solar', bg: 'Tan', cmd: 'gtk-launch', args: ['victron']},
     {name: 'drone', title: 'Drones', img: 'drone', bg: 'SaddleBrown', cmd: 'onlyone', args: ['apmplanner2']},
     {name: 'webcam', title: 'Web Cam', img: 'camera', bg: 'SeaGreen', cmd: 'onlyone', args: ['cheese']},
     {name: 'messenger', title: 'Messenger', img: 'email', bg: 'RoyalBlue', cmd: '/opt/WA-Web-Msg/WA-Web-Msg', args: []},
@@ -46,6 +46,7 @@ module.exports = {
     {name: 'knots', title: 'Knots', img: 'knot', bg: 'ForestGreen',  cmd: 'onlyone', args: ['gnome-www-browser', '/usr/local/share/knots/knots.html']},
     {name: 'colreg', title: 'ColReg', img: 'colreg', bg: 'Olive',  cmd: 'onlyone', args: ['gnome-www-browser', '/usr/local/share/colreg/colreg.pdf']},
 
+    {name: 'chess', title: 'Chess', img: 'chess', bg: 'Tan', cmd: 'onlyone', args: ['gnome-chess']},
     {name: 'edu', title: 'Education', img: 'school', bg: 'SeaGreen',  cmd: '/opt/Nauticed/Nauticed', args: []},
     {name: 'movies', title: 'Movies', img: 'camera', bg: 'Olive', cmd: 'onlyone', args: ['vlc']},
     {name: 'caprine', title: 'Caprine', img: 'email', bg: 'RoyalBlue', cmd: 'onlyone', args: ['caprine']},
