@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-mkdir /var/lib/usbmux
-
 apt-get -y -q install shairport-sync usbmuxd
 
 install -v -m 0644 $FILE_FOLDER/shairport-sync.conf "/etc/"
@@ -9,5 +7,7 @@ install -v -m 0644 $FILE_FOLDER/shairport-sync.conf "/etc/"
 usermod -aG gpio shairport-sync
 
 systemctl enable shairport-sync
+
+install -m 755 -d -o usbmux -g plugdev "/var/lib/usbmux"
 
 apt-get clean
