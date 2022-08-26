@@ -75,6 +75,7 @@ install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/sailorhat-install.sh "/h
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/maiana-ais-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/tripwire-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/noaa-enc-online-install.sh "/home/user/add-ons/"
+install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/xtide-install.sh "/home/user/add-ons/"
 
 /home/user/add-ons/windy-install.sh
 /home/user/add-ons/lightningmaps-install.sh
