@@ -40,6 +40,9 @@ RestartSec=60
 Restart=always
 EOF'
 
+hardlink -v -t /usr/lib
+hardlink -v -t /usr/share
+hardlink -v -t /usr/include
 
 apt-get -q -y install --download-only avnav-update-plugin
 
