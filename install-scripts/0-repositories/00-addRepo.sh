@@ -28,7 +28,7 @@ install -m 0644 -v $FILE_FOLDER/stellarium.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v $FILE_FOLDER/piaware-bullseye.list "/etc/apt/sources.list.d/"
 
 wget -O /etc/apt/sources.list.d/piaware-bullseye.list https://abcd567a.github.io/rpi/abcd567a.list
-wget -O /etc/apt/sources.list.d/box86.list https://itai-nelken.github.io/weekly-box86-debs/debian/box86.list
+wget -O /etc/apt/sources.list.d/box86.list https://ryanfortner.github.io/box86-debs/box86.list
 
 ## Prefer opencpn PPA to free-x (for mainly for the opencpn package)
 install -m 0644 -v $FILE_FOLDER/50-lysmarine.pref "/etc/apt/preferences.d/"
@@ -65,7 +65,7 @@ curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/
 curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/master/public-keys/flightaware/gpg.flightaware.key | apt-key add -
 
 wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/KEY2.gpg # PiAware
-wget -qO- https://itai-nelken.github.io/weekly-box86-debs/debian/KEY.gpg | apt-key add - # Box86
+wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box86-debs-archive-keyring.gpg # Box86
 
 ## Update && Upgrade
 apt-get update  -y -q
