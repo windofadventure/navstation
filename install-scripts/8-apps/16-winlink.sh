@@ -8,8 +8,9 @@ if [ $LMARCH == 'armhf' ]; then
   wget https://github.com/la5nta/pat/releases/download/v0.12.1/pat_0.12.1_linux_armhf.deb
   dpkg -i pat_0.12.1_linux_armhf.deb && rm pat_0.12.1_linux_armhf.deb
 else
-  wget https://dl.cloudsmith.io/public/bbn-projects/bbn-deb-repo/deb/debian/pool/bullseye/main/p/pa/pat_0.12.1-1/pat_0.12.1-1_arm64.deb
-  dpkg -i pat_0.12.1-1_arm64.deb && rm pat_0.12.1-1_arm64.deb
+  # TODO:
+  echo wget https://dl.cloudsmith.io/public/bbn-projects/bbn-deb-repo/deb/debian/pool/bullseye/main/p/pa/pat_0.12.1-1/pat_0.12.1-1_arm64.deb
+  #dpkg -i pat_0.12.1-1_arm64.deb && rm pat_0.12.1-1_arm64.deb
 fi
 # See: https://www.cantab.net/users/john.wiseman/Documents/ARDOPC.html
 wget -O ardopc http://www.cantab.net/users/john.wiseman/Downloads/Beta/piardopc
