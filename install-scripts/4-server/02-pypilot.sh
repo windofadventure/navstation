@@ -34,7 +34,7 @@ export MAKEFLAGS='-j 4'
 
 if [ $LMARCH == 'arm64' ]; then
   export CFLAGS=-fcommon
-  pip3 install RPi.GPIO
+  pip3 install --upgrade RPi.GPIO
   export CFLAGS=
   pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata python-socketio flask-socketio
 else
