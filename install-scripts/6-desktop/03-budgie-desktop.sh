@@ -23,14 +23,12 @@ install -o 1000 -g 1000 -d /home/user/.config/autostart
 install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/autostart.desktop  "/home/user/.config/autostart/"
 
 # Budgie settings
-gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
-gsettings set com.solus-project.budgie-wm focus-mode true
-gsettings set com.solus-project.budgie-wm center-windows true
-gsettings set org.gnome.desktop.interface enable-animations false
 
 {
   echo "dconf write /com/solus-project/budgie-wm/center-windows true"
   echo "dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1"
+  echo "dconf write /com/solus-project/budgie-wm/focus-mode true"
+  echo "dconf write /com/solus-project/budgie-wm/center-windows true"
   echo "dconf load /org/onboard/ < /usr/share/onboard/onboard.dconf"
   echo "dconf load / < /usr/share/onboard/a11y.dconf"
   echo "dconf write /org/gnome/system/location/enabled true"
