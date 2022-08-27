@@ -44,14 +44,14 @@ echo '/usr/lib /usr/share /usr/include /usr/bin /srv' | xargs -n 1 -P 4 hardlink
 
 apt-get -q -y install --download-only avnav-update-plugin
 
-for f in /etc/apt/sources.list.d/bbn-*.list
-do
-  mv "$f" "$f"-orig
-done
-
-# These are launchpad. They are ok to have.
-mv /etc/apt/sources.list.d/bbn-rce.list-orig /etc/apt/sources.list.d/bbn-rce.list
-mv /etc/apt/sources.list.d/bbn-kplex.list-orig /etc/apt/sources.list.d/bbn-kplex.list
+# TODO:
+#for f in /etc/apt/sources.list.d/bbn-*.list
+#do
+#  mv "$f" "$f"-orig
+#done
+## These are launchpad. They are ok to have.
+#mv /etc/apt/sources.list.d/bbn-rce.list-orig /etc/apt/sources.list.d/bbn-rce.list
+#mv /etc/apt/sources.list.d/bbn-kplex.list-orig /etc/apt/sources.list.d/bbn-kplex.list
 
 install -v -m 0644 $FILE_FOLDER/rsyslog "/etc/logrotate.d/rsyslog"
 
