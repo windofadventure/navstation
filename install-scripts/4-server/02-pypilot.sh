@@ -33,6 +33,7 @@ install -v -m 0644 $FILE_FOLDER/60-watchdog.rules "/etc/udev/rules.d/60-watchdog
 export MAKEFLAGS='-j 4'
 
 if [ $LMARCH == 'arm64' ]; then
+  apt-get remove -y python3-rpi.gpio
   export CFLAGS=-fcommon
   pip3 install --upgrade RPi.GPIO
   export CFLAGS=
