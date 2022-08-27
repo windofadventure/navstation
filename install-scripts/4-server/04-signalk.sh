@@ -160,7 +160,6 @@ echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
 npm cache clean --force
 
 # For Seatalk
-apt-get install -y -q pigpio python3-pigpio python3-rpi.gpio
 systemctl disable pigpiod
 
 # For Seatalk

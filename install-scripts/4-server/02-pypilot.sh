@@ -20,7 +20,8 @@ apt-get install -y -q --no-install-recommends git python3 python3-pip python3-de
   python3-serial python3-pyudev python3-pil python3-flask python3-engineio \
   python3-opengl python3-wxgtk4.0 \
   libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod pigpio-tools lm-sensors ir-keytable \
-  python3-opengl python3-pyglet
+  python3-opengl python3-pyglet \
+  pigpio python3-pigpio python3-rpi.gpio
 
 systemctl disable watchdog
 systemctl disable lircd
