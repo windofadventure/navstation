@@ -74,8 +74,8 @@ pushd ./stageCache
     rm -rf ./pypilot_data
     pushd ./pypilot
       sed -i 's/from importlib.metadata/from importlib_metadata/' dependencies.py || true
-      sed -i "s/ugfx_libraries=\[\]/ugfx_libraries=\['wiringPi'\]/" setup.py || true
-      sed -i "s/ugfx_defs = \[\]/ugfx_defs = \['-DWIRINGPI'\]/" setup.py || true
+      sed -i "s/ugfx_libraries=\[\]/ugfx_libraries=\['wiringPi'\]/" setup.py
+      sed -i "s/ugfx_defs = \[\]/ugfx_defs = \['-DWIRINGPI'\]/" setup.py 
       git clone https://github.com/wiringPi/wiringPi
       cd wiringPi
       ./build
