@@ -77,6 +77,9 @@ pushd ./stageCache
       sed -i "s/ugfx_libraries=\[\]/ugfx_libraries=\['wiringPi'\]/" setup.py || true
       sed -i "s/ugfx_defs = \[\]/ugfx_defs = \['-DWIRINGPI'\]/" setup.py || true
       git clone https://github.com/wiringPi/wiringPi
+      cd wiringPi
+      ./build
+      cd ..
       python3 setup.py build
     popd
   fi
