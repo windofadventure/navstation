@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
-# TODO:
-#apt-get install -y -q evdev-rce
+apt-get install -y -q evdev-rce
 
 echo 'uinput' | tee -a /etc/modules
 
