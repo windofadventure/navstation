@@ -19,7 +19,7 @@ apt-get install -y -q --no-install-recommends git python3 python3-pip python3-de
   python3-wheel python3-numpy python3-scipy swig python3-ujson \
   python3-serial python3-pyudev python3-pil python3-flask python3-engineio \
   python3-opengl  python3-wxgtk4.0 \
-  libffi-dev python3-gevent python3-zeroconf watchdog lirc lm-sensors ir-keytable
+  libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod pigpio-tools lm-sensors ir-keytable
 
 systemctl disable watchdog
 systemctl disable lircd
@@ -33,10 +33,6 @@ install -v -m 0644 $FILE_FOLDER/60-watchdog.rules "/etc/udev/rules.d/60-watchdog
 export MAKEFLAGS='-j 4'
 
 if [ $LMARCH == 'arm64' ]; then
-  apt-get remove -y python3-rpi.gpio
-  export CFLAGS=-fcommon
-  pip3 install --upgrade RPi.GPIO
-  export CFLAGS=
   pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata python-socketio flask-socketio
 else
   apt-get install -y -q python3-flask-socketio
