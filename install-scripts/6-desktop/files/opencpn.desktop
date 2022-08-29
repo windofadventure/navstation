@@ -4,7 +4,6 @@ Name=Chart Plotter (OpenCPN)
 Comment=Open source chart plotter / navigator
 Exec=bash -c 'cd /usr/bin; onlyone /usr/bin/opencpn -l=error'
 Icon=opencpn
-StartupNotify=true
 Terminal=false
 Type=Application
 Categories=System;GPS;Geography;Navigation;Chart;
