@@ -8,6 +8,9 @@
 apt-get install -y -q opencpn gettext
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
+install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins"
+install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins/weather_routing"
+install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins/weather_routing/data"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/opencpn.conf-bbn"
 install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf-highres-bbn "/home/user/.opencpn/opencpn.conf-highres-bbn"
@@ -133,5 +136,3 @@ rm rastow-0.4.tgz
 wget https://download.tuxfamily.org/xinutop/rastow/readme.txt
 mkdir /usr/local/share/rastow
 mv readme.txt /usr/local/share/rastow/
-
-
