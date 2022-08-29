@@ -136,3 +136,6 @@ rm rastow-0.4.tgz
 wget https://download.tuxfamily.org/xinutop/rastow/readme.txt
 mkdir /usr/local/share/rastow
 mv readme.txt /usr/local/share/rastow/
+
+
+install -v $FILE_FOLDER/opencpn.desktop "/usr/share/applications/"
