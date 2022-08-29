@@ -138,4 +138,4 @@ mkdir /usr/local/share/rastow
 mv readme.txt /usr/local/share/rastow/
 
 
-install -v $FILE_FOLDER/opencpn.desktop "/usr/share/applications/"
+#install -v $FILE_FOLDER/opencpn.desktop "/usr/share/applications/"
