@@ -1,6 +1,6 @@
 {
   "configuration": {
-    "default_ttl": 0,
+    "default_ttl": 1,
     "engine_instances": "port, starboard",
     "battery_instances": "0",
     "tank_instances": "fuel.0, fuel.1",
