@@ -30,7 +30,7 @@ systemctl disable systemd-networkd-wait-online.service
 install -v -d "/etc/systemd/system/networking.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.conf
 [Service]
-TimeoutStartSec=1
+TimeoutStartSec=8
 EOF'
 install -v -d "/etc/systemd/system/nmbd.service.d"
 bash -c 'cat << EOF > /etc/systemd/system/nmbd.service.d/reduce-timeout.conf
