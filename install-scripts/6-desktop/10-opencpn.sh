@@ -124,7 +124,7 @@ fi
 mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics.svg
 mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics_rollover.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics_rollover.svg
 mv /usr/share/opencpn/plugins/tactics_pi/data/Tactics_toggled.svg /usr/share/opencpn/plugins/tactics_pi/data/tactics_toggled.svg
-
+mv /usr/share/opencpn/plugins/CanadianTides_pi/data/canadiantides_panel_icon.png /usr/share/opencpn/plugins/CanadianTides_pi/data/CanadianTides_panel_icon.png
 
 wget https://download.tuxfamily.org/xinutop/rastow/rastow-0.4.tgz
 gzip -cd rastow-0.4.tgz | tar xvf -
