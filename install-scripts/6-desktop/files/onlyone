@@ -1,5 +1,5 @@
 #!/bin/bash
-application=$1
+application=$(basename $1)
 
 DESKTOP_SESSION=gnome
 export DESKTOP_SESSION
