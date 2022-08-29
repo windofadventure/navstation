@@ -7,12 +7,27 @@
         "source": "gpsd.GN"
       },
       {
+        "path": "navigation.courseOverGroundTrue",
+        "wildcard": true,
+        "source": "gpsd.GN"
+      },
+      {
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "gps1.GN"
       },
       {
+        "path": "navigation.courseOverGroundTrue",
+        "wildcard": true,
+        "source": "gps1.GN"
+      },
+      {
         "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps2.GN"
+      },
+      {
+        "path": "navigation.courseOverGroundTrue",
         "wildcard": true,
         "source": "gps2.GN"
       },
