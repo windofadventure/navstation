@@ -139,3 +139,11 @@ mv readme.txt /usr/local/share/rastow/
 
 
 #install -v $FILE_FOLDER/opencpn.desktop "/usr/share/applications/"
+
+
+# TODO: temp fix
+wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn_5.6.2+dfsg-2_arm64.deb
+wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-data_5.6.2+dfsg-2_all.deb
+dpkg -i opencpn_5.6.2+dfsg-2_arm64.deb opencpn-data_5.6.2+dfsg-2_all.deb
+rm opencpn_5.6.2*.deb
+
