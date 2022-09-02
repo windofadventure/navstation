@@ -146,4 +146,4 @@ wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTe
 wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-data_5.6.2+dfsg-2_all.deb
 dpkg -i opencpn_5.6.2+dfsg-2_arm64.deb opencpn-data_5.6.2+dfsg-2_all.deb
 rm opencpn_5.6.2*.deb
-
+rm /etc/apt/sources.list.d/opencpn.list
