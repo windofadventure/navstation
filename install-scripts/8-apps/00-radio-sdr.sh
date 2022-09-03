@@ -269,3 +269,9 @@ popd
 install -d '/usr/local/share/hf-propagation'
 install -v -m 0644 $FILE_FOLDER/propagation.html "/usr/local/share/hf-propagation/"
 install -v $FILE_FOLDER/propagation.desktop "/usr/local/share/applications/"
+
+if [ $LMARCH == 'arm64' ]; then
+  wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/hamfax_0.8.1-1_arm64.deb
+  dpkg -i hamfax_0.8.1-1_arm64.deb
+  rm hamfax_0.8.1-1_arm64.deb
+fi
