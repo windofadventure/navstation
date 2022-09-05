@@ -82,9 +82,6 @@
             <Filename>org.gnome.Cheese.desktop</Filename>
         </Include>
         <Include>
-            <Filename>org.kiwix.desktop.desktop</Filename>
-        </Include>
-        <Include>
             <Filename>iris.desktop</Filename>
         </Include>
         <Include>
@@ -428,6 +425,9 @@
         <Directory>Office.directory</Directory>
         <Include>
             <Category>Office</Category>
+        </Include>
+        <Include>
+            <Filename>org.kiwix.desktop.desktop</Filename>
         </Include>
     </Menu>
     <Layout>
