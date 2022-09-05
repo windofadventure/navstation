@@ -82,6 +82,9 @@
             <Filename>org.gnome.Cheese.desktop</Filename>
         </Include>
         <Include>
+            <Filename>org.kiwix.desktop.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>iris.desktop</Filename>
         </Include>
         <Include>
