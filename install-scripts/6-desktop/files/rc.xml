@@ -756,6 +756,15 @@
             </position>
         </application>
 
+        <application name="org.gnome.clocks">
+            <maximized>no</maximized>
+            <decor>yes</decor>
+            <position force="no">
+                <x>center</x>
+                <y>center</y>
+            </position>
+        </application>
+
         <application name="rpi-imager">
             <maximized>no</maximized>
             <decor>yes</decor>
