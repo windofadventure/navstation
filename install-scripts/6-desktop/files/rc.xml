@@ -747,9 +747,13 @@
             <skip_taskbar>yes</skip_taskbar>
         </application>
 
-        <application name="gsimplecal">
+        <application name="gnome-calculator">
             <maximized>no</maximized>
             <decor>yes</decor>
+            <position force="no">
+                <x>center</x>
+                <y>center</y>
+            </position>
         </application>
 
         <application name="rpi-imager">
