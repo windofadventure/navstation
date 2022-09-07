@@ -9,11 +9,7 @@ sudo apt-get -y install build-essential libsoapysdr0.7 libsoapysdr-dev libopenal
 sudo apt-get -y install git
 cd /home/user
 rm -rf SdrGlut || true
-if [ "armhf" == "$myArch" ] ; then
-  git clone https://github.com/righthalfplane/SdrGlut
-else
-  git clone https://github.com/bareboat-necessities/SdrGlut
-fi
+git clone https://github.com/righthalfplane/SdrGlut
 cd SdrGlut
 make -f makefileRaspbian -j 4
 
