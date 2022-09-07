@@ -9,8 +9,9 @@ sudo apt-get -y install build-essential libsoapysdr0.7 libsoapysdr-dev libopenal
 sudo apt-get -y install git
 cd /home/user
 rm -rf SdrGlut || true
-git clone https://github.com/righthalfplane/SdrGlut
+git clone -b v1.31 https://github.com/righthalfplane/SdrGlut
 cd SdrGlut
+sed -i -e 's~#define WINDOWS_LONG_NAMES~//#define WINDOWS_LONG_NAMES~g'  MainSource/firstFile.h
 make -f makefileRaspbian -j 4
 
 # to run
