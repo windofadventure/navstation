@@ -796,5 +796,9 @@
             <skip_taskbar>yes</skip_taskbar>
         </application>
 
+        <application title="Calibration">
+            <maximized>yes</maximized>
+        </application>
+
     </applications>
 </openbox_config>
