@@ -35,10 +35,11 @@ install -v -m 0644 $FILE_FOLDER/60-watchdog.rules "/etc/udev/rules.d/60-watchdog
 export MAKEFLAGS='-j 4'
 
 if [ $LMARCH == 'arm64' ]; then
-  pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata python-socketio flask-socketio
+  pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata \
+    python-socketio flask-socketio wmm2020
 else
   apt-get install -y -q python3-flask-socketio
-  pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5"
+  pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5" wmm2020
 fi
 
 if [ $LMOS == 'Raspbian' ] && [ $LMARCH == 'armhf' ]; then
