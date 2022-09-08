@@ -86,6 +86,13 @@ pushd ./stageCache
       python3 setup.py build
     popd
   fi
+  pushd /usr/local/lib/python3.9/dist-packages/wmm2020
+    mkdir build
+    cd build
+    cmake ..
+    make -j 4
+    cd ..
+  popd
   ## Build and install pypilot
   pushd ./pypilot
     python3 setup.py install
