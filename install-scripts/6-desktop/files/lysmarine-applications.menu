@@ -161,6 +161,9 @@
             <Filename>org.gnome.Weather.Application.desktop</Filename>
         </Include>
         <Include>
+            <Filename>org.gnome.Weather.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>org.gnome.Geary.desktop</Filename>
         </Include>
         <Include>
@@ -247,6 +250,9 @@
             <Filename>Thunar.desktop</Filename>
         </Include>
         <Include>
+            <Filename>thunar.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>lxtask.desktop</Filename>
         </Include>
         <Include>
@@ -304,6 +310,9 @@
         </Include>
         <Include>
             <Filename>eog.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>org.gnome.eog.desktop</Filename>
         </Include>
         <Include>
             <Filename>victron.desktop</Filename>
