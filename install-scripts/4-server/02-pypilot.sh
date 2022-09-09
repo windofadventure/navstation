@@ -71,7 +71,7 @@ pushd ./stageCache
   if [[ ! -d ./pypilot ]]; then
     git clone https://github.com/pypilot/pypilot.git
     cd pypilot
-    #git checkout 6a5634b8559b87d38679d45b3c6bb3cd1ad98a09 # Sep 1, 2022
+    git checkout 7aa9670131977279cbed56593f0fee7c9c8cda48 # Sep 8, 2022
     cd ..
     git clone --depth=1 https://github.com/pypilot/pypilot_data.git
     cp -rv ./pypilot_data/* ./pypilot
@@ -92,6 +92,7 @@ pushd ./stageCache
     cd build
     cmake ..
     make -j 4
+    rm -f ./*.o
     cd ..
   popd
   ## Build and install pypilot
