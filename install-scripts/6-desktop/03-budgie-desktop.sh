@@ -58,4 +58,10 @@ users=
 allowed=true
 system=false
 users=
+
+[org.freedesktop.GeoClue2]
+allowed=true
+system=false
+users=
+
 EOF
