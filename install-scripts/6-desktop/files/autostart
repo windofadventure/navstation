@@ -17,6 +17,8 @@ export MOZ_USE_XINPUT2=1
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
 (rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
+ibus-daemon --xim -d
+
 (openbox --replace) &
 (evdev-rce || true) &
 (twofing --click=first --grab-by-disabling /dev/twofingtouch || true) &
@@ -33,6 +35,7 @@ export MOZ_USE_XINPUT2=1
  xset -dpms && \
  xset s noblank) &
 
-(sleep 10 && ibus-daemon) &
+#(sleep 10 && ibus-daemon) &
+
 (sleep 15 && /usr/libexec/geoclue-2.0/demos/agent) &
 
