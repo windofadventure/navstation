@@ -17,7 +17,7 @@ export MOZ_USE_XINPUT2=1
 (cp .config/signalk-nativefier-*/Cookies .config/sk-autopilot-nativefier-*/ || true) &
 (rm -rf ~/.opencpn/startcheck.dat ~/.opencpn/_OpenCPN_SILock || true) &
 
-ibus-daemon --xim -d
+ibus-daemon --xim -d -R
 
 (openbox --replace) &
 (evdev-rce || true) &
