@@ -1,11 +1,6 @@
 #!/bin/bash -e
 
-apt-get -y -q install empathy libayatana-appindicator3-1
-
-apt-get clean
-
 # FB messenger
-
 if [ $LMARCH == 'armhf' ]; then
   arch=armv7l
 elif [ $LMARCH == 'arm64' ]; then
@@ -22,8 +17,11 @@ dpkg -i libindicator3-7_0.5.0-4_${arch}.deb libappindicator3-1_0.4.92-7_${arch}.
 rm libindicator3-7_0.5.0-4_${arch}.deb libappindicator3-1_0.4.92-7_${arch}.deb
 
 wget https://github.com/mquevill/caprine/releases/download/v2.54.1-ARM/caprine_2.54.1_${arch}.deb
-
 dpkg -i caprine_2.54.1_${arch}.deb
-
 rm caprine_2.54.1_${arch}.deb
+
+
+apt-get -y -q install empathy libayatana-appindicator3-1
+
+apt-get clean
 
