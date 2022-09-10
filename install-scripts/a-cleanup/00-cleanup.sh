@@ -66,6 +66,7 @@ rm -rf /usr/share/doc/openjdk*/test*/
 rm -rf /usr/share/doc/python3*/HISTORY.*
 rm -rf /usr/share/doc/python3*/NEWS.*
 rm -rf "$(find /usr/share/doc -name changelog\*.gz)"
+rm -rf "$(find /usr/share/doc -name NEWS\*.gz)"
 
 # Fill free space with zeros
 cat /dev/zero > /zer0s || true
