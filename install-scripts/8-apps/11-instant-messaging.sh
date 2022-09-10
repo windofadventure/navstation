@@ -21,7 +21,7 @@ dpkg -i caprine_2.54.1_${arch}.deb
 rm caprine_2.54.1_${arch}.deb
 
 
-apt-get -y -q install empathy libayatana-appindicator3-1
+apt-get -y -q install empathy libayatana-appindicator3-1=0.5.5-2
 
 apt-get clean
 
