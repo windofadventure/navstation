@@ -214,7 +214,7 @@ cd gwsocket-0.3/
 make -j 4
 make install
 cd ..
-rm -rf gwsocket-0.3/
+rm -rf gwsocket-0.3/ gwsocket-0.3.tar.gz
 
 # Usage example:
 #gwsocket -p 7474 --pipein=out  &
