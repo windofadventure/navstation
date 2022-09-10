@@ -145,5 +145,5 @@ mv readme.txt /usr/local/share/rastow/
 wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn_5.6.2+dfsg-2_arm64.deb
 wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-data_5.6.2+dfsg-2_all.deb
 dpkg -i opencpn_5.6.2+dfsg-2_arm64.deb opencpn-data_5.6.2+dfsg-2_all.deb
-rm opencpn_5.6.2*.deb
+rm opencpn_5.6.2*.deb opencpn-data_5.6.2*.deb
 rm /etc/apt/sources.list.d/opencpn.list
