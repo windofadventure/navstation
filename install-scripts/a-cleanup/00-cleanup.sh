@@ -57,6 +57,16 @@ rm /etc/apt/sources.list.d/*.list-orig
 
 install -v -m 0644 $FILE_FOLDER/rsyslog "/etc/logrotate.d/rsyslog"
 
+# clean up more
+rm -rf /usr/share/doc/noaa-apt/docs/examples/argentina.wav*
+rm -rf /usr/share/doc/nodejs/api/
+rm -rf /usr/share/doc/nodejs/changelogs/
+rm -rf /usr/share/doc/tcllib/html/
+rm -rf /usr/share/doc/openjdk*/test*/
+rm -rf /usr/share/doc/python3*/HISTORY.*
+rm -rf /usr/share/doc/python3*/NEWS.*
+rm -rf "$(find /usr/share/doc -name changelog\*.gz)"
+
 # Fill free space with zeros
 cat /dev/zero > /zer0s || true
 rm -f /zer0s
