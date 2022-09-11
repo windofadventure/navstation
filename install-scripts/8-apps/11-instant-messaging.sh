@@ -23,4 +23,6 @@ fi
 wget https://github.com/mquevill/caprine/releases/download/v2.54.1-ARM/caprine_2.54.1_${arch}.deb
 #dpkg -i caprine_2.54.1_${arch}.deb
 dpkg-deb -xv caprine_2.54.1_${arch}.deb /
+chown root:root /
+chmod 755 /
 rm caprine_2.54.1_${arch}.deb
