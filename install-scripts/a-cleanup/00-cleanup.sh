@@ -74,3 +74,6 @@ rm -f /zer0s
 
 date --rfc-3339=seconds > /etc/bbn-build
 fake-hwclock save
+
+chown root:root /
+chmod 755 /
