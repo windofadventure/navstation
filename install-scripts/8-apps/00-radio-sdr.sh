@@ -246,6 +246,9 @@ cd /usr/local/share
 git clone https://github.com/cropinghigh/inmarsatc
 git clone https://github.com/cropinghigh/stdcdec
 
+rm -rf inmarsatc/.git
+rm -rf stdcdec/.git
+
 cd $mdir
 
 #################################
