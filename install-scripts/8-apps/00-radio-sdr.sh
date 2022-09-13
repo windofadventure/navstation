@@ -258,6 +258,7 @@ apt-get install -y cmake
 pushd /usr/local/share
   git clone https://github.com/bareboat-necessities/aisdecoder
   cd aisdecoder
+  rm -rf .git/
   mkdir build && cd build
   # Moving to first-run due to this bug: https://gitlab.kitware.com/cmake/cmake/-/issues/20568
   if [ $LMARCH == 'arm64' ]; then
