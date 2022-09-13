@@ -9,7 +9,7 @@ i=0
 while [[ -n "$(pidof stellarium)" ]]
 do
   # magnetic variation
-  if [[ $((i%100)) == 0 ]]; then
+  if [[ $((i%20)) == 0 ]]; then
     MV=$(curl -s http://localhost:3000/signalk/v1/api/vessels/self/navigation/magneticVariation/value)
     i=0
   fi
