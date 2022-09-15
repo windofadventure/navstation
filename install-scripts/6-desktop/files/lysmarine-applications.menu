@@ -172,6 +172,9 @@
         <Include>
             <Filename>empathy.desktop</Filename>
         </Include>
+        <Include>
+            <Filename>sasplanet.desktop</Filename>
+        </Include>
     </Menu>
     <Menu>
         <Name>Hamradio</Name>
