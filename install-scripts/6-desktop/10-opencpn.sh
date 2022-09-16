@@ -147,3 +147,13 @@ wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTe
 dpkg -i opencpn_5.6.2+dfsg-2_arm64.deb opencpn-data_5.6.2+dfsg-2_all.deb
 rm opencpn_5.6.2*.deb opencpn-data_5.6.2*.deb
 rm /etc/apt/sources.list.d/opencpn.list
+
+# ImgKap https://github.com/nohal
+apt-get install  libfreeimage-dev
+git clone https://github.com/nohal/imgkap
+cd imgkap
+make -j 4
+make install
+cd ..
+rm -rf imgkap
+
