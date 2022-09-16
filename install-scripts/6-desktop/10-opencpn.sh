@@ -149,7 +149,7 @@ rm opencpn_5.6.2*.deb opencpn-data_5.6.2*.deb
 rm /etc/apt/sources.list.d/opencpn.list
 
 # ImgKap https://github.com/nohal
-apt-get install  libfreeimage-dev
+apt-get -y install libfreeimage-dev
 git clone https://github.com/nohal/imgkap
 cd imgkap
 make -j 4
