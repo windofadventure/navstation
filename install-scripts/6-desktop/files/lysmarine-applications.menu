@@ -103,6 +103,9 @@
             <Filename>org.openshot.OpenShot.desktop</Filename>
         </Include>
         <Include>
+            <Filename>org.shotcut.Shotcut.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>vokoscreenNG.desktop</Filename>
         </Include>
     </Menu>
