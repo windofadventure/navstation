@@ -99,6 +99,9 @@
         <Include>
             <Filename>org.gnome.Totem.desktop</Filename>
         </Include>
+        <Include>
+            <Filename>vokoscreenNG.desktop</Filename>
+        </Include>
     </Menu>
     <Menu>
         <Name>Internet</Name>
@@ -440,6 +443,9 @@
         </Include>
         <Include>
             <Filename>org.kiwix.desktop.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>homebank.desktop</Filename>
         </Include>
     </Menu>
     <Layout>
