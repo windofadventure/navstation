@@ -100,6 +100,9 @@
             <Filename>org.gnome.Totem.desktop</Filename>
         </Include>
         <Include>
+            <Filename>org.openshot.OpenShot.desktop</Filename>
+        </Include>
+        <Include>
             <Filename>vokoscreenNG.desktop</Filename>
         </Include>
     </Menu>
