@@ -21,6 +21,7 @@ apt-get -y -q install multimon-ng netcat\
   gpredict                              \
   previsat                              \
   rtl-sdr                               \
+  librtlsdr-dev                         \
   gnss-sdr                              \
   gnuradio                              \
   gnuais                                \
@@ -279,3 +280,12 @@ if [ $LMARCH == 'arm64' ]; then
   dpkg -i hamfax_0.8.1-1_arm64.deb
   rm hamfax_0.8.1-1_arm64.deb
 fi
+
+
+git clone https://github.com/globecen/rtl-ais
+cd rtl-ais
+make -j 4
+cp rtl_ais /usr/bin/
+cd ..
+rm -rf rtl-ais
+
