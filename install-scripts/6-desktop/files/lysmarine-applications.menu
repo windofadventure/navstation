@@ -184,6 +184,9 @@
         <Include>
             <Filename>sasplanet.desktop</Filename>
         </Include>
+        <Include>
+            <Filename>org.qgis.qgis.desktop</Filename>
+        </Include>
     </Menu>
     <Menu>
         <Name>Hamradio</Name>
