@@ -152,6 +152,27 @@
             "type": "NMEA0183",
             "subOptions": {
               "validateChecksum": true,
+              "type": "gpsd",
+              "host": "localhost",
+              "port": "29471",
+              "noDataReceivedTimeout": "10",
+              "removeNulls": true
+            }
+          }
+        }
+      ],
+      "id": "gps1_gpsd",
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
               "type": "serial",
               "device": "/dev/ttyLYS_gps_2",
               "removeNulls": true,
@@ -161,6 +182,27 @@
         }
       ],
       "id": "gps2",
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "gpsd",
+              "host": "localhost",
+              "port": "29472",
+              "noDataReceivedTimeout": "10",
+              "removeNulls": true
+            }
+          }
+        }
+      ],
+      "id": "gps2_gpsd",
       "enabled": true
     },
     {
