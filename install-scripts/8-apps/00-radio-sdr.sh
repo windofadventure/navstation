@@ -48,6 +48,8 @@ apt-get -y -q install multimon-ng netcat\
   libhamlib-utils                       \
   python3-libxml2                       \
   python3-serial                        \
+  libtool                               \
+  libfftw3-dev                          \
   direwolf
 
 install -d -m 755 -o 1000 -g 1000 "/home/user/.config/gqrx/"
@@ -289,3 +291,9 @@ cp rtl_ais /usr/bin/
 cd ..
 rm -rf rtl-ais
 
+git clone https://github.com/steve-m/kalibrate-rtl
+cd kalibrate-rtl/
+./bootstrap && CXXFLAGS='-W -Wall -O3' ./configure && make -j 4
+cp src/kal /usr/local/bin/
+cd ..
+rm -rf kalibrate-rtl/
