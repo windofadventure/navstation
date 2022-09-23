@@ -4,7 +4,6 @@
 ## Create pypilot user to run the services.
 if [ ! -d /home/pypilot ]; then
 	echo "Creating pypilot user"
-	groupadd pypilot
 	adduser --home /home/pypilot --gecos --system --disabled-password --disabled-login pypilot
 fi
 
