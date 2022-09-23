@@ -159,3 +159,6 @@ sed '1 i :msg, contains, "No IMU detected" stop' -i /etc/rsyslog.conf
 sed '1 i :msg, contains, "No IMU Detected" stop' -i /etc/rsyslog.conf
 sed '1 i :msg, contains, "Failed to open I2C bus" stop' -i /etc/rsyslog.conf
 sed '1 i :msg, contains, "Using fusion algorithm Kalman" stop' -i /etc/rsyslog.conf
+
+# pypilot
+sed -i 's/8000/8080/' /etc/systemd/system/pypilot_web.service || true
