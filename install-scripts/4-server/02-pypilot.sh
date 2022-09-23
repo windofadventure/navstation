@@ -4,6 +4,7 @@
 ## Create pypilot user to run the services.
 if [ ! -d /home/pypilot ]; then
 	echo "Creating pypilot user"
+	groupadd pypilot
 	adduser --home /home/pypilot --gecos --system --disabled-password --disabled-login pypilot
 fi
 
@@ -13,6 +14,7 @@ usermod -a -G spi pypilot
 usermod -a -G gpio pypilot
 usermod -a -G dialout pypilot
 usermod -a -G plugdev pypilot
+usermod -a -G pypilot user
 
 # Op way
 apt-get install -y -q --no-install-recommends git python3 python3-pip python3-dev python3-setuptools libpython3-dev \
@@ -122,9 +124,10 @@ systemctl enable pypilot_web.service                                   # listens
 systemctl enable pypilot_detect.service                                # tries to detect pypilot hardware (hat)
 
 ## Install the user config files
-install -v -o pypilot -g pypilot -m 0755 -d /home/pypilot/.pypilot
-install -v -o pypilot -g pypilot -m 0755 -d /home/tc/.pypilot
-install -v -o user -g user -m 0755 -d /home/user/.pypilot
+install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
+ln -s /home/pypilot/.pypilot /home/tc/.pypilot
+ln -s /home/pypilot/.pypilot /home/user/.pypilot
+
 install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/pypilot_client.conf "/home/pypilot/.pypilot/"
@@ -133,7 +136,6 @@ install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/pypilot_client.conf "/home
 install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/hat.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/blacklist_serial_ports "/home/pypilot/.pypilot/"
 #install -v -o pypilot -g pypilot -m 0644 $FILE_FOLDER/serial_ports "/home/pypilot/.pypilot/"
-install -v -o user -g user -m 0644 $FILE_FOLDER/pypilot_client.conf "/home/user/.pypilot/"
 
 install -v -m 0644 $FILE_FOLDER/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
 
