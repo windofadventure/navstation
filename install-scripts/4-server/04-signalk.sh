@@ -31,7 +31,7 @@ if [ ! -f /home/user/charts ] ; then
 fi
 
 ## Dependencies of signalk.
-apt-get install -y -q python3-dev git nodejs=16.17.0-deb-1nodesource1 \
+apt-get install -y -q python3-dev git nodejs \
  libnss-mdns avahi-utils \
  node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
@@ -62,6 +62,7 @@ install -m 644 $FILE_FOLDER/signalk.service "/etc/systemd/system/signalk.service
 npm cache clean --force
 npm install -g npm pnpm@7.11.0
 npm install -g --unsafe-perm --production signalk-server
+npm cache clean --force
 
 ## Install signalk published plugins
 pushd /home/signalk/.signalk
