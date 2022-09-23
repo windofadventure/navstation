@@ -124,6 +124,7 @@ systemctl enable pypilot_detect.service                                # tries t
 
 ## Install the user config files
 install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
+install -v -o pypilot -g pypilot -m 0775 -d /home/tc
 ln -s /home/pypilot/.pypilot /home/tc/.pypilot
 ln -s /home/pypilot/.pypilot /home/user/.pypilot
 
