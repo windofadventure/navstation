@@ -215,7 +215,7 @@
             "subOptions": {
               "validateChecksum": true,
               "type": "serial",
-              "device": "/dev/ttyLYS_ch340",
+              "device": "/dev/ttyLYS_ch340_",
               "removeNulls": true,
               "baudrate": 4800
             }
