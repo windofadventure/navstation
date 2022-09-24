@@ -173,3 +173,6 @@ sed -i 's/8000/8080/' /etc/systemd/system/pypilot_web.service || true
 
 # TODO: temp patch
 install -m 644 $FILE_FOLDER/wind.py /usr/local/lib/python3.9/dist-packages/pypilot/pilots/wind.py
+
+echo > /RTIMULib.ini
+chown pypilot:pypilot /RTIMULib.ini
