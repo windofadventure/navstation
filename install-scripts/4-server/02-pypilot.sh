@@ -142,7 +142,7 @@ if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
   chmod 664 /home/pypilot/.pypilot/pypilot.conf
   chown pypilot:pypilot /home/pypilot/.pypilot/pypilot.conf
 fi
-    
+
 install -v -m 0664 $FILE_FOLDER/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
 
 ## Install The .desktop files
