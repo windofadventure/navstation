@@ -15,6 +15,13 @@ usermod -a -G dialout pypilot
 usermod -a -G plugdev pypilot
 usermod -a -G pypilot user
 
+## Install the user config files
+install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
+install -v -o pypilot -g pypilot -m 0775 -d /home/tc
+ln -s /home/pypilot/.pypilot /home/tc/.pypilot
+ln -s /home/pypilot/.pypilot /home/user/.pypilot
+setfacl -d -m g:pypilot:rw /home/pypilot/.pypilot
+
 # Op way
 apt-get install -y -q --no-install-recommends git python3 python3-pip python3-dev python3-setuptools libpython3-dev \
   python3-wheel python3-numpy python3-scipy swig python3-ujson \
@@ -121,13 +128,6 @@ systemctl disable pypilot_hat.service
 systemctl enable pypilot@pypilot.service                               # listens on tcp 20220 and 23322
 systemctl enable pypilot_web.service                                   # listens on tcp 8080
 systemctl enable pypilot_detect.service                                # tries to detect pypilot hardware (hat)
-
-## Install the user config files
-install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
-install -v -o pypilot -g pypilot -m 0775 -d /home/tc
-ln -s /home/pypilot/.pypilot /home/tc/.pypilot
-ln -s /home/pypilot/.pypilot /home/user/.pypilot
-setfacl -d -m g:pypilot:rw /home/pypilot/.pypilot
 
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
