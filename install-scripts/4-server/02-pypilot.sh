@@ -177,4 +177,4 @@ install -m 644 $FILE_FOLDER/wind.py /usr/local/lib/python3.9/dist-packages/pypil
 echo > /RTIMULib.ini
 chown pypilot:pypilot /RTIMULib.ini
 chmod 664 /RTIMULib.ini
-
+setfacl -m g:pypilot:rw /RTIMULib.ini
