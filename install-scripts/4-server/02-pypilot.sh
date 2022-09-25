@@ -133,11 +133,12 @@ setfacl -d -m g:pypilot:rw "/home/tc"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/pypilot_client.conf "/home/pypilot/.pypilot/"
-#install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/servodevice "/home/pypilot/.pypilot/"
-#install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/nmea0device "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/hat.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/blacklist_serial_ports "/home/pypilot/.pypilot/"
-#install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/serial_ports "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/serial_ports "/home/pypilot/.pypilot/serial_ports.sample"
+install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/servodevice "/home/pypilot/.pypilot/servodevice.sample"
+install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/nmea0device "/home/pypilot/.pypilot/nmea0device.sample"
+
 
 if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
   chmod 664 /home/pypilot/.pypilot/pypilot.conf
