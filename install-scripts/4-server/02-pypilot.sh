@@ -144,7 +144,7 @@ if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
   chown pypilot:pypilot /home/pypilot/.pypilot/pypilot.conf
 fi
 
-install -v -m 0664 $FILE_FOLDER/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
+install -v -g pypilot -m 0664 $FILE_FOLDER/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
 
 ## Install The .desktop files
 install -d /usr/local/share/applications
