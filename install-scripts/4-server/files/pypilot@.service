@@ -5,7 +5,7 @@ Conflicts=pypilot_boatimu.service
 
 [Service]
 Type=simple
-#ExecStartPre=/bin/chmod 664 /home/pypilot/.pypilot/*
+WorkingDirectory=/home/pypilot
 ExecStart=pypilot
 User=%i
 Restart=always

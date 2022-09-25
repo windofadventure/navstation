@@ -127,7 +127,7 @@ install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
 install -v -o pypilot -g pypilot -m 0775 -d /home/tc
 ln -s /home/pypilot/.pypilot /home/tc/.pypilot
 ln -s /home/pypilot/.pypilot /home/user/.pypilot
-setfacl -d -m g:pypilot:rw /home/pypilot/.pypilot
+setfacl -d -m g:pypilot:rw /home/pypilot
 
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
@@ -177,4 +177,4 @@ install -m 644 $FILE_FOLDER/wind.py /usr/local/lib/python3.9/dist-packages/pypil
 echo > /RTIMULib.ini
 chown pypilot:pypilot /RTIMULib.ini
 chmod 664 /RTIMULib.ini
-setfacl -m g:pypilot:rw /RTIMULib.ini
+
