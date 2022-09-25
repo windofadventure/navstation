@@ -10,6 +10,8 @@ ExecStart=pypilot_boatimu -q
 User=pypilot
 Restart=always
 RestartSec=2
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=local-fs.target
