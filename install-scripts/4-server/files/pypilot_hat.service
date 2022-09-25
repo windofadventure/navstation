@@ -5,7 +5,7 @@ DefaultDependencies=false
 
 [Service]
 Type=simple
-WorkingDirectory=/home/pypilot/.pypilot
+WorkingDirectory=/home/pypilot
 ExecStart=pypilot_hat
 User=pypilot
 StandardOutput=journal
