@@ -8,6 +8,8 @@ ExecStart=pypilot_web 8080
 User=pypilot
 Restart=always
 RestartSec=3
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target

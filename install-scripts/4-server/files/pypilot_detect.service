@@ -7,6 +7,8 @@ ConditionPathExists=/proc/device-tree/hat/custom_0
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=pypilot_detect
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=local-fs.target
