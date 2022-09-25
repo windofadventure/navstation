@@ -123,11 +123,12 @@ systemctl enable pypilot_web.service                                   # listens
 systemctl enable pypilot_detect.service                                # tries to detect pypilot hardware (hat)
 
 ## Install the user config files
-install -v -o pypilot -g pypilot -m 0775 -d /home/pypilot/.pypilot
-install -v -o pypilot -g pypilot -m 0775 -d /home/tc
-ln -s /home/pypilot/.pypilot /home/tc/.pypilot
-ln -s /home/pypilot/.pypilot /home/user/.pypilot
-setfacl -d -m g:pypilot:rw /home/pypilot
+install -v -o pypilot -g pypilot -m 0775 -d "/home/pypilot/.pypilot"
+install -v -o pypilot -g pypilot -m 0775 -d "/home/tc"
+ln -s /home/pypilot/.pypilot "/home/user/.pypilot"
+ln -s /home/pypilot/.pypilot "/home/tc/.pypilot"
+setfacl -d -m g:pypilot:rw "/home/pypilot"
+setfacl -d -m g:pypilot:rw "/home/tc"
 
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
