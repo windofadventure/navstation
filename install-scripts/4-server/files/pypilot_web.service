@@ -3,6 +3,7 @@ Description=pypilot web
 
 [Service]
 Type=simple
+WorkingDirectory=/home/pypilot/.pypilot
 ExecStart=pypilot_web 8080
 User=pypilot
 Restart=always
