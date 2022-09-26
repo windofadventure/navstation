@@ -23,3 +23,6 @@ apt-get clean
 
 pip3 install --upgrade spotify-cli
 
+apt-mark hold raspotify
+
+
