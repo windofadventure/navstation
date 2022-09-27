@@ -61,6 +61,13 @@ pushd ./stageCache
   fi
   echo "Build and install RTIMULib2"
 
+  pushd ./RTIMULib2/Linux/RTIMULibCal
+    curl -o Makefile https://raw.githubusercontent.com/bareboat-necessities/my-bareboat/master/RTIMULibCal/Makefile
+    make -j 4
+    cp Output/RTIMULibCal /usr/local/bin/
+    make clean
+  popd
+
   pushd ./RTIMULib2/Linux/python
     python3 setup.py install
     python3 setup.py clean --all
