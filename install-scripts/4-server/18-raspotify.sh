@@ -1,15 +1,15 @@
 #!/bin/bash -e
 
-if [ $LMARCH == 'armhf' ]; then
-  #apt-get -y -q install raspotify=0.31.8~librespot.v0.3.1-54-gf4be9bb
-  wget https://github.com/dtcooper/raspotify/releases/download/0.42.1/raspotify_0.42.1.librespot.v0.4.2-6537c44_armhf.deb -O rasp.deb
-fi
-if [ $LMARCH == 'arm64' ]; then
-  #apt-get -y -q install raspotify=0.31.8~librespot.v0.3.1-54-gf4be9bb
-  wget https://github.com/dtcooper/raspotify/releases/download/0.42.1/raspotify_0.42.1.librespot.v0.4.2-6537c44_arm64.deb -O rasp.deb
-fi
+apt-get -y -q install raspotify
 
-dpkg -i rasp.deb && rm -f rasp.deb
+#if [ $LMARCH == 'armhf' ]; then
+#  wget https://github.com/dtcooper/raspotify/releases/download/0.42.1/raspotify_0.42.1.librespot.v0.4.2-6537c44_armhf.deb -O rasp.deb
+#fi
+#if [ $LMARCH == 'arm64' ]; then
+#  wget https://github.com/dtcooper/raspotify/releases/download/0.42.1/raspotify_0.42.1.librespot.v0.4.2-6537c44_arm64.deb -O rasp.deb
+#fi
+#dpkg -i rasp.deb && rm -f rasp.deb
+
 if ! grep -q raspotify /etc/group; then
   groupadd raspotify
 fi
@@ -23,6 +23,4 @@ apt-get clean
 
 pip3 install --upgrade spotify-cli
 
-apt-mark hold raspotify
-
-
+#apt-mark hold raspotify
