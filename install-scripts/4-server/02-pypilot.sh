@@ -68,9 +68,9 @@ pushd ./stageCache
     make clean
     install -v -o user -g pypilot -m 0775 -d "/home/user/kts"
     cp -r ../../RTEllipsoidFit /home/user/kts/
-    git clone https://github.com/OldCC/scripts
-    cp -r scripts /home/user/kts/
-    rm -rf scripts
+    git clone https://github.com/bareboat-necessities/kts-scripts
+    cp -r kts-scripts /home/user/kts/scripts
+    rm -rf kts-scripts
     chown -R user:pypilot /home/user/kts
   popd
 
