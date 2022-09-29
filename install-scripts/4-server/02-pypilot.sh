@@ -23,7 +23,7 @@ apt-get install -y -q --no-install-recommends git python3 python3-pip python3-de
   libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod pigpio-tools lm-sensors ir-keytable \
   python3-opengl \
   pigpio python3-pigpio python3-rpi.gpio \
-  meson cmake make
+  meson cmake make octave
 
 systemctl disable watchdog
 systemctl disable lircd
