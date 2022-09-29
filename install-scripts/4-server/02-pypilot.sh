@@ -65,6 +65,9 @@ pushd ./stageCache
     curl -o Makefile https://raw.githubusercontent.com/bareboat-necessities/my-bareboat/master/RTIMULibCal/Makefile
     make -j 4
     cp Output/RTIMULibCal /usr/local/bin/
+    install -v -o pypilot -g pypilot -m 0775 -d "/home/pypilot/imu-cal"
+    cp -r ../../RTEllipsoidFit /home/pypilot/imu-cal/
+    chown -r pypilot:pypilot /home/pypilot/imu-cal/RTEllipsoidFit
     make clean
   popd
 
