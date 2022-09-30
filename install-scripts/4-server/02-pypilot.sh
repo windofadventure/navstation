@@ -5,6 +5,7 @@
 if [ ! -d /home/pypilot ]; then
 	echo "Creating pypilot user"
 	adduser --home /home/pypilot --gecos --system --disabled-password --disabled-login pypilot
+	chmod 775 /home/pypilot
 fi
 
 usermod -a -G tty pypilot
