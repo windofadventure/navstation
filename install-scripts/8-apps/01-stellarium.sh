@@ -2,7 +2,7 @@
 
 apt-get clean
 
-apt-get -y -q install geographiclib-tools
+apt-get -y -q install geographiclib-tools libqt5charts5 libqt5multimediawidgets5 libqt5script5 
 
 wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium-data_0.22.2-upstream1.1~ubuntu20.04.1_all.deb
 wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium_0.22.2-upstream1.1~ubuntu20.04.1_arm64.deb
