@@ -2,8 +2,13 @@
 
 apt-get clean
 
-apt-get -y -q install stellarium=0.22.2-upstream1.1~ubuntu20.04.1 stellarium-data=0.22.2-upstream1.1~ubuntu20.04.1 \
-  geographiclib-tools
+apt-get -y -q install geographiclib-tools
+
+wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium-data_0.22.2-upstream1.1~ubuntu20.04.1_all.deb
+wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium_0.22.2-upstream1.1~ubuntu20.04.1_arm64.deb
+
+dpkg -i stellarium*.deb
+rm -f stellarium*.deb
 
 install -d -o 1000 -g 1000 -m 0755 "/home/user/.stellarium"
 install -v -o 1000 -g 1000 -m 0644 $FILE_FOLDER/stellarium-config.ini "/home/user/.stellarium/config.ini"
