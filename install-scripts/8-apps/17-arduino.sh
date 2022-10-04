@@ -15,3 +15,5 @@ pushd /opt
     ./arduino-linux-setup.sh root
   popd
 popd
+
+ln -s /opt/arduino-1.8.19 /usr/share/arduino
