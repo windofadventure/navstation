@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install -y gcc-avr avr-libc # avrdude
+apt-get install -y gcc-avr avr-libc arduino-core-avr # avrdude
 
 pushd /opt
   ARD_URL=https://downloads.arduino.cc
