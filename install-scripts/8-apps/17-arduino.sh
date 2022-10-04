@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+apt-get install -y gcc-avr avr-libc # avrdude
+
 pushd /opt
   ARD_URL=https://downloads.arduino.cc
   ARD_FILE=arduino-1.8.19-linuxarm.tar.xz
