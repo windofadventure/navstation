@@ -19,3 +19,5 @@ install -v -m 0755 $FILE_FOLDER/stellarium-augmented.sh /usr/local/bin/stellariu
 geographiclib-get-magnetic all
 
 apt-get clean
+
+apt-mark hold stellarium stellarium-data
