@@ -36,7 +36,7 @@
             <Filename>opencpn.desktop</Filename>
         </Include>
         <Include>
-            <Filename>stellarium.desktop</Filename>
+            <Filename>org.stellarium.Stellarium.desktop</Filename>
         </Include>
         <Include>
             <Filename>avnav.desktop</Filename>
