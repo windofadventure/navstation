@@ -101,6 +101,13 @@ pushd /home/signalk/.signalk
                  node-red-contrib-string \
                  node-red-node-email \
                  node-red-node-openweathermap \
+                 node-red-contrib-dht-sensor \
+                 node-red-contrib-ds18b20-sensor \
+                 node-red-contrib-sht31 \
+                 @rakwireless/shtc3 \
+                 node-red-contrib-bme280 \
+                 node-red-contrib-sensor-htu21d \
+                 node-red-contrib-ina-sensor \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
