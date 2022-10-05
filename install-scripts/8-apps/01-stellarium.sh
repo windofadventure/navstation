@@ -4,9 +4,8 @@ apt-get clean
 
 apt-get -y -q install geographiclib-tools libqt5charts5 libqt5multimediawidgets5 libqt5script5 
 
-wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium-data_0.22.2-upstream1.1~ubuntu21.10.1_all.deb
-wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium_0.22.2-upstream1.1~ubuntu21.10.1_arm64.deb
-
+wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium_1.0-upstream1.0~ubuntu20.04.1_arm64.deb
+wget http://ppa.launchpad.net/stellarium/stellarium-releases/ubuntu/pool/main/s/stellarium/stellarium-data_1.0-upstream1.0~ubuntu20.04.1_all.deb
 dpkg -i stellarium*.deb
 rm -f stellarium*.deb
 
