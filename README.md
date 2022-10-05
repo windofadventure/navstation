@@ -125,7 +125,6 @@ Default user name in login screens is 'user'.
 - Knots
 - [JTides](https://arachnoid.com/JTides/)
 - [TukTuk chartplotter](https://github.com/vokkim/tuktuk-chart-plotter)
-- [Nautic](https://sourceforge.net/projects/nauticalmanac/)
 - [PC-NavTex](https://github.com/juerec/pc-navtex)
 
 
