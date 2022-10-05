@@ -200,3 +200,6 @@ echo > /RTIMULib.ini
 chown pypilot:pypilot /RTIMULib.ini
 chmod 664 /RTIMULib.ini
 
+wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/avrdude_7.0-20221004-1_arm64.deb
+dpkg -i avrdude_7*.deb
+rm -f avrdude_7*.deb
