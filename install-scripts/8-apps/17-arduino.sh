@@ -18,4 +18,3 @@ pushd /opt
   popd
 popd
 
-ln -s /opt/arduino-1.8.19 /usr/share/arduino
