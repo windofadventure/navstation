@@ -265,7 +265,6 @@ Windlass, Bow Thruster, Lights)
 - [DeskPi Pro](https://github.com/DeskPi-Team/deskpi) support
 - ArgonOne case support
 - Text-To-Speech App
-- [AnBox](https://anbox.io/) (experimental Android app support)
 - Touchscreen calibration
 - [NMEA Sleuth Chromium Plugin](https://chrome.google.com/webstore/detail/nmea-sleuth/pkikkfglomloligndkaibecgapljgjok?hl=en)
 - PACTOR
@@ -275,8 +274,8 @@ Windlass, Bow Thruster, Lights)
 - Timezone Setup
 - Change Password
 - Predict (Satellite Tracker for scripting)
-- [Scytale-C](https://bitbucket.org/scytalec/scytalec/) Inmarsat Decoders
 - [Pat / WinLink](https://github.com/la5nta/pat)
+- [Airmail](http://siriuscyber.net/airmail/)
 - [Widevine](https://www.widevine.com/) Digital Content Protection
 - [Homeassistant](https://www.home-assistant.io/) Home Automation
 - [EspHome](https://esphome.io/) Home Automation
