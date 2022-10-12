@@ -32,13 +32,13 @@
     ls *.img
     cd ../../
   )
-  inflateImage $thisArch $myCache/$imageName
+  inflateImage $thisArch $myCache/"$imageName"
 
   # copy ready image from cache to the work dir
-  cp -fv $myCache/$imageName-inflated ./work/$thisArch/$imageName
+  cp -fv $myCache/"$imageName"-inflated ./work/$thisArch/"$imageName"
 
   # Mount the image and make the binds required to chroot.
-  mountImageFile $thisArch ./work/$thisArch/$imageName
+  mountImageFile $thisArch ./work/$thisArch/"$imageName"
 
   # Copy the lysmarine and origine OS config files in the mounted rootfs
   addLysmarineScripts $thisArch
@@ -62,18 +62,18 @@
 EOF
 
   # Unmount
-  umountImageFile $thisArch ./work/$thisArch/$imageName
+  umountImageFile $thisArch ./work/$thisArch/"$imageName"
 
-  ls -l ./work/$thisArch/$imageName
+  ls -l ./work/$thisArch/"$imageName"
   wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
   chmod +x "$myCache"/pishrink.sh
-  "$myCache"/pishrink.sh -s ./work/$thisArch/$imageName || if [ $? == 11 ]; then
+  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
     log "Image already shrunk to smallest size"
   fi
-  ls -l ./work/$thisArch/$imageName
+  ls -l ./work/$thisArch/"$imageName"
 
   # Renaming the OS and moving it to the release folder.
-  cp -v ./work/$thisArch/$imageName ./release/$thisArch/lysmarine-bbn-bullseye_${LYSMARINE_VER}-${thisArch}-${cpuArch}.img
+  cp -v ./work/$thisArch/"$imageName" ./release/$thisArch/lysmarine-bbn-bullseye_${LYSMARINE_VER}-${thisArch}-${cpuArch}.img
 
   exit 0
 }

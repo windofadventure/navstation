@@ -108,7 +108,7 @@ mv /opt/instrumentpanel-linux-"$arch" /opt/instrumentpanel
 mv /opt/sailgauge-linux-"$arch" /opt/sailgauge
 
 ## On debian, the sandbox environment fail without GUID/SUID
-if [ $LMOS == Debian ]; then
+if [ "$LMOS" == Debian ]; then
   chmod 4755 /opt/SignalK/chrome-sandbox
   chmod 4755 /opt/Freeboard-sk/chrome-sandbox
   chmod 4755 /opt/kip-dash/chrome-sandbox
@@ -157,7 +157,7 @@ install -m 644 "$FILE_FOLDER"/moorings.desktop "/usr/local/share/applications/"
 install -m 644 "$FILE_FOLDER"/nauticed.desktop "/usr/local/share/applications/"
 
 ## On debian, the sandbox environment fail without GUID/SUID
-if [ $LMOS == Debian ]; then
+if [ "$LMOS" == Debian ]; then
   chmod 4755 /opt/MusicBox/chrome-sandbox
   chmod 4755 /opt/Iris/chrome-sandbox
   chmod 4755 /opt/Moorings/chrome-sandbox
@@ -197,7 +197,7 @@ install -v "$FILE_FOLDER"/facebook.desktop /usr/local/share/applications/
 install -v "$FILE_FOLDER"/WA-Web-Msg.desktop /usr/local/share/applications/
 
 ## On debian, the sandbox environment fail without GUID/SUID
-if [ $LMOS == Debian ]; then
+if [ "$LMOS" == Debian ]; then
   chmod 4755 /opt/youtube/chrome-sandbox
   chmod 4755 /opt/facebook/chrome-sandbox
   chmod 4755 /opt/WA-Web-Msg/chrome-sandbox
@@ -240,7 +240,7 @@ mv /opt/tuktuk-linux-"$arch" /opt/tuktuk
 mv /opt/sk-autopilot-linux-"$arch" /opt/sk-autopilot
 
 ## On debian, the sandbox environment fail without GUID/SUID
-if [ $LMOS == Debian ]; then
+if [ "$LMOS" == Debian ]; then
   chmod 4755 /opt/skwiz/chrome-sandbox
   chmod 4755 /opt/motioneye/chrome-sandbox
   chmod 4755 /opt/tuktuk/chrome-sandbox
