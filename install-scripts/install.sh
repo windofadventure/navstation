@@ -43,7 +43,7 @@ for argument in $argumentList; do # access each element of array
   fi
 
   set +f
-  for scriptLocation in ./"$stage"*/"$script"*.sh; do
+  for scriptLocation in ./$stage*/$script*.sh; do
     if [ -f "$scriptLocation" ]; then
       echo "From request $argument "
       echo "Running stage $stage -> $script ( $scriptLocation )"
