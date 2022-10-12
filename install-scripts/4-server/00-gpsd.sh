@@ -4,7 +4,7 @@ apt-get install -y -q gpsd gpsd-clients gpsd-tools
 
 ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.9/dist-packages/
 
-## Automaticaly start gpsd when a USB gps detected, handle AIS
+## Automatically start gpsd when a USB gps detected, handle AIS
 install -d /etc/udev/rules.d
 install -v -m 0644 $FILE_FOLDER/90-lys-ais.rules "/etc/udev/rules.d/90-lys-ais.rules"
 install -v -m 0644 $FILE_FOLDER/90-lys-cp210x.rules "/etc/udev/rules.d/90-lys-cp210x.rules"
