@@ -8,7 +8,7 @@ apt-get install -y -q libatk-adaptor libgtk-3-0 libatk1.0-0 libcairo2 libfontcon
 install -o 1000 -g 1000 -d /home/user/.config/openbox
 
 ## Start budgie-desktop boot.
-install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/.xinitrc    "/home/user/"
+install -o 1000 -g 1000 -m 644 -v "$FILE_FOLDER"/.xinitrc    "/home/user/"
 
 #echo '(chromium-browser --headless || true) &' >>/home/user/.config/openbox/autostart
 
@@ -19,8 +19,8 @@ chmod 4775 /usr/bin/nm-connection-editor
 
 ## Autostart openbox from budgie-desktop.
 install -o 1000 -g 1000 -d /home/user/.config/autostart
-#install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/openbox.desktop    "/home/user/.config/autostart/"
-install -o 1000 -g 1000 -m 644 -v $FILE_FOLDER/autostart.desktop  "/home/user/.config/autostart/"
+#install -o 1000 -g 1000 -m 644 -v "$FILE_FOLDER"/openbox.desktop    "/home/user/.config/autostart/"
+install -o 1000 -g 1000 -m 644 -v "$FILE_FOLDER"/autostart.desktop  "/home/user/.config/autostart/"
 
 # Budgie settings
 

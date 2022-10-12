@@ -2,17 +2,17 @@
 
 apt-get clean
 
-install -v -m 0644 $FILE_FOLDER/50-rtl-sdr.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/52-airspy.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/52-airspyhf.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/53-hackrf.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/66-mirics.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/88-nuand-bladerf1.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/88-nuand-bladerf2.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/88-nuand-bootloader.rules "/etc/udev/rules.d/"
-#install -v -m 0644 $FILE_FOLDER/99-com.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/99-direwolf-cmedia.rules "/etc/udev/rules.d/"
-install -v -m 0644 $FILE_FOLDER/99-thumbdv.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/50-rtl-sdr.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/52-airspy.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/52-airspyhf.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/53-hackrf.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/66-mirics.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/88-nuand-bladerf1.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/88-nuand-bladerf2.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/88-nuand-bootloader.rules "/etc/udev/rules.d/"
+#install -v -m 0644 "$FILE_FOLDER"/99-com.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/99-direwolf-cmedia.rules "/etc/udev/rules.d/"
+install -v -m 0644 "$FILE_FOLDER"/99-thumbdv.rules "/etc/udev/rules.d/"
 
 apt-get -y -q install multimon-ng netcat\
   cubicsdr                              \
@@ -53,26 +53,26 @@ apt-get -y -q install multimon-ng netcat\
   direwolf
 
 install -d -m 755 -o 1000 -g 1000 "/home/user/.config/gqrx/"
-install -v $FILE_FOLDER/gqrx-default.conf -o 1000 -g 1000 "/home/user/.config/gqrx/default.conf"
-install -v $FILE_FOLDER/gqrx-bookmarks.csv -o 1000 -g 1000 "/home/user/.config/gqrx/bookmarks.csv"
+install -v "$FILE_FOLDER"/gqrx-default.conf -o 1000 -g 1000 "/home/user/.config/gqrx/default.conf"
+install -v "$FILE_FOLDER"/gqrx-bookmarks.csv -o 1000 -g 1000 "/home/user/.config/gqrx/bookmarks.csv"
 
 systemctl disable direwolf
-install -v $FILE_FOLDER/direwolf.conf -o 1000 -g 1000 "/home/user/"
+install -v "$FILE_FOLDER"/direwolf.conf -o 1000 -g 1000 "/home/user/"
 
 systemctl disable aprx
 
 install -d -m 755 "/usr/local/share/noaa-apt"
 install -d -m 755 "/usr/local/share/noaa-apt/res"
 install -d -m 755 "/usr/local/share/noaa-apt/res/shapefiles"
-install -v $FILE_FOLDER/noaa-apt.desktop -o 1000 -g 1000 "/home/user/.local/share/applications/ar.com.mbernardi.noaa-apt.desktop"
+install -v "$FILE_FOLDER"/noaa-apt.desktop -o 1000 -g 1000 "/home/user/.local/share/applications/ar.com.mbernardi.noaa-apt.desktop"
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/icon.png > "/usr/local/share/noaa-apt/res/icon.png"
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/countries.shp > "/usr/local/share/noaa-apt/res/shapefiles/countries.shp"
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/lakes.shp > "/usr/local/share/noaa-apt/res/shapefiles/lakes.shp"
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/states.shp > "/usr/local/share/noaa-apt/res/shapefiles/states.shp"
-if [ $LMARCH == 'arm64' ]; then
+if [ "$LMARCH" == 'arm64' ]; then
   apt-get -y -q install noaa-apt
 fi
-if [ $LMARCH == 'armhf' ]; then
+if [ "$LMARCH" == 'armhf' ]; then
   pushd /usr/local/share/noaa-apt
     wget -q -O - https://github.com/martinber/noaa-apt/releases/download/v1.3.1/noaa-apt-1.3.1-armv7-linux-gnueabihf.zip > noaa-apt.zip
     unzip -n noaa-apt.zip
@@ -83,9 +83,9 @@ if [ $LMARCH == 'armhf' ]; then
 fi
 rm -f /usr/local/share/noaa-apt/test/test*.wav
 
-install -v $FILE_FOLDER/gnuaisgui.desktop /usr/local/share/applications/
-install -v $FILE_FOLDER/previsat.desktop /usr/local/share/applications/
-install -v $FILE_FOLDER/hamfax.desktop -o 1000 -g 1000 "/home/user/.local/share/applications/hamfax.desktop"
+install -v "$FILE_FOLDER"/gnuaisgui.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/previsat.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/hamfax.desktop -o 1000 -g 1000 "/home/user/.local/share/applications/hamfax.desktop"
 
 pip3 install pyrtlsdr wheel
 
@@ -102,14 +102,14 @@ apt-get -y -q --no-install-recommends --no-install-suggests install python3-wxgt
     python3-setuptools                 \
     python3-pip
 pip3 install --upgrade quisk
-install -v $FILE_FOLDER/quisk.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/quisk.desktop /usr/local/share/applications/
 rm -rf ~/.cache/pip
 # To run quisk
 # python3 -m quisk
 
 
-install -v $FILE_FOLDER/jnx.desktop /usr/local/share/applications/
-install -v $FILE_FOLDER/jwx.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/jnx.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/jwx.desktop /usr/local/share/applications/
 
 install -d -m 755 "/usr/local/share/jnx"
 install -d -m 755 "/usr/local/share/jwx"
@@ -121,7 +121,7 @@ wget -q -O - https://arachnoid.com/JWX/resources/JWX.jar > /usr/local/share/jwx/
 wget -q -O - https://arachnoid.com/JWX/resources/JWX_source.tar.bz2 > /usr/local/share/jwx/JWX_source.tar.bz2
 
 apt-get -y -q install fontconfig
-if [ $LMARCH == 'armhf' ]; then
+if [ "$LMARCH" == 'armhf' ]; then
   apt-get -y -q install openjdk-8-jdk
 else
   apt-get -y -q install default-jdk
@@ -252,7 +252,7 @@ git clone https://github.com/cropinghigh/stdcdec
 rm -rf inmarsatc/.git
 rm -rf stdcdec/.git
 
-cd $mdir
+cd "$mdir"
 
 #################################
 
@@ -264,7 +264,7 @@ pushd /usr/local/share
   rm -rf .git/
   mkdir build && cd build
   # Moving to first-run due to this bug: https://gitlab.kitware.com/cmake/cmake/-/issues/20568
-  if [ $LMARCH == 'arm64' ]; then
+  if [ "$LMARCH" == 'arm64' ]; then
     cmake ../ -DCMAKE_BUILD_TYPE=RELEASE
     make -j 4
     cp aisdecoder /usr/local/bin/
@@ -274,10 +274,10 @@ pushd /usr/local/share
 popd
 
 install -d '/usr/local/share/hf-propagation'
-install -v -m 0644 $FILE_FOLDER/propagation.html "/usr/local/share/hf-propagation/"
-install -v $FILE_FOLDER/propagation.desktop "/usr/local/share/applications/"
+install -v -m 0644 "$FILE_FOLDER"/propagation.html "/usr/local/share/hf-propagation/"
+install -v "$FILE_FOLDER"/propagation.desktop "/usr/local/share/applications/"
 
-if [ $LMARCH == 'arm64' ]; then
+if [ "$LMARCH" == 'arm64' ]; then
   wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/hamfax_0.8.1-1_arm64.deb
   dpkg -i hamfax_0.8.1-1_arm64.deb
   rm hamfax_0.8.1-1_arm64.deb

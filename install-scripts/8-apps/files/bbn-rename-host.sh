@@ -12,7 +12,7 @@ if [ $# -eq 0 ] ; then
   exit 2
 fi
 
-NEW_HOSTNAME=$(echo $1 | tr '[:upper:]' '[:lower:]' | sed 's/[^0-9a-z-]*//g')
+NEW_HOSTNAME=$(echo "$1" | tr '[:upper:]' '[:lower:]' | sed 's/[^0-9a-z-]*//g')
 OLD_HOSTNAME="${HOSTNAME:-lysmarine}"
 
 if [ -z "$NEW_HOSTNAME" ] ; then

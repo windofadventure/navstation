@@ -11,11 +11,11 @@ install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins"
 install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins/weather_routing"
 install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins/weather_routing/data"
-install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/"
-install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf "/home/user/.opencpn/opencpn.conf-bbn"
-install -o 1000 -g 1000 -v $FILE_FOLDER/opencpn.conf-highres-bbn "/home/user/.opencpn/opencpn.conf-highres-bbn"
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf "/home/user/.opencpn/"
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf "/home/user/.opencpn/opencpn.conf-bbn"
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf-highres-bbn "/home/user/.opencpn/opencpn.conf-highres-bbn"
 
-if [ $LMARCH == 'armhf' ]; then
+if [ "$LMARCH" == 'armhf' ]; then
   apt-get install -y -q                                         \
     opencpn-doc                                                 \
     opencpn-plugin-calculator                                   \
@@ -60,11 +60,11 @@ wget https://launchpad.net/~opencpn/+archive/ubuntu/opencpn/+files/opencpn-doc_4
 dpkg -i opencpn-doc_4.8.2.0-0~bionic1_all.deb
 rm opencpn-doc_4.8.2.0-0~bionic1_all.deb
 
-mkdir tmp-o-bundle-$LMARCH || exit 2
-cd tmp-o-bundle-$LMARCH
+mkdir tmp-o-bundle-"$LMARCH" || exit 2
+cd tmp-o-bundle-"$LMARCH"
 
-wget -O opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/bundles/opencpn-plugins-bundle-o_5_6_x-bullseye-$LMARCH.tar.gz?raw=true
-gzip -cd opencpn-plugins-bundle-o_5_6_x-$LMARCH.tar.gz | tar xvf -
+wget -O opencpn-plugins-bundle-o_5_6_x-"$LMARCH".tar.gz https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/bundles/opencpn-plugins-bundle-o_5_6_x-bullseye-"$LMARCH".tar.gz?raw=true
+gzip -cd opencpn-plugins-bundle-o_5_6_x-"$LMARCH".tar.gz | tar xvf -
 
 cp -r -p lib/* /usr/lib/
 cp -r -p bin/* /usr/bin/
@@ -73,9 +73,9 @@ cp -r -p doc/* /usr/doc/
 cp -r -p include/* /usr/include/
 
 cd ..
-rm -rf tmp-o-bundle-$LMARCH
+rm -rf tmp-o-bundle-"$LMARCH"
 
-if [ $LMARCH == 'arm64' ]; then
+if [ "$LMARCH" == 'arm64' ]; then
   mkdir tmp-op && cd tmp-op
   wget https://github.com/bareboat-necessities/opencpn-plugins-bundle/raw/main/rtlsdr_pi/bullseye-arm64/librtlsdr_pi.so && \
   mv librtlsdr_pi.so /usr/lib/opencpn/
@@ -138,7 +138,7 @@ mkdir /usr/local/share/rastow
 mv readme.txt /usr/local/share/rastow/
 
 
-#install -v $FILE_FOLDER/opencpn.desktop "/usr/share/applications/"
+#install -v "$FILE_FOLDER"/opencpn.desktop "/usr/share/applications/"
 
 
 # TODO: temp fix

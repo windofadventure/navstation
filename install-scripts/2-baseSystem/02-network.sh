@@ -5,12 +5,12 @@ apt-get install -y -q network-manager make avahi-daemon bridge-utils wakeonlan #
 
 
 # Resolve lysmarine.local
-install -v $FILE_FOLDER/hostname "/etc/"
-cat $FILE_FOLDER/hosts >> /etc/hosts
+install -v "$FILE_FOLDER"/hostname "/etc/"
+cat "$FILE_FOLDER"/hosts >> /etc/hosts
 sed -i '/raspberrypi/d' /etc/hosts
 
 # Access Point management
-install -m0600 -v $FILE_FOLDER/lysmarine-hotspot.nmconnection "/etc/NetworkManager/system-connections/"
+install -m0600 -v "$FILE_FOLDER"/lysmarine-hotspot.nmconnection "/etc/NetworkManager/system-connections/"
 systemctl disable dnsmasq
 
 
@@ -27,7 +27,7 @@ systemctl disable NetworkManager-wait-online.service # if we do not boot remote 
 systemctl disable ModemManager.service # for 2G/3G/4G
 systemctl disable pppd-dns.service # For dial-up Internet LOL
 
-install -v -m 0644 $FILE_FOLDER/wifi_powersave@.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/wifi_powersave@.service "/etc/systemd/system/"
 systemctl disable wifi_powersave@on.service
 systemctl mask wifi_powersave@on.service
 systemctl enable wifi_powersave@off.service

@@ -6,12 +6,10 @@ executors:
   boot-linux:
     machine:
       resource_class: large
-      enabled: true
       image: ubuntu-2004:2022.07.1
   boot-linux-arm:
     machine:
       resource_class: arm.large
-      enabled: true
       image: ubuntu-2004:2022.07.1
 commands:
   git-checkout:

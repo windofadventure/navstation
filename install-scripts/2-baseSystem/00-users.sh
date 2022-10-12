@@ -12,9 +12,9 @@ echo "user:$DPASS" > /boot/userconf.txt
 
 ## Remove default user (if any).
 oldUser=$(cat /etc/passwd | grep 1000:1000 | cut -f1 -d:) 
-if [[ ! -z $oldUser ]]; then 
-	echo "Removing user "$oldUser
-	userdel -r -f $oldUser
+if [[ -n $oldUser ]]; then
+	echo "Removing user $oldUser"
+	userdel -r -f "$oldUser"
 else
 	echo "No default user found !"
 fi
@@ -53,10 +53,10 @@ usermod -a -G input lirc
 if [[ -d /etc/polkit-1 ]]; then
 	echo "polkit found, adding rules"
 	install -d "/etc/polkit-1/localauthority/50-local.d"
-	install -v $FILE_FOLDER/mount.pkla  "/etc/polkit-1/localauthority/50-local.d/"
-	install -v $FILE_FOLDER/all_all_users_to_shutdown_reboot.pkla "/etc/polkit-1/localauthority/50-local.d/"
+	install -v "$FILE_FOLDER"/mount.pkla  "/etc/polkit-1/localauthority/50-local.d/"
+	install -v "$FILE_FOLDER"/all_all_users_to_shutdown_reboot.pkla "/etc/polkit-1/localauthority/50-local.d/"
 	install -d "/etc/polkit-1/localauthority/10-vendor.d"
-	install -v $FILE_FOLDER/org.freedesktop.NetworkManager.pkla  "/etc/polkit-1/localauthority/10-vendor.d/"
+	install -v "$FILE_FOLDER"/org.freedesktop.NetworkManager.pkla  "/etc/polkit-1/localauthority/10-vendor.d/"
 fi
 
 if [[ -f /etc/sudoers.d/010_pi-nopasswd ]]; then # Remove no-pwd sudo to user pi.

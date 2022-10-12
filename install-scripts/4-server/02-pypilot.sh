@@ -33,12 +33,12 @@ systemctl disable lircd
 usermod -a -G lirc user
 usermod -a -G lirc pypilot
 
-install -v -m 0644 $FILE_FOLDER/60-watchdog.rules "/etc/udev/rules.d/60-watchdog.rules"
+install -v -m 0644 "$FILE_FOLDER"/60-watchdog.rules "/etc/udev/rules.d/60-watchdog.rules"
 
 # performance of the build, make parallel jobs
 export MAKEFLAGS='-j 4'
 
-if [ $LMARCH == 'arm64' ]; then
+if [ "$LMARCH" == 'arm64' ]; then
   pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata \
     python-socketio flask-socketio wmm2020
 else
@@ -46,7 +46,7 @@ else
   pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5" wmm2020
 fi
 
-if [ $LMOS == 'Raspbian' ] && [ $LMARCH == 'armhf' ]; then
+if [ "$LMOS" == 'Raspbian' ] && [ "$LMARCH" == 'armhf' ]; then
   wget https://project-downloads.drogon.net/wiringpi-latest.deb
   dpkg -i wiringpi-latest.deb && rm wiringpi-latest.deb
 fi
@@ -119,17 +119,17 @@ pushd ./stageCache
 popd
 
 ## Install the service files
-install -v -m 0644 $FILE_FOLDER/pypilot@.service "/etc/systemd/system/"
-install -v -m 0644 $FILE_FOLDER/pypilot_boatimu.service "/etc/systemd/system/"
-install -v -m 0644 $FILE_FOLDER/pypilot_web.service "/etc/systemd/system/"
-install -v -m 0644 $FILE_FOLDER/pypilot_hat.service "/etc/systemd/system/"
-install -v -m 0644 $FILE_FOLDER/pypilot_detect.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/pypilot@.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/pypilot_boatimu.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/pypilot_web.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/pypilot_hat.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/pypilot_detect.service "/etc/systemd/system/"
 
 sed -i 's/_http._tcp.local./_signalk-http._tcp.local./' "$(find /usr/local/lib -name signalk.py)" || true
 #sed -i 's/ttyAMA0/serial1/' "$(find /usr/local/lib -name serialprobe.py)" || true
 #sed -i "s/'ttyAMA'//" "$(find /usr/local/lib -name serialprobe.py)" || true
 
-#cp $FILE_FOLDER/wind.py "$(find /usr/local/lib -name wind.py)" || true
+#cp "$FILE_FOLDER"/wind.py "$(find /usr/local/lib -name wind.py)" || true
 
 systemctl disable pypilot_boatimu.service
 systemctl disable pypilot_hat.service
@@ -148,15 +148,15 @@ setfacl -d -m g:pypilot:rw "/home/pypilot/.pypilot"
 setfacl -d -m g:pypilot:rw "/home/pypilot/.pypilot/ugfxfonts"
 setfacl -d -m g:pypilot:rw "/home/tc"
 
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/signalk.conf "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/webapp.conf "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/pypilot_client.conf "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/pypilot.conf "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/hat.conf "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/blacklist_serial_ports "/home/pypilot/.pypilot/"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/serial_ports "/home/pypilot/.pypilot/serial_ports.sample"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/servodevice "/home/pypilot/.pypilot/servodevice.sample"
-install -v -o pypilot -g pypilot -m 0664 $FILE_FOLDER/nmea0device "/home/pypilot/.pypilot/nmea0device.sample"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/signalk.conf "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/webapp.conf "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/pypilot_client.conf "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/pypilot.conf "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/hat.conf "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/blacklist_serial_ports "/home/pypilot/.pypilot/"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/serial_ports "/home/pypilot/.pypilot/serial_ports.sample"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/servodevice "/home/pypilot/.pypilot/servodevice.sample"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/nmea0device "/home/pypilot/.pypilot/nmea0device.sample"
 
 
 if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
@@ -164,15 +164,15 @@ if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
   chown pypilot:pypilot /home/pypilot/.pypilot/pypilot.conf
 fi
 
-install -v -g pypilot -m 0664 $FILE_FOLDER/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
+install -v -g pypilot -m 0664 "$FILE_FOLDER"/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
 
 ## Install The .desktop files
 install -d /usr/local/share/applications
-install -v $FILE_FOLDER/pypilot_calibration.desktop "/usr/local/share/applications/"
-install -v $FILE_FOLDER/pypilot_control.desktop "/usr/local/share/applications/"
+install -v "$FILE_FOLDER"/pypilot_calibration.desktop "/usr/local/share/applications/"
+install -v "$FILE_FOLDER"/pypilot_control.desktop "/usr/local/share/applications/"
 
-install -m 755 $FILE_FOLDER/pypilot-restart "/usr/local/sbin/pypilot-restart"
-install -m 755 $FILE_FOLDER/pypilot_detect.sh "/usr/local/sbin/pypilot_detect"
+install -m 755 "$FILE_FOLDER"/pypilot-restart "/usr/local/sbin/pypilot-restart"
+install -m 755 "$FILE_FOLDER"/pypilot_detect.sh "/usr/local/sbin/pypilot_detect"
 
 ## Give permission to sudo chrt without a password for the user pypilot.
 {
@@ -193,7 +193,7 @@ sed '1 i :msg, contains, "Using fusion algorithm Kalman" stop' -i /etc/rsyslog.c
 sed -i 's/8000/8080/' /etc/systemd/system/pypilot_web.service || true
 
 # TODO: temp patch
-install -m 644 $FILE_FOLDER/wind.py "$(find /usr/local/lib -name wind.py)"
+install -m 644 "$FILE_FOLDER"/wind.py "$(find /usr/local/lib -name wind.py)"
 
 # TODO: not needed after changing pypilot service working directory
 echo > /RTIMULib.ini

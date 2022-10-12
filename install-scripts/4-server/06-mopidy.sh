@@ -30,13 +30,13 @@ pip3 install --upgrade https://github.com/natumbri/mopidy-youtube/archive/develo
 
 pip3 install "ytmusicapi==0.22.0"
 
-install -m 644 $FILE_FOLDER/.asoundrc "/home/user/"
-install -m 644 $FILE_FOLDER/mopidy.conf "/etc/mopidy/"
+install -m 644 "$FILE_FOLDER"/.asoundrc "/home/user/"
+install -m 644 "$FILE_FOLDER"/mopidy.conf "/etc/mopidy/"
 install -m 755 -d -o mopidy -g audio "/var/lib/mopidy/m3u"
-install -m 644 -o mopidy -g audio $FILE_FOLDER/BBN-Playlist.m3u8 "/var/lib/mopidy/m3u/"
-install -m 644 $FILE_FOLDER/mopidy.service "/usr/lib/systemd/system/"
+install -m 644 -o mopidy -g audio "$FILE_FOLDER"/BBN-Playlist.m3u8 "/var/lib/mopidy/m3u/"
+install -m 644 "$FILE_FOLDER"/mopidy.service "/usr/lib/systemd/system/"
 
-install -m 755 $FILE_FOLDER/mopidy-restart "/usr/local/sbin/mopidy-restart"
+install -m 755 "$FILE_FOLDER"/mopidy-restart "/usr/local/sbin/mopidy-restart"
 
 echo "" >>/etc/sudoers
 echo 'user ALL=(ALL) NOPASSWD: /usr/local/sbin/mopidy-restart' >>/etc/sudoers

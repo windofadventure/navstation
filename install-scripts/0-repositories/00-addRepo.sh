@@ -4,34 +4,34 @@ apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
 
 ## Add repository sources
-install -m 0644 -v $FILE_FOLDER/nodesource.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/mosquitto.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/influxdb.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/grafana.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/mopidy.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v $FILE_FOLDER/bbn-gpsd.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/bbn-autoadb.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/bbn-rce.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/raspotify.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/jellyfin.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/debian-backports.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/opencpn.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/xygrib.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/lysmarine.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/bbn-kplex.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/bbn-navtex.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v $FILE_FOLDER/avnav.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v $FILE_FOLDER/openplotter.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/chirp.list "/etc/apt/sources.list.d/"
-install -m 0644 -v $FILE_FOLDER/stellarium.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v $FILE_FOLDER/piaware-bullseye.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/mosquitto.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/influxdb.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/grafana.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/mopidy.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/bbn-gpsd.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/bbn-autoadb.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/bbn-rce.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/raspotify.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/jellyfin.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/debian-backports.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/opencpn.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/xygrib.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/lysmarine.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/bbn-kplex.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/bbn-navtex.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/avnav.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/openplotter.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/chirp.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/stellarium.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/piaware-bullseye.list "/etc/apt/sources.list.d/"
 
 wget -O /etc/apt/sources.list.d/piaware-bullseye.list https://abcd567a.github.io/rpi/abcd567a.list
 wget -O /etc/apt/sources.list.d/box86.list https://ryanfortner.github.io/box86-debs/box86.list
 
 ## Prefer opencpn PPA to free-x (for mainly for the opencpn package)
-install -m 0644 -v $FILE_FOLDER/50-lysmarine.pref "/etc/apt/preferences.d/"
+install -m 0644 -v "$FILE_FOLDER"/50-lysmarine.pref "/etc/apt/preferences.d/"
 
 ## Get the signature keys
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 684A14CF2582E0C5           # Influx

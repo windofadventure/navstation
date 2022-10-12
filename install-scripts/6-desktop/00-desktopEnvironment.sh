@@ -1,15 +1,15 @@
 #!/bin/bash -e
 
 ## Needed to allow the service file start X
-install  -v $FILE_FOLDER/Xwrapper.config "/etc/X11/"
+install  -v "$FILE_FOLDER"/Xwrapper.config "/etc/X11/"
 
 arch=$(dpkg --print-architecture)
 
-if [ $LMOS == Raspbian ]; then
+if [ "$LMOS" == Raspbian ]; then
   apt-get -q -y install xserver-xorg-video-fbturbo
 fi
 
-if [ $LMOS == Armbian ]; then
+if [ "$LMOS" == Armbian ]; then
 	apt-get -q -y install xserver-xorg-legacy
 fi
 
@@ -38,36 +38,36 @@ install -o 1000 -g 1000 -d /home/user/.local/share/sounds
 # Openbox
 install -o 1000 -g 1000 -d /home/user/.config
 install -o 1000 -g 1000 -d /home/user/.config/openbox
-install -o 1000 -g 1000 -v $FILE_FOLDER/autostart /home/user/.config/openbox/
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/autostart /home/user/.config/openbox/
 
 # Thunar file manager
 install -o 1000 -g 1000 -d /home/user/.config/xfce4
 install -o 1000 -g 1000 -d /home/user/.config/xfce4/xfconf
 install -o 1000 -g 1000 -d /home/user/.config/xfce4/xfconf/xfce-perchannel-xml
-install -o 1000 -g 1000 -v $FILE_FOLDER/thunar.xml /home/user/.config/xfce4/xfconf/xfce-perchannel-xml/
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/thunar.xml /home/user/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 # Menus
 install -o 1000 -g 1000 -d /home/user/.config/menus
-install -o 1000 -g 1000 -v $FILE_FOLDER/gnome-applications.menu /home/user/.config/menus/gnome-applications.menu-orig
-install -o 1000 -g 1000 -v $FILE_FOLDER/lysmarine-applications.menu /home/user/.config/menus/lysmarine-applications.menu-orig
-install -o 1000 -g 1000 -v $FILE_FOLDER/lysmarine-applications.menu /home/user/.config/menus/gnome-applications.menu
-install -o 1000 -g 1000 -v $FILE_FOLDER/navigation.directory /home/user/.local/share/desktop-directories/
-install -o 1000 -g 1000 -v $FILE_FOLDER/openplotter.directory /home/user/.local/share/desktop-directories/
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/gnome-applications.menu /home/user/.config/menus/gnome-applications.menu-orig
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/lysmarine-applications.menu /home/user/.config/menus/lysmarine-applications.menu-orig
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/lysmarine-applications.menu /home/user/.config/menus/gnome-applications.menu
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/navigation.directory /home/user/.local/share/desktop-directories/
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/openplotter.directory /home/user/.local/share/desktop-directories/
 
-install -m 755 -v $FILE_FOLDER/bbn-commands.sh /usr/local/bin/bbn-commands
+install -m 755 -v "$FILE_FOLDER"/bbn-commands.sh /usr/local/bin/bbn-commands
 
 install -d /usr/local/share/applications
-install -v $FILE_FOLDER/commands.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/commands.desktop /usr/local/share/applications/
 
 install -d /etc/budgie-desktop
-install -m 644 -v $FILE_FOLDER/panel.ini /etc/budgie-desktop/
+install -m 644 -v "$FILE_FOLDER"/panel.ini /etc/budgie-desktop/
 
 
 # Make some room for the rest of the build script
 apt-get clean
 
 ## Install base desktop apps.
-if [ $LMOS == Raspbian ]; then
+if [ "$LMOS" == Raspbian ]; then
 	apt-get install -y -q chromium-browser
 else
 	apt-get install -y -q chromium
@@ -83,10 +83,10 @@ apt-get install -y -q lxterminal gpsbabel file-roller lxtask thunar
 # force polkit agent to start with openbox (this is needed for nm-applet hotspot)
 sed -i '/^OnlyShowIn=/ s/$/GNOME;/' /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
 
-install -v $FILE_FOLDER/scale-up.desktop /usr/local/share/applications/
-install -v $FILE_FOLDER/scale-down.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/scale-up.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/scale-down.desktop /usr/local/share/applications/
 
-install -v -m 755 $FILE_FOLDER/scale-up /usr/local/bin/
-install -v -m 755 $FILE_FOLDER/scale-down /usr/local/bin/
+install -v -m 755 "$FILE_FOLDER"/scale-up /usr/local/bin/
+install -v -m 755 "$FILE_FOLDER"/scale-down /usr/local/bin/
 
-install -v -m 755 $FILE_FOLDER/twofing-detect.sh /usr/local/sbin/twofing-detect
+install -v -m 755 "$FILE_FOLDER"/twofing-detect.sh /usr/local/sbin/twofing-detect

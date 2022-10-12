@@ -2,7 +2,7 @@
 
 apt-get clean
 
-install -v $FILE_FOLDER/jtides.desktop /usr/local/share/applications/
+install -v "$FILE_FOLDER"/jtides.desktop /usr/local/share/applications/
 
 install -d -m 755 "/usr/local/share/jtides"
 

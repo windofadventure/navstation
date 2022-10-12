@@ -5,7 +5,7 @@
 pushd /opt
   ARD_URL=https://downloads.arduino.cc
   ARD_FILE=arduino-1.8.19-linuxarm.tar.xz
-  if [ $LMARCH == 'arm64' ]; then
+  if [ "$LMARCH" == 'arm64' ]; then
     ARD_FILE=arduino-1.8.19-linuxaarch64.tar.xz
   fi
   wget $ARD_URL/$ARD_FILE

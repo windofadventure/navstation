@@ -5,5 +5,5 @@
 #apt-get install -y -q rtl-ais kalibrate-rtl
 
 ## Adding service file
-install -v -m 0644 $FILE_FOLDER/rtl-ais.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/rtl-ais.service "/etc/systemd/system/"
 systemctl disable rtl-ais.service

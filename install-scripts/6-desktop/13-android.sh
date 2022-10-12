@@ -22,7 +22,7 @@ gpasswd -a user adbusers
 cd ..
 rm -rf android-udev-rules
 
-install -v -m 0644 $FILE_FOLDER/scrcpy.desktop "/usr/local/share/applications/"
+install -v -m 0644 "$FILE_FOLDER"/scrcpy.desktop "/usr/local/share/applications/"
 
 ############################
 

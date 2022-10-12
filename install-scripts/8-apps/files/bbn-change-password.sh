@@ -5,7 +5,7 @@ p2=
 
 until [ "$p1" == "$p2" ]
 do
-  if [ ! -z "$p2" ]; then
+  if [ -n "$p2" ]; then
      text="Repeated password is not matching new"
   fi
   data=$(yad --title="Change Password" --borders=80 --text="$text" --form --align=right --field="Current Password":H --field="New Password":H --field="Repeat New Password":H)

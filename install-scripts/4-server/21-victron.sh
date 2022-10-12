@@ -39,7 +39,7 @@ npm install -g serve
 # This way you can run the local app against venus device data if the venus device
 # is on the same network as your computer.
 
-install -v -m 0644 $FILE_FOLDER/victron.service "/etc/systemd/system/"
+install -v -m 0644 "$FILE_FOLDER"/victron.service "/etc/systemd/system/"
 
 systemctl enable victron.service
 

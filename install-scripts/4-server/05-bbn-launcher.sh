@@ -14,16 +14,16 @@ fi
 install -m 755 -d -o www-data -g www-data "/var/www/bbn-launcher"
 install -m 755 -d -o www-data -g www-data "/var/www/bbn-launcher/img"
 install -m 755 -d -o www-data -g www-data "/var/www/bbn-launcher/js"
-install -m 644 -v -o www-data -g www-data $FILE_FOLDER/bbn-launcher/bbn-launcher.js "/var/www/bbn-launcher/"
-install -m 644 -v -o www-data -g www-data $FILE_FOLDER/bbn-launcher/constants.js "/var/www/bbn-launcher/"
-install -m 644 -v -o www-data -g www-data $FILE_FOLDER/bbn-launcher/js/swiped-events.js "/var/www/bbn-launcher/js"
-install -m 755 -v -o www-data -g www-data $FILE_FOLDER/bbn-launcher/bbn-launcherd "/usr/local/bin/"
+install -m 644 -v -o www-data -g www-data "$FILE_FOLDER"/bbn-launcher/bbn-launcher.js "/var/www/bbn-launcher/"
+install -m 644 -v -o www-data -g www-data "$FILE_FOLDER"/bbn-launcher/constants.js "/var/www/bbn-launcher/"
+install -m 644 -v -o www-data -g www-data "$FILE_FOLDER"/bbn-launcher/js/swiped-events.js "/var/www/bbn-launcher/js"
+install -m 755 -v -o www-data -g www-data "$FILE_FOLDER"/bbn-launcher/bbn-launcherd "/usr/local/bin/"
 
-for f in $FILE_FOLDER/bbn-launcher/img/*.svg; do
+for f in "$FILE_FOLDER"/bbn-launcher/img/*.svg; do
   install -m 644 -v -o www-data -g www-data $f "/var/www/bbn-launcher/img"
 done
 
 chown -R www-data:www-data /var/www/bbn-launcher
 
 install -d -o 1000 -g 1000 -m 0755 "/home/user/add-ons"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/hot-fixes-install.sh "/home/user/add-ons/"
+install -v -o 1000 -g 1000 -m 0755 "$FILE_FOLDER"/hot-fixes-install.sh "/home/user/add-ons/"

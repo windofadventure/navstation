@@ -5,11 +5,11 @@ apt-get -y -q install empathy libayatana-appindicator3-1
 apt-get clean
 
 # FB messenger
-if [ $LMARCH == 'armhf' ]; then
+if [ "$LMARCH" == 'armhf' ]; then
   arch=armv7l
-elif [ $LMARCH == 'arm64' ]; then
+elif [ "$LMARCH" == 'arm64' ]; then
   arch=arm64
-elif [ $LMARCH == 'amd64' ]; then
+elif [ "$LMARCH" == 'amd64' ]; then
   arch=x64
 else
   arch=$LMARCH

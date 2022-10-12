@@ -9,6 +9,7 @@
 <!ENTITY % s ":xsd">
 ]>
 
+<!--suppress ALL -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://openbox.org/4.0/rc"
     xmlns:ob="http://openbox.org/4.0/rc"
