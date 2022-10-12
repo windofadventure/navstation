@@ -9,10 +9,10 @@ logErr() {
 # Create caching folder hierarchy to work with this architecture
 setupWorkSpace() {
   thisArch=$1
-  mkdir -p ./cache/$thisArch/stageCache
-  mkdir -p ./work/$thisArch/rootfs
-  mkdir -p ./work/$thisArch/bootfs
-  mkdir -p ./release/$thisArch
+  mkdir -p ./cache/"$thisArch"/stageCache
+  mkdir -p ./work/"$thisArch"/rootfs
+  mkdir -p ./work/"$thisArch"/bootfs
+  mkdir -p ./release/"$thisArch"
 }
 
 # Check if the user run with root privileges
@@ -32,29 +32,29 @@ mountImageFile() {
   log "Mounting Image File"
 
   ## Make sure it's not already mounted
-  if [ -n "$(ls -A $rootfs)" ]; then
+  if [ -n "$(ls -A "$rootfs")" ]; then
     logErr "$rootfs is not empty. Previous failure to unmount?"
-    umountImageFile $1 $2
+    umountImageFile "$1" "$2"
     exit
   fi
 
   # Mount the image and make the binds required to chroot.
   losetup -f
-  partitions=$(kpartx -sav $imageFile | cut -d' ' -f3)
-  partQty=$(echo $partitions | wc -w)
-  echo $partQty partitions detected.
+  partitions=$(kpartx -sav "$imageFile" | cut -d' ' -f3)
+  partQty=$(echo "$partitions" | wc -w)
+  echo "$partQty partitions detected."
 
   # mount partition table in /dev/loop
-  loopId=$(echo $partitions | grep -oh '[0-9]*' | head -n 1)
+  loopId=$(echo "$partitions" | grep -oh '[0-9]*' | head -n 1)
 
-  if [ $partQty == 2 ]; then
-    mount $mountOpt -v /dev/mapper/loop${loopId}p2 $rootfs/
-    if [ ! -d $rootfs/boot ]; then mkdir $rootfs/boot; fi
-    mount $mountOpt -v /dev/mapper/loop${loopId}p1 $rootfs/boot/
-  elif [ $partQty == 1 ]; then
-    mount $mountOpt -v /dev/mapper/loop${loopId}p1 $rootfs/
+  if [ "$partQty" == 2 ]; then
+    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p2 "$rootfs"/
+    if [ ! -d "$rootfs"/boot ]; then mkdir "$rootfs"/boot; fi
+    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
+  elif [ "$partQty" == 1 ]; then
+    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/
   else
-    log "ERROR: unsuported amount of partitions."
+    log "ERROR: unsupported amount of partitions."
     exit 1
   fi
 }
@@ -65,23 +65,23 @@ umountImageFile() {
   imageFile=$2
   rootfs=./work/${thisArch}/rootfs
 
-  rm -rf $rootfs/home/border
-  rm -rf $rootfs/install-scripts/stageCache/*
-  rm -rf $rootfs/install-scripts/logs/*
-  find $rootfs/var/log/ -type f -exec rm -rf {} \;
-  rm -rf $rootfs/tmp/*
+  rm -rf "$rootfs"/home/border
+  rm -rf "$rootfs"/install-scripts/stageCache/*
+  rm -rf "$rootfs"/install-scripts/logs/*
+  find "$rootfs"/var/log/ -type f -exec rm -rf {} \;
+  rm -rf "$rootfs"/tmp/*
 
-  umount $rootfs/etc/resolv.conf
-  umount $rootfs/dev
-  umount $rootfs/sys
-  umount $rootfs/proc
-  umount $rootfs/tmp
-  umount $rootfs/install-scripts/stageCache
-  umount $rootfs/run/shm
-  umount $rootfs/boot
-  umount $rootfs
+  umount "$rootfs"/etc/resolv.conf
+  umount "$rootfs"/dev
+  umount "$rootfs"/sys
+  umount "$rootfs"/proc
+  umount "$rootfs"/tmp
+  umount "$rootfs"/install-scripts/stageCache
+  umount "$rootfs"/run/shm
+  umount "$rootfs"/boot
+  umount "$rootfs"
 
-  kpartx -d $imageFile
+  kpartx -d "$imageFile"
 }
 
 inflateImage() {
@@ -89,26 +89,26 @@ inflateImage() {
   imageLocation=$2
   imageLocationInflated=${imageLocation}-inflated
 
-  if [ ! -f $imageLocationInflated ]; then
+  if [ ! -f "$imageLocationInflated" ]; then
     log "Inflating OS image to have enough space to build lysmarine. "
-    cp -fv ${imageLocation} $imageLocationInflated
+    cp -fv "${imageLocation}" "$imageLocationInflated"
 
     log "truncate image to 12G"
-    truncate -s "12G" $imageLocationInflated
+    truncate -s "12G" "$imageLocationInflated"
 
     log "resize last partition to 100%"
-    partQty=$(fdisk -l $imageLocationInflated | grep -o "^$imageLocationInflated" | wc -l)
-    parted $imageLocationInflated --script "resizepart $partQty 100%"
-    fdisk -l $imageLocationInflated
+    partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
+    parted "$imageLocationInflated" --script "resizepart $partQty 100%"
+    fdisk -l "$imageLocationInflated"
 
     log "Resize the filesystem to fit the partition."
-    loopId=$(kpartx -sav $imageLocationInflated | cut -d" " -f3 | grep -oh '[0-9]*' | head -n 1)
+    loopId=$(kpartx -sav "$imageLocationInflated" | cut -d" " -f3 | grep -oh '[0-9]*' | head -n 1)
     sleep 5
     ls -l /dev/mapper/
 
-    e2fsck -y -f /dev/mapper/loop${loopId}p$partQty
-    resize2fs /dev/mapper/loop${loopId}p$partQty
-    kpartx -d $imageLocationInflated
+    e2fsck -y -f /dev/mapper/loop"${loopId}"p"$partQty"
+    resize2fs /dev/mapper/loop"${loopId}"p"$partQty"
+    kpartx -d "$imageLocationInflated"
   else
     log "Using Ready to build image from cache"
   fi
@@ -118,7 +118,7 @@ function addLysmarineScripts() {
   thisArch=$1
   rootfs=./work/${thisArch}/rootfs
   log "copying lysmarine on the image"
-  ls $rootfs
-  cp -r ./install-scripts ${rootfs}/
-  chmod 0775 ${rootfs}/install-scripts/install.sh
+  ls "$rootfs"
+  cp -r ./install-scripts "${rootfs}"/
+  chmod 0775 "${rootfs}"/install-scripts/install.sh
 }

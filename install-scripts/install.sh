@@ -35,20 +35,20 @@ fi
 
 set -f
 for argument in $argumentList; do # access each element of array
-  stage=$(echo $argument | cut -d '.' -f 1)
-  script=$(echo $argument | cut -s -d '.' -f 2)
+  stage=$(echo "$argument" | cut -d '.' -f 1)
+  script=$(echo "$argument" | cut -s -d '.' -f 2)
 
-  if [ ! $script ]; then
+  if [ ! "$script" ]; then
     script="*"
   fi
 
   set +f
-  for scriptLocation in ./$stage*/$script*.sh; do
-    if [ -f $scriptLocation ]; then
+  for scriptLocation in ./"$stage"*/"$script"*.sh; do
+    if [ -f "$scriptLocation" ]; then
       echo "From request $argument "
       echo "Running stage $stage -> $script ( $scriptLocation )"
       export FILE_FOLDER=${scriptLocation%/*}/files/
-      chmod +x $scriptLocation
+      chmod +x "$scriptLocation"
       $scriptLocation
       [[ ${PIPESTATUS[0]} -ne 0 ]] && exit 255
     fi

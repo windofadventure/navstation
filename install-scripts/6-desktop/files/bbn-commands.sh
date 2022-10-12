@@ -17,4 +17,4 @@ case $action in
     *) exit 1 ;;
 esac
 
-eval exec $cmd
+eval exec "$cmd"

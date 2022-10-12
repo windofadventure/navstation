@@ -12,9 +12,9 @@ do
 
   if [ "$?" == 0 ]; then
     doit=true
-    cpwd=$(echo $data | cut -d'|' -f1)
-    p1=$(echo $data | cut -d'|' -f2)
-    p2=$(echo $data | cut -d'|' -f3)
+    cpwd=$(echo "$data" | cut -d'|' -f1)
+    p1=$(echo "$data" | cut -d'|' -f2)
+    p2=$(echo "$data" | cut -d'|' -f3)
   else
     exit 1
   fi
