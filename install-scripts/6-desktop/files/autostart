@@ -33,6 +33,6 @@ export MOZ_USE_XINPUT2=1
  xset -dpms && \
  xset s noblank) &
 
-(sleep 10 && ibus-daemon --xim) &
+(sleep 10 && ibus-daemon) &
 (sleep 15 && /usr/libexec/geoclue-2.0/demos/agent) &
 
