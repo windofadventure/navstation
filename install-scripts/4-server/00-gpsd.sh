@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
 # TODO: temp fix for https://forums.raspberrypi.com/viewtopic.php?p=2045341
-apt-get install -y -q libgtk-3-0=3.24.24-4+deb11u2 libgtk-3-bin=3.24.24-4+deb11u2 libgtk-3-common=3.24.24-4+deb11u2
-wget http://ftp.us.debian.org/debian/pool/main/w/wayland/libwayland-client0_1.21.0-1_arm64.deb
-wget http://ftp.us.debian.org/debian/pool/main/libf/libffi/libffi8_3.4.2-4_arm64.deb
-dpkg -i libwayland-client0_1.21.0-1_arm64.deb libffi8_3.4.2-4_arm64.deb
-rm -f libwayland-client0_*.dev libffi8_*.deb
+#apt-get install -y -q libgtk-3-0=3.24.24-4+deb11u2 libgtk-3-bin=3.24.24-4+deb11u2 libgtk-3-common=3.24.24-4+deb11u2
+#wget http://ftp.us.debian.org/debian/pool/main/w/wayland/libwayland-client0_1.21.0-1_arm64.deb
+#wget http://ftp.us.debian.org/debian/pool/main/libf/libffi/libffi8_3.4.2-4_arm64.deb
+#dpkg -i libwayland-client0_1.21.0-1_arm64.deb libffi8_3.4.2-4_arm64.deb
+#rm -f libwayland-client0_*.dev libffi8_*.deb
 
 apt-get install -y -q gpsd gpsd-clients gpsd-tools
 
