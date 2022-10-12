@@ -20,9 +20,9 @@ fi
 #dpkg -i libindicator3-7_0.5.0-4_${arch}.deb libappindicator3-1_0.4.92-7_${arch}.deb
 #rm libindicator3-7_0.5.0-4_${arch}.deb libappindicator3-1_0.4.92-7_${arch}.deb
 
-wget https://github.com/mquevill/caprine/releases/download/v2.54.1-ARM/caprine_2.54.1_${arch}.deb
-#dpkg -i caprine_2.54.1_${arch}.deb
-dpkg-deb -xv caprine_2.54.1_${arch}.deb /
+wget https://github.com/mquevill/caprine/releases/download/v2.54.1-ARM/caprine_2.54.1_"${arch}".deb
+#dpkg -i caprine_2.54.1_"${arch}".deb
+dpkg-deb -xv caprine_2.54.1_"${arch}".deb /
 chown root:root /
 chmod 755 /
-rm caprine_2.54.1_${arch}.deb
+rm caprine_2.54.1_"${arch}".deb

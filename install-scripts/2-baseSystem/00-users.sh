@@ -11,7 +11,7 @@ DPASS=$(echo 'changeme' | openssl passwd -6 -stdin)
 echo "user:$DPASS" > /boot/userconf.txt
 
 ## Remove default user (if any).
-oldUser=$(cat /etc/passwd | grep 1000:1000 | cut -f1 -d:) 
+oldUser=$(grep 1000:1000 /etc/passwd | cut -f1 -d:)
 if [[ -n $oldUser ]]; then
 	echo "Removing user $oldUser"
 	userdel -r -f "$oldUser"
