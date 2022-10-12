@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install -y -q gpsd=3.22-4 gpsd-clients=3.22-4 gpsd-tools=3.22-4
+apt-get install -y -q gpsd gpsd-clients gpsd-tools
 
 ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.9/dist-packages/
 
