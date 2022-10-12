@@ -3,6 +3,9 @@
 apt-get install -y -q gpsd gpsd-clients gpsd-tools \
   libgtk-3-0=3.24.24-4+deb11u2 libgtk-3-bin=3.24.24-4+deb11u2 libgtk-3-common=3.24.24-4+deb11u2
 
+# TODO: temp fix for https://forums.raspberrypi.com/viewtopic.php?p=2045341
+apt-mark hold libgtk-3-0 libgtk-3-bin libgtk-3-common
+
 ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.9/dist-packages/
 
 ## Automatically start gpsd when a USB gps detected, handle AIS
