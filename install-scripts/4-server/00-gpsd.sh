@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install -y -q gpsd/backports gpsd-clients/backports gpsd-tools/backports
+apt-get install -y -q gpsd/bullseye-backports gpsd-clients/bullseye-backports gpsd-tools/bullseye-backports
 
 ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.9/dist-packages/
 
