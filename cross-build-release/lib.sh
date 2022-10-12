@@ -48,11 +48,11 @@ mountImageFile() {
   loopId=$(echo "$partitions" | grep -oh '[0-9]*' | head -n 1)
 
   if [ "$partQty" == 2 ]; then
-    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p2 "$rootfs"/
+    mount $mountOpt -v /dev/mapper/loop"${loopId}"p2 "$rootfs"/
     if [ ! -d "$rootfs"/boot ]; then mkdir "$rootfs"/boot; fi
-    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
+    mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
   elif [ "$partQty" == 1 ]; then
-    mount "$mountOpt" -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/
+    mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/
   else
     log "ERROR: unsupported amount of partitions."
     exit 1
