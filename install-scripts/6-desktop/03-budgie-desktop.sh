@@ -34,7 +34,7 @@ install -o 1000 -g 1000 -m 644 -v "$FILE_FOLDER"/autostart.desktop  "/home/user/
   echo "dconf write /org/gnome/desktop/interface/enable-animations false"
   echo "dconf write /org/gnome/Weather/automatic-location true"
   echo "dconf write /org/gnome/Weather/Application/automatic-location true"
-  echo "dconf write /org/gnome/desktop/input-sources/sources \"[('ibus', 'xkb:us::eng')]\""
+  echo "dconf write /org/gnome/desktop/input-sources/sources \"[('xkb', 'us')]\""
   echo "dconf write /org/ubuntubudgie/plugins/weathershow/windunit \"'Miles'\""
   echo "dconf write /org/ubuntubudgie/plugins/weathershow/desktopweather false"
   echo "dconf write /org/gnome/desktop/screensaver/lock-enabled false"
