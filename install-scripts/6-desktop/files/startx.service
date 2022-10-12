@@ -8,12 +8,12 @@ WorkingDirectory=/home/user
 PAMName=login
 Environment=XDG_SESSION_TYPE=x11
 Environment=XDG_CURRENT_DESKTOP=Budgie:GNOME
-#TTYPath=/dev/tty7
-#StandardInput=tty
+TTYPath=/dev/tty7
+StandardInput=tty
 UnsetEnvironment=TERM
-#UtmpIdentifier=tty7
+UtmpIdentifier=tty7
 UtmpMode=user
-#ExecStartPre=/usr/bin/chvt 7
+ExecStartPre=/usr/bin/chvt 7
 ExecStartPre=+-/usr/local/sbin/twofing-detect
 StandardOutput=journal
 Type=simple
