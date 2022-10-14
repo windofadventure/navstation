@@ -125,6 +125,7 @@ pushd /home/signalk/.signalk
                  nmea0183-to-nmea0183 \
                  signalk-path-filter \
                  signalk-empirbusnxt-plugin \
+                 obd2-signalk \
                  signalk-n2k-switch-alias \
                  signalk-n2k-switching \
                  signalk-n2k-switching-emulator \
