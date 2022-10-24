@@ -161,6 +161,9 @@ sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-mon
 sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
 sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
+# see https://github.com/SignalK/signalk-server/pull/1455/
+sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
+
 # use pnpm instead of npm
 sed -i 's#spawn('"'npm',#spawn\('pnpm'"',#' /usr/lib/node_modules/signalk-server/lib/modules.js
 
