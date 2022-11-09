@@ -65,7 +65,8 @@ curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/
 curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/master/public-keys/flightaware/gpg.flightaware.key | apt-key add -
 
 wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/KEY2.gpg # PiAware
-wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box86-debs-archive-keyring.gpg # Box86
+wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | tee /usr/share/keyrings/box86-debs-archive-keyring.gpg # Box86
+wget -q -O /usr/share/keyrings/grafana.key https://packages.grafana.com/gpg.key
 
 ## Update && Upgrade
 apt-get update  -y -q
