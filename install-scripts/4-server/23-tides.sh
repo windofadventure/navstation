@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
+# See: https://flaterco.com/xtide/files.html
 
 wget https://flaterco.com/files/xtide/harmonics-dwf-20220109-free.tar.xz
 xzcat harmonics-dwf-20220109-free.tar.xz | tar xvf  -
