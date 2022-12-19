@@ -23,7 +23,7 @@ sudo mkdir /usr/share/wvs/
 sudo mv wvs*.dat /usr/share/wvs/
 
 sudo bash -c 'cat << EOF > /etc/xtide.conf
-/usr/share/opencpn/tcdata/harmonics-dwf-20210110-free.tcd
+/usr/share/opencpn/tcdata/harmonics-dwf-20220109/harmonics-dwf-20210110-free.tcd
 /usr/share/wvs
 EOF'
 
@@ -38,3 +38,10 @@ Icon=gnome-globe
 Categories=Navigation
 Keywords=Navigation
 EOF'
+
+wget https://flaterco.com/files/xtide/harmonics-dwf-20220109-free.tar.xz
+xzcat harmonics-dwf-20220109-free.tar.xz | tar xvf  -
+rm harmonics-dwf-20220109-free.tar.xz
+sudo cp -r harmonics-dwf-20220109 /usr/share/opencpn/tcdata/
+rm -rf harmonics-dwf-20220109/
+
