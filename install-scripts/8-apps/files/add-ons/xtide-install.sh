@@ -23,7 +23,7 @@ sudo mkdir /usr/share/wvs/
 sudo mv wvs*.dat /usr/share/wvs/
 
 sudo bash -c 'cat << EOF > /etc/xtide.conf
-/usr/share/opencpn/tcdata/harmonics-dwf-20220109/harmonics-dwf-20210110-free.tcd
+/usr/share/opencpn/tcdata/harmonics-dwf-20220109/harmonics-dwf-20220109-free.tcd
 /usr/share/wvs
 EOF'
 
