@@ -19,12 +19,12 @@ do
     # true heading
     HT=$(echo "$MH" + "$MV" - 3.1415926535 | bc)
     # control Stellarium azimuth
-    curl -X POST -d "az=$HT" 'http://localhost:8090/api/main/view'
+    curl -s -X POST -d "az=$HT" 'http://localhost:8090/api/main/view' >/dev/null
   fi
   # control Stellarium location
   POS="$(curl -s http://localhost:3000/signalk/v1/api/vessels/self/navigation/position/ | jq -M -jr '"latitude=",.value.latitude,"&longitude=",.value.longitude')"
   if [ -n "$POS" ] && [ "latitude=null&longitude=null" != "$POS" ]; then
-    curl -X POST -d "altitude=2&${POS}&name=Current" 'http://localhost:8090/api/location/setlocationfields'
+    curl -s -X POST -d "altitude=2&${POS}&name=Current" 'http://localhost:8090/api/location/setlocationfields' >/dev/null
   fi
   sleep 3
   i=$((i+1))
