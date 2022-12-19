@@ -165,7 +165,7 @@ sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk
 sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
 
 # use pnpm instead of npm
-sed -i "s/'npm',/'pnpm',/" /usr/lib/node_modules/signalk-server/lib/modules.js
+sed -i "s/'npm', command/'pnpm', command/" /usr/lib/node_modules/signalk-server/lib/modules.js
 
 ## Give set-system-time the possibility to change the date.
 echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
