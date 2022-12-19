@@ -38,3 +38,17 @@ Icon=gnome-globe
 Categories=Navigation
 Keywords=Navigation
 EOF'
+
+
+sudo apt-get -y install libboost1.74-dev ragel
+
+git clone --recursive https://github.com/joelkoz/xtwsd.git
+cd xtwsd/
+mkdir build
+cd build/
+cmake -Wno-dev ..
+make -j 4
+sudo make install
+cd ../../
+rm -rf xtwsd/
+
