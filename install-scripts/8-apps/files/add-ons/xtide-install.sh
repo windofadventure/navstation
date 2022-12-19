@@ -48,6 +48,7 @@ mkdir build
 cd build/
 cmake -Wno-dev ..
 make -j 4
+sudo ldconfig
 sudo make install
 cd ../../
 rm -rf xtwsd/
