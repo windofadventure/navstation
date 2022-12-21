@@ -157,3 +157,5 @@ make install
 cd ..
 rm -rf imgkap
 
+# for OpenCPN
+ln -s /usr/share/opencpn/tcdata/harmonics-dwf-20220109/harmonics-dwf-20220109-free.tcd /usr/share/opencpn/tcdata/harmonics-dwf-20210110-free.tcd
