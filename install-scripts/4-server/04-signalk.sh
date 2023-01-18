@@ -100,7 +100,7 @@ pushd /home/signalk/.signalk
                  node-red-contrib-moment \
                  node-red-contrib-string \
                  node-red-node-email \
-                 node-red-node-serial \
+                 node-red-node-serialport \
                  node-red-node-openweathermap \
                  node-red-contrib-dht-sensor \
                  node-red-contrib-ds18b20-sensor \
