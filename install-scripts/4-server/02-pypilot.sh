@@ -87,7 +87,7 @@ pushd ./stageCache
   if [[ ! -d ./pypilot ]]; then
     git clone https://github.com/pypilot/pypilot.git
     cd pypilot
-    git checkout 0f62d9f73f5221710d0d1cd14d1a6e1258ec627f # Dec 13, 2022
+    git checkout 8b40189875c3f947e7a893a1a987e837b3dbc104 # Jan 11, 2023
     cd ..
     git clone --depth=1 https://github.com/pypilot/pypilot_data.git
     cp -rv ./pypilot_data/* ./pypilot
