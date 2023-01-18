@@ -1,1 +1,1 @@
-deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/oss/deb stable main
+deb [signed-by=/usr/share/keyrings/grafana.gpg] https://apt.grafana.com stable main

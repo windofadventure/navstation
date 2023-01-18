@@ -47,7 +47,6 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1932F485C68D72A5       
 wget -q -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -    # NodeJs
 wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add -
 wget -q -O - https://repos.influxdata.com/influxdb.key | apt-key add -
-wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
 wget -q -O - https://repo.jellyfin.org/jellyfin_team.gpg.key | apt-key add -
 curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -
 curl -1sLf https://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | apt-key add - # Mosquitto
@@ -66,7 +65,7 @@ curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/
 
 wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/KEY2.gpg # PiAware
 wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | tee /usr/share/keyrings/box86-debs-archive-keyring.gpg # Box86
-wget -q -O /usr/share/keyrings/grafana.key https://packages.grafana.com/gpg.key
+wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor > /usr/share/keyrings/grafana.gpg
 
 ## Update && Upgrade
 apt-get update  -y -q
