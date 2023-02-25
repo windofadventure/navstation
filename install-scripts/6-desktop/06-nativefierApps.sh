@@ -29,8 +29,6 @@ else
   arch=$LMARCH
 fi
 
-USER_AGENT="Mozilla/5.0 (Linux; Android 10; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.86 Mobile Safari/537.36"
-
 ########################################################################################################################
 
 nativefier -a "$arch" --inject "$FILE_FOLDER"/pypilot_darktheme.js --disable-context-menu --disable-dev-tools --single-instance \
@@ -138,13 +136,13 @@ nativefier -a "$arch" --disable-context-menu --disable-dev-tools --single-instan
   --disable-old-build-warning-yesiknowitisinsecure \
   --name "Moorings" --icon /home/user/.local/share/icons/dockwa.png \
   --internal-urls ".*" \
-  "http://localhost:4997/www?name=moorings" -u "$USER_AGENT" /opt/
+  "http://localhost:4997/www?name=moorings" /opt/
 
 nativefier -a "$arch" --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
   --name "Nauticed" --icon /usr/share/icons/gnome/256x256/actions/go-jump.png \
   --internal-urls ".*" \
-  "http://localhost:4997/www?name=nauticed" -u "$USER_AGENT" /opt/
+  "http://localhost:4997/www?name=nauticed" /opt/
 
 mv /opt/MusicBox-linux-"$arch" /opt/MusicBox
 mv /opt/Iris-linux-"$arch" /opt/Iris
@@ -174,7 +172,7 @@ nativefier -a "$arch" --disable-context-menu --disable-dev-tools --single-instan
   --disable-old-build-warning-yesiknowitisinsecure \
   --name "youtube" --icon /usr/share/icons/gnome/48x48/apps/multimedia-volume-control.png \
   --internal-urls ".*" \
-  "http://localhost:4997/www?name=youtube" -u "$USER_AGENT" /opt/
+  "http://localhost:4997/www?name=youtube" /opt/
 
 nativefier -a "$arch" --disable-context-menu --disable-dev-tools --single-instance \
   --disable-old-build-warning-yesiknowitisinsecure \
