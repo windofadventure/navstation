@@ -68,6 +68,9 @@
         <Include>
             <Filename>apmplanner2.desktop</Filename>
         </Include>
+        <Include>
+            <Filename>gweatherrouting.desktop</Filename>
+        </Include>
     </Menu>
     <Menu>
         <Name>Multimedia</Name>
