@@ -94,7 +94,6 @@ pushd /home/signalk/.signalk
                  node-red-dashboard \
                  node-red-contrib-nmea \
                  node-red-contrib-modbus \
-                 node-red-contrib-solaredge-modbus \
                  @victronenergy/node-red-contrib-victron \
                  node-red-contrib-influxdb \
                  node-red-contrib-moment \
