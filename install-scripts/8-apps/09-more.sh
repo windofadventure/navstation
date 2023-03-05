@@ -137,3 +137,10 @@ rm -rf /home/user/usbboot
 cd "$CUR_DIR"
 
 install -v "$FILE_FOLDER"/term-weather.desktop "/usr/local/share/applications/"
+
+
+git clone https://github.com/formatc1702/WireViz
+cd WireViz/
+python3 setup.py install
+cd .. && rm -rf WireViz/
+
