@@ -8,7 +8,7 @@ cd ~/deskpi/
 
 myArch=$(dpkg --print-architecture)
 
-if [ "armhf" != "$myArch" ] ; then
+if [ "arm64" != "$myArch" ] ; then
   chmod +x install.sh
   sudo ./install.sh
 else
