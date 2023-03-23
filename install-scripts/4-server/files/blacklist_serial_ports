@@ -24,3 +24,5 @@
 /dev/ttyLYS_ais_0
 /dev/ttyLYS_ais_1
 /dev/ttyLYS_ais_2
+/dev/ttySC0
+/dev/ttySC1
