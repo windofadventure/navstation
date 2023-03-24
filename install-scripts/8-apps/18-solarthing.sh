@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
+groupadd solarthing
 useradd -r -g solarthing -G dialout,tty,video solarthing
 usermod -a -G dialout,tty,video solarthing
 usermod -a -G gpio solarthing
