@@ -144,3 +144,8 @@ cd WireViz/
 python3 setup.py install
 cd .. && rm -rf WireViz/
 
+
+O_DIR=$(pwd)
+chmod +x "$FILE_FOLDER"/add-ons/maiana-ais-install.sh
+"$FILE_FOLDER"/add-ons/maiana-ais-install.sh
+cd $O_DIR
