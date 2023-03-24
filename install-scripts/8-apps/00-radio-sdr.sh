@@ -246,8 +246,8 @@ apt-get -y install libaudiofile-dev
 mdir=$(pwd)
 
 cd /usr/local/share
-git clone https://github.com/cropinghigh/inmarsatc
-git clone https://github.com/cropinghigh/stdcdec
+git clone --depth=1 https://github.com/cropinghigh/inmarsatc
+git clone --depth=1 https://github.com/cropinghigh/stdcdec
 
 rm -rf inmarsatc/.git
 rm -rf stdcdec/.git
@@ -259,7 +259,7 @@ cd "$mdir"
 apt-get install -y cmake
 
 pushd /usr/local/share
-  git clone https://github.com/bareboat-necessities/aisdecoder
+  git clone --depth=1 https://github.com/bareboat-necessities/aisdecoder
   cd aisdecoder
   rm -rf .git/
   mkdir build && cd build
@@ -284,14 +284,14 @@ if [ "$LMARCH" == 'arm64' ]; then
 fi
 
 
-git clone https://github.com/globecen/rtl-ais
+git clone --depth=1 https://github.com/globecen/rtl-ais
 cd rtl-ais
 make -j 4
 cp rtl_ais /usr/bin/
 cd ..
 rm -rf rtl-ais
 
-git clone https://github.com/steve-m/kalibrate-rtl
+git clone --depth=1 https://github.com/steve-m/kalibrate-rtl
 cd kalibrate-rtl/
 ./bootstrap && CXXFLAGS='-W -Wall -O3' ./configure && make -j 4
 cp src/kal /usr/local/bin/
