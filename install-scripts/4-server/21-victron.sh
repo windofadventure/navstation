@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 #pushd /usr/share/
-#  git clone https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
+#  git clone --depth=1 https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
 #  #pnpm install
 #  pnpm install caniuse-lite date-fns
 #  pnpm run build
