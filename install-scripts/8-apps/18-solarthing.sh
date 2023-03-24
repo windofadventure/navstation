@@ -11,10 +11,10 @@ cd /opt
 git clone --depth=1 --single-branch https://github.com/wildmountainfarms/solarthing.git || exit 1
 
 cd /opt/solarthing 
-other/linux/create_user.sh 
+/opt/solarthing/other/linux/create_user.sh 
 
 cd /opt/solarthing
-other/linux/update_perms.sh continue 
+/opt/solarthing/other/linux/update_perms.sh continue 
 
 /opt/solarthing/program/.bin/solarthing version || true
 
