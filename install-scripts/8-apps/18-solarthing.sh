@@ -15,7 +15,7 @@ cd /opt/solarthing
 /opt/solarthing/other/linux/create_user.sh 
 
 cd /opt/solarthing
-/opt/solarthing/other/linux/update_perms.sh continue 
+/opt/solarthing/other/linux/update_perms.sh continue || true
 
 /opt/solarthing/program/.bin/solarthing version || true
 
