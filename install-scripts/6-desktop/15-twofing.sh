@@ -7,7 +7,7 @@
 apt-get -y install build-essential libx11-dev libxtst-dev libxi-dev x11proto-randr-dev libxrandr-dev \
   xserver-xorg-input-evdev-dev xserver-xorg-input-evdev git
 
-git clone https://github.com/bareboat-necessities/twofing.git
+git clone --depth=1 https://github.com/bareboat-necessities/twofing.git
 
 cd twofing || exit 255
 make -j 4 && cp twofing /usr/local/bin/
