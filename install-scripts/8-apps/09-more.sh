@@ -17,7 +17,7 @@ apt-get clean
 #apt-get install software-properties-common
 
 # rpi-clone
-git clone https://github.com/bareboat-necessities/rpi-clone.git
+git clone --depth=1 https://github.com/bareboat-necessities/rpi-clone.git
 cd rpi-clone
 cp rpi-clone rpi-clone-setup /usr/local/sbin
 cd ..
@@ -139,7 +139,7 @@ cd "$CUR_DIR"
 install -v "$FILE_FOLDER"/term-weather.desktop "/usr/local/share/applications/"
 
 
-git clone https://github.com/formatc1702/WireViz
+git clone --depth=1 https://github.com/formatc1702/WireViz
 cd WireViz/
 python3 setup.py install
 cd .. && rm -rf WireViz/
