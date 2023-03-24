@@ -3,7 +3,7 @@
 apt-get install -y ffmpeg libsdl2-2.0-0 adb \
   pkg-config meson ninja-build scrcpy
 
-git clone https://github.com/M0Rf30/android-udev-rules.git
+git clone --depth=1 https://github.com/M0Rf30/android-udev-rules.git
 cd android-udev-rules
 
 # Copy rules file
