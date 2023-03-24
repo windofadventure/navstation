@@ -29,6 +29,7 @@ install -m 0644 -v "$FILE_FOLDER"/stellarium.list "/etc/apt/sources.list.d/"
 wget -O /etc/apt/sources.list.d/piaware-bullseye.list https://abcd567a.github.io/rpi/abcd567a.list
 wget -O /etc/apt/sources.list.d/box86.list https://ryanfortner.github.io/box86-debs/box86.list
 
+
 ## Prefer opencpn PPA to free-x (for mainly for the opencpn package)
 install -m 0644 -v "$FILE_FOLDER"/50-lysmarine.pref "/etc/apt/preferences.d/"
 
