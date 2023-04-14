@@ -5,7 +5,7 @@
 #apt-get install -y -q opencpn opencpn-plugin-celestial opencpn-plugin-launcher opencpn-plugin-radar \
 #   opencpn-plugin-pypilot opencpn-plugin-objsearch opencpn-plugin-iacfleet imgkap
 
-apt-get install -y -q opencpn=5.6.2+dfsg-1~bpo11+3 gettext libwxsvg3 
+apt-get install -y -q opencpn=5.6.2+dfsg-1~bpo11+3 opencpn-data=5.6.2+dfsg-1~bpo11+3 gettext libwxsvg3 
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins"
