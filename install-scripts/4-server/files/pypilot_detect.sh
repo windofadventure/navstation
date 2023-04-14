@@ -18,7 +18,7 @@ if [ -f "$DEV_FILE" ]; then
         echo 'dtoverlay=gpio-ir,gpio_pin=4' >> /boot/config.txt
       fi
     fi
-    systemctl enable lircd
+    systemctl enable lircd || true
   fi
   if [ "$PYPILOT" = "1" ]; then
     # enable pypilot serial port scan
@@ -40,7 +40,7 @@ if [ -f "$DEV_FILE" ]; then
       fi
     fi
     # enable pypilot hat service
-    systemctl enable pypilot_hat
+    systemctl enable pypilot_hat || true
   fi
 fi
 
