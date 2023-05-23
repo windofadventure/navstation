@@ -1,3 +1,7 @@
+# A Minimal Navstation
+
+This is an attempt to build a really lightweight Navigation Station image based on Raspberry Pi (Only 1-2Gb RAM should be enough).
+This image is based on [BBN Marine OS](https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html), which stands for Bareboat Necessities. The guys have done a great job with this project, however I feel that for a minimalistic navigation station some of the included components are not necessary. Hence, this attempt.
 
 ## What is BBN Marine OS
 
