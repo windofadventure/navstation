@@ -75,3 +75,6 @@ workflows:
   build_all:
     jobs:
       - build-raspbian-bullseye-arm64
+  build_local:
+    jobs:
+      - build-only-raspbian-bullseye-arm64
