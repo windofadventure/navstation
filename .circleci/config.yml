@@ -31,10 +31,22 @@ commands:
           command: |
             .circleci/publish-gs.sh img bbn-projects/bbn-repo ${PKG_DISTRO}/${PKG_RELEASE}
           no_output_timeout: 40m
+  build-debian:
+    steps:
+      - run: sudo apt-get -y install wget
+      - run: chmod a+x .circleci/*.sh
+      - run:
+          command: |
+            .circleci/build-ci.sh
+          no_output_timeout: 20m
   do-all:
     steps:
       - git-checkout
       - build-n-publish-debian
+  do-build:
+    steps:
+      - git-checkout
+      - build-debian
 jobs:
   build-raspbian-bullseye-arm64:
     executor: boot-linux-arm
@@ -47,6 +59,17 @@ jobs:
       - EMU=off
     steps:
       - do-all
+  build-only-raspbian-bullseye-arm64:
+    executor: boot-linux-arm
+    environment:
+      - DOCKER_IMAGE=arm64v8/debian:bullseye
+      - CONTAINER_DISTRO=debian:bullseye
+      - PKG_RELEASE=raspbian
+      - PKG_DISTRO=bullseye
+      - PKG_ARCH=arm64
+      - EMU=off
+    steps:
+      - do-build
 workflows:
   version: 2
   build_all:
