@@ -25,10 +25,11 @@ for pkg_file in cross-build-release/release/*/*."$EXT"; do
   cd "$zipDir" || exit 255
   xz -z -c -v -7 --threads=5 "${zipName}" > ../../../tmp/"${zipName}".xz
   cd ../../..
-  #cloudsmith push raw "$REPO" ./tmp/"${zipName}".xz --summary "BBN OS built by CircleCi on $(date)" --description "BBN OS build"
-  gsutil ${GSTORAGE}
-  RESULT=$?
-  if [ $RESULT -eq 144 ]; then
-    echo "skipping already deployed $pkg_file"
-  fi
+
+  ## Deploying to GS
+  ## define GSTORAGE_TARGET=gs://navstation-pi/public
+  export TARGET="${GSTORAGE_TARGET}${zipName}".xz
+  echo Deploying image /tmp/"${zipName}".xz to "${TARGET}"
+  gsutil rsync /tmp/"${zipName}".xz ${TARGET}
+  
 done
